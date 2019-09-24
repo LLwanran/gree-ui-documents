@@ -29,6 +29,7 @@ Vue.component(Picker.name, Picker);
   </gree-row>
 </gree-block>
 <gree-picker
+  class="picker1"
   ref="picker"
   :data="pickerData"
   :cols="1"
@@ -75,7 +76,7 @@ Vue.component(Picker.name, Picker);
 
 <style lang="less" scoped>
   .gree-picker {
-    &:not(.picker2):not(.picker3) {
+    &.picker1 {
       .gree-picker-column {
         padding: 0 27px;
         .gree-picker-column-container {
@@ -300,6 +301,125 @@ Vue.component(Picker.name, Picker);
 
 :::
 
+### 3 级联动数据
+
+:::demo
+
+```html
+<gree-picker
+  class="picker4"
+  ref="picker4"
+  :data="pickerData4"
+  :cols="3"
+  :default-index="pickerDefaultIndex4"
+  :default-value="pickerDefaultValue4"
+  is-view
+  is-cascade
+  @initialed="onPickerInitialed4"
+  @change="onPickerConfirm4"
+></gree-picker>
+
+<script>
+  import times from '../../configs/times';
+
+  export default {
+    data() {
+      return {
+        pickerData4: [],
+        pickerDefaultIndex4: [],
+        pickerDefaultValue4: [],
+        pickerValue4: ''
+      };
+    },
+    mounted() {
+      this.pickerData4 = times;
+      this.pickerDefaultIndex4 = [1, 2, 5];
+      setTimeout(() => {
+        this.$refs.picker4.refresh();
+      }, 0);
+    },
+    methods: {
+      onPickerInitialed4() {
+        const columnValues = this.$refs.picker4.getColumnValues();
+        let value = '';
+        columnValues.forEach(item => {
+          value += `${item.label}-`;
+        });
+        console.log(
+          `Picker4 getColumnValues: ${value.substr(0, value.length - 1)}`
+        );
+      },
+      onPickerConfirm4(columnIndex, itemIndex, value) {
+        if (value) {
+          this.pickerValue4 = value.text;
+        }
+      }
+    }
+  };
+</script>
+
+<style lang="less" scoped>
+  .gree-picker {
+    &.picker4 {
+      .gree-picker-column {
+        .gree-picker-column-container {
+          .gree-picker-column-masker {
+            &.top {
+              &:before {
+                visibility: hidden;
+              }
+            }
+            &.bottom {
+              &:after {
+                visibility: hidden;
+              }
+            }
+          }
+          .gree-picker-column-list {
+            .gree-picker-column-item {
+              &:nth-of-type(1) {
+                flex: 0.5;
+              }
+              &:nth-of-type(2):after {
+                content: '时';
+              }
+              &:nth-of-type(3):after {
+                content: '分完成';
+              }
+              &:nth-of-type(2),
+              &:nth-of-type(3) {
+                &:after {
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%);
+                  font-size: 38px;
+                }
+              }
+            }
+            .column-list {
+              .column-item {
+                color: #111a34;
+                font-size: 45px;
+              }
+            }
+          }
+          .gree-picker-column-hooks {
+            .gree-picker-column-hook {
+              &:nth-of-type(1) {
+                flex: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
+```
+
+:::
+
 ## Props
 
 | 属性          | 说明                                 | 类型      | 默认值  | 备注                                                   |
@@ -415,6 +535,7 @@ Vue.component(Picker.name, Picker);
 
 <script>
 import years from '../../configs/years';
+import times from '../../configs/times';
 
 let Data1 = [];
 for (let i = 1; i < 24; i++) {
@@ -492,8 +613,19 @@ export default {
       pickerText3: '查看',
       pickerValue3: '',
       isPickerShow3: false,
-      pickerData3: years
+      pickerData3: years,
+      pickerData4: [],
+      pickerDefaultIndex4: [],
+      pickerDefaultValue4: [],
+      pickerValue4: ''
     };
+  },
+  mounted() {
+    this.pickerData4 = times;
+    this.pickerDefaultIndex4 = [1, 2, 5];
+    setTimeout(() => {
+      this.$refs.picker4.refresh();
+    }, 0);
   },
   methods: {
     onPickerInitialed() {
@@ -531,6 +663,21 @@ export default {
         value && (res += `${value.text || value.label} `);
       });
       this.pickerText3 = this.pickerValue3 = res;
+    },
+    onPickerInitialed4() {
+      const columnValues = this.$refs.picker4.getColumnValues();
+      let value = '';
+      columnValues.forEach(item => {
+        value += `${item.label}-`;
+      });
+      console.log(
+        `Picker4 getColumnValues: ${value.substr(0, value.length - 1)}`
+      );
+    },
+    onPickerConfirm4(columnIndex, itemIndex, value) {
+      if (value) {
+        this.pickerValue4 = value.text;
+      }
     }
   }
 };
@@ -538,7 +685,7 @@ export default {
 
 <style lang="less" scoped>
 /deep/ .gree-picker {
-  &:not(.picker2):not(.picker3) {
+  &.picker1 {
     .gree-picker-column {
       padding: 0 27px;
       .gree-picker-column-container {
@@ -600,6 +747,59 @@ export default {
             .column-item {
               color: #111a34;
               font-size: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.picker4 {
+    .gree-picker-column {
+      .gree-picker-column-container {
+        .gree-picker-column-masker {
+          &.top {
+            &:before {
+              visibility: hidden;
+            }
+          }
+          &.bottom {
+            &:after {
+              visibility: hidden;
+            }
+          }
+        }
+        .gree-picker-column-list {
+          .gree-picker-column-item {
+            &:nth-of-type(1) {
+              flex: 0.5;
+            }
+            &:nth-of-type(2):after {
+              content: '时';
+            }
+            &:nth-of-type(3):after {
+              content: '分完成';
+            }
+            &:nth-of-type(2), &:nth-of-type(3) {
+              &:after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                font-size: 19px;
+              }
+            }
+          }
+          .column-list {
+            .column-item {
+              color: #111a34;
+              font-size: 22px;
+            }
+          }
+        }
+        .gree-picker-column-hooks {
+          .gree-picker-column-hook {
+            &:nth-of-type(1) {
+              flex: 0.5;
             }
           }
         }

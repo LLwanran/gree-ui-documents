@@ -10,7 +10,7 @@
   "dependencies": {
     "algoliasearch": "^3.29.0",
     "fastclick": "^1.0.6",
-    "gree-ui": "ssh://git@10.2.11.226:li/gree-ui.git#aa0c88652c314687a8c93917892440e602709429",
+    "gree-ui": "ssh://git@10.2.11.226:li/gree-ui.git#b6e554072d7857dd8919ff7cfc38946900dbba5e",
     "iview": "^3.4.2",
     "muse-ui": "^3.0.2",
     "register-service-worker": "^1.0.0",

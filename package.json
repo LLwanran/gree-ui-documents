@@ -1,0 +1,44 @@
+{
+  "name": "gree-ui-docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build && node scripts/gen-indices.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.29.0",
+    "fastclick": "^1.0.6",
+    "gree-ui": "ssh://git@10.2.11.226:li/gree-ui.git#aa0c88652c314687a8c93917892440e602709429",
+    "iview": "^3.4.2",
+    "muse-ui": "^3.0.2",
+    "register-service-worker": "^1.0.0",
+    "typeface-roboto": "^0.0.54",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
+    "@vue/cli-plugin-pwa": "^3.0.0-beta.15",
+    "@vue/cli-service": "^3.0.0-beta.15",
+    "@vue/eslint-config-standard": "^3.0.0-rc.3",
+    "babel-plugin-import": "^1.12.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-container": "^2.0.0",
+    "postcss-px2rem-exclude": "^0.0.6",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-url": "^8.0.0",
+    "transliteration": "^1.6.2",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

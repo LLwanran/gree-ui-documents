@@ -1,0 +1,60 @@
+html,
+body {
+  user-select: auto !important;
+}
+#app,
+body,
+html {
+  width: auto !important;
+  height: auto !important;
+}
+#app {
+  overflow: auto !important;
+}
+th,
+td {
+  vertical-align: middle !important;
+}
+.gree-header .gree-header-title {
+  border-bottom: none;
+}
+.list .item-content .item-inner::after,
+.gree-accordion-head::after,
+.gree-action-sheet-item-wrapper::before,
+.gree-cell-item-body::after,
+.gree-dialog-actions::before,
+.gree-picker-column-masker.top::after,
+.gree-picker-column-masker.bottom::before,
+.gree-field-item-content::after {
+  height: 1px !important;
+}
+.block,
+.list,
+.gree-radio-list,
+.gree-field,
+.gree-notice-bar {
+  width: 100% !important;
+}
+.block p,
+.list p {
+  margin-bottom: 0 !important;
+}
+.block .gree-button,
+.list .gree-button {
+  margin: 8px !important;
+}
+.block .gree-button p,
+.list .gree-button p {
+  margin-bottom: 0 !important;
+}
+.gree-popup,
+.gree-toast {
+  z-index: 10002 !important;
+}
+.gree-toast .gree-popup {
+  z-index: 10002 !important;
+}
+.gree-check-box {
+  border-width: 1px !important;
+  margin-right: 3px !important;
+}

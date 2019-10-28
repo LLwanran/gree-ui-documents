@@ -21,6 +21,18 @@ export default {
           path: '/development'
         },
         {
+          name: 'Git提交规范',
+          path: '/git-commit-message'
+        },
+        {
+          name: 'Git命令速查',
+          path: '/git-commands'
+        },
+        {
+          name: '真机远程调试',
+          path: '/remote-debugging'
+        },
+        {
           name: '主体Cordova接口',
           path: '/cordova-api'
         }
@@ -57,6 +69,10 @@ export default {
         {
           name: 'NoticeBar',
           path: '/notice-bar'
+        },
+        {
+          name: 'Progress',
+          path: '/progress'
         },
         {
           name: 'ProgressBar',
@@ -225,10 +241,6 @@ export default {
         {
           name: 'PowerOff',
           path: '/power-off'
-        },
-        {
-          name: 'Progress',
-          path: '/progress'
         },
         {
           name: 'SweepSelect',

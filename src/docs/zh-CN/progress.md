@@ -1,6 +1,6 @@
 # 进度
 
-常用于烹饪进度、洗衣进度等
+进度圆环，用于展示操作进度，告知用户当前状态和预期
 
 ## 按需引入
 
@@ -10,70 +10,121 @@ import { Progress } from 'gree-ui';
 Vue.component(Progress.name, Progress);
 ```
 
-### 示例 1
+### 基础
 
 :::demo
 
 ```html
-<gree-block>
-  <gree-progress :width="5" :size="206" color="url(#linear)">
-    <div class="progress-value">25<span class="progress-unit">°C</span></div>
-    <div class="progress-desc">正在高温杀毒</div>
+<div
+  class="gree-example-child gree-example-child-progress gree-example-child-progress-0"
+>
+  <gree-progress :value="0.25" :width="5">
+    <span class="progress-value">25%</span>
+  </gree-progress>
+  <gree-progress :size="100" :value="0.5" :width="7" color="#ed4014">
+    <span class="progress-value">50%</span>
+  </gree-progress>
+  <gree-progress
+    :size="120"
+    :value="1"
+    :width="10"
+    color="#19be6b"
+    fill="#c5c8ce"
+  >
+    <span class="progress-value">100%</span>
+  </gree-progress>
+</div>
+
+<style lang="scss">
+  .gree-example-child-progress {
+    display: flex;
+    justify-content: center;
+
+    .gree-progress {
+      margin: 0 10px;
+
+      .rolling-container {
+        position: relative;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0 !important;
+        transform: none !important;
+
+        .progress-value {
+          font-size: 38px;
+        }
+      }
+    }
+  }
+</style>
+```
+
+:::
+
+### 其他配置
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-progress gree-example-child-progress-1"
+>
+  <gree-progress
+    :value="0.8"
+    :width="10"
+    :size="100"
+    color="url(#linear)"
+    border-color="#FFF"
+  >
+    <span class="progress-value">80%</span>
     <defs slot="defs">
       <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#fb5f5f" />
-        <stop offset="100%" stop-color="#f0c2c2" />
+        <stop offset="0%" stop-color="#FF5257" />
+        <stop offset="100%" stop-color="#FFC541" />
       </linearGradient>
     </defs>
   </gree-progress>
-</gree-block>
-```
-
-:::
-
-### 示例 2
-
-:::demo
-
-```html
-<gree-block>
-  <gree-progress :width="5" :size="206" color="url(#linear2)">
-    <div class="progress-value">
-      120<span class="progress-unit">剩余分钟</span>
-    </div>
-    <div class="progress-desc">正在臭氧消毒</div>
-    <defs slot="defs">
-      <linearGradient id="linear2" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#57bdfb" />
-        <stop offset="100%" stop-color="#cee7ee" />
-      </linearGradient>
-    </defs>
+  <gree-progress
+    :value="0.8"
+    :width="10"
+    :size="100"
+    :rotate="-90"
+    color="#FF5257"
+    transition
+    linecap="butt"
+  >
+    <span class="progress-value">80%</span>
   </gree-progress>
-</gree-block>
-```
+</div>
 
-:::
+<style lang="scss">
+  .gree-example-child-progress {
+    display: flex;
+    justify-content: center;
 
-### 示例 3
+    .gree-progress {
+      margin: 0 10px;
 
-:::demo
+      .rolling-container {
+        position: relative;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0 !important;
+        transform: none !important;
 
-```html
-<gree-block>
-  <gree-progress :width="5" :size="206" color="url(#linear3)">
-    <div class="progress-value">
-      50<span class="progress-unit">剩余分钟</span>
-    </div>
-    <div class="progress-desc">正在烘干</div>
-    <div class="progress-desc-more">温度25°C</div>
-    <defs slot="defs">
-      <linearGradient id="linear3" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#fcb31f" />
-        <stop offset="100%" stop-color="#eeeace" />
-      </linearGradient>
-    </defs>
-  </gree-progress>
-</gree-block>
+        .progress-value {
+          font-size: 38px;
+        }
+      }
+    }
+  }
+</style>
 ```
 
 :::
@@ -93,27 +144,51 @@ Vue.component(Progress.name, Progress);
 | transition   | 进度变化是否使用动效 | Boolean | `false`             | \-   |
 | duration     | 进度变化动效时长     | Number  | `1000`              | \-   |
 
-<style lang="less" scoped>
-.content {
-  flex-direction: column;
-  .progress-value {
-    color: #404657;
-    font-size: 25px;
-    font-family: 'Roboto_Thin';
-    text-align: center;
-    .progress-unit {
-      font-family: 'FZLTHJW--GB1-0';
-      font-size: 12px;
-      vertical-align: text-top;
+<style lang="less">
+.gree-example-child-progress {
+    display: flex;
+    justify-content: center;
+
+    .gree-progress {
+      position: relative;
+      margin: 0 10px;
+
+      .rolling-container {
+        position: relative;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0 !important;
+        transform: none !important;
+
+        .progress-value {
+          font-size: 14px;
+        }
+      }
     }
   }
-  .progress-desc, .progress-desc-more {
-    font-family: 'FZLTHJW--GB1-0';
-    color: rgba(112, 112, 112, 0.75);
-    text-align: center;
-    &.progress-desc-more {
-      color: #707070;
-      margin-top: 5px;
+  .gree-example-child-progress {
+  display: flex;
+  justify-content: center;
+
+  .gree-progress {
+    margin: 0 10px;
+
+    .rolling-container {
+      position: relative;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0 !important;
+      transform: none !important;
+
+      .progress-value {
+        font-size: 14px;
+      }
     }
   }
 }

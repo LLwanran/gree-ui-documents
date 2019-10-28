@@ -170,6 +170,10 @@
   margin: 0;
 }
 
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
 .markdown-body ul,
 .markdown-body ol {
   padding: 0;

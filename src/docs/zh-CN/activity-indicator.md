@@ -5,7 +5,7 @@
 ## 按需引入
 
 ```javascript
-import { ActivityIndicator } from 'gree-ui';
+import { ActivityIndicator } from "gree-ui";
 
 Vue.component(ActivityIndicator.name, ActivityIndicator);
 ```
@@ -61,17 +61,19 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 ```html
 <gree-block class="gree-example-child-activity-indicator-3">
   <gree-activity-indicator type="carousel" :size="15"></gree-activity-indicator>
-  <gree-button type="positive" @click="doClick">
-    <gree-activity-indicator
-      v-if="loading"
-      class="gree-activity-indicator-css"
-      type="carousel"
-      :size="15"
-      color="#fff"
-      text-color="#fff"
-    ></gree-activity-indicator>
-    <span v-else>确认提交</span>
-  </gree-button>
+  <gree-block>
+    <gree-button type="positive" @click="doClick">
+      <gree-activity-indicator
+        v-if="loading"
+        class="gree-activity-indicator-css"
+        type="carousel"
+        :size="15"
+        color="#fff"
+        text-color="#fff"
+      ></gree-activity-indicator>
+      <span v-else>确认提交</span>
+    </gree-button>
+  </gree-block>
 </gree-block>
 
 <script>

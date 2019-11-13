@@ -5,87 +5,100 @@
 ## 按需引入
 
 ```javascript
-import { Radio, RadioList } from 'gree-ui';
+import { Radio, RadioBox, RadioGroup, RadioList } from 'gree-ui';
 
 Vue.component(Radio.name, Radio);
+Vue.component(RadioBox.name, RadioBox);
+Vue.component(RadioGroup.name, RadioGroup);
 Vue.component(RadioList.name, RadioList);
 ```
 
-### 示例 1
+### 内联模式
 
 :::demo
 
 ```html
-<gree-list>
-  <gree-list-item media-item>
-    <span slot="media">米种</span>
-    <gree-row slot="title">
-      <gree-radio
-        name="1"
-        v-model="rice"
-        icon=""
-        icon-inverse=""
-        icon-disabled=""
-        label="长粒米"
-        inline
-      ></gree-radio>
-      <gree-radio
-        name="2"
-        v-model="rice"
-        icon=""
-        icon-inverse=""
-        icon-disabled=""
-        label="短粒米"
-        inline
-        disabled
-      ></gree-radio>
-      <gree-radio
-        name="3"
-        v-model="rice"
-        icon=""
-        icon-inverse=""
-        icon-disabled=""
-        label="糙米"
-        inline
-      ></gree-radio>
-    </gree-row>
-  </gree-list-item>
-  <gree-list-item media-item>
-    <span slot="media">口感</span>
-    <gree-row slot="title">
-      <gree-radio
-        name="1"
-        v-model="taste"
-        icon=""
-        icon-inverse=""
-        icon-disabled=""
-        label="稍软"
-        inline
-      ></gree-radio>
-      <gree-radio
-        name="2"
-        v-model="taste"
-        icon=""
-        icon-inverse=""
-        icon-disabled=""
-        label="适中"
-        inline
-      ></gree-radio>
-      <gree-radio
-        name="3"
-        v-model="taste"
-        icon=""
-        icon-inverse=""
-        icon-disabled=""
-        label="稍硬"
-        inline
-      ></gree-radio>
-    </gree-row>
-  </gree-list-item>
-</gree-list>
+<gree-block>
+  <div
+    class="gree-example-child gree-example-child-radio gree-example-child-radio-0"
+  >
+    <gree-list>
+      <gree-list-item media-item>
+        <span slot="media">米种</span>
+        <gree-row slot="title">
+          <gree-radio
+            name="1"
+            v-model="rice"
+            icon
+            icon-inverse
+            icon-disabled
+            label="长粒米"
+            inline
+          ></gree-radio>
+          <gree-radio
+            name="2"
+            v-model="rice"
+            icon
+            icon-inverse
+            icon-disabled
+            label="短粒米"
+            inline
+            disabled
+          ></gree-radio>
+          <gree-radio
+            name="3"
+            v-model="rice"
+            icon
+            icon-inverse
+            icon-disabled
+            label="糙米"
+            inline
+          ></gree-radio>
+        </gree-row>
+      </gree-list-item>
+      <gree-list-item media-item>
+        <span slot="media">口感</span>
+        <gree-row slot="title">
+          <gree-radio
+            name="1"
+            v-model="taste"
+            icon
+            icon-inverse
+            icon-disabled
+            label="稍软"
+            inline
+          ></gree-radio>
+          <gree-radio
+            name="2"
+            v-model="taste"
+            icon
+            icon-inverse
+            icon-disabled
+            label="适中"
+            inline
+          ></gree-radio>
+          <gree-radio
+            name="3"
+            v-model="taste"
+            icon
+            icon-inverse
+            icon-disabled
+            label="稍硬"
+            inline
+          ></gree-radio>
+        </gree-row>
+      </gree-list-item>
+    </gree-list>
+  </div>
+</gree-block>
 
 <script>
+  import { Radio } from 'gree-ui';
+
   export default {
+    components: {
+      [Radio.name]: Radio
+    },
     data() {
       return {
         rice: '1',
@@ -94,27 +107,72 @@ Vue.component(RadioList.name, RadioList);
     }
   };
 </script>
+
+<style lang="scss">
+  .gree-example-child-radio-0 {
+    .gree-radio {
+      &.is-inline {
+        border: 1px solid #e4e4e4;
+        border-radius: 8px;
+        width: 145px;
+        height: 84px;
+        justify-content: center;
+
+        &.is-checked {
+          border-color: #f2da7c;
+          background-color: #f2da7c;
+        }
+      }
+    }
+  }
+</style>
 ```
 
 :::
 
-### 示例 2
+### 列表模式
 
 :::demo
 
 ```html
-<gree-radio-list
-  :options="modes"
-  v-model="myMode"
-  icon="check"
-  icon-size="md"
-></gree-radio-list>
+<gree-block>
+  <div
+    class="gree-example-child gree-example-child-radio gree-example-child-radio-1"
+  >
+    <gree-radio-list
+      :options="modes"
+      v-model="mode"
+      icon="check"
+      icon-inverse
+    ></gree-radio-list>
+    <gree-block-title>选择列表 - 带描述</gree-block-title>
+    <gree-radio-list
+      :options="subscribes"
+      v-model="subscribe"
+      icon="checked"
+    ></gree-radio-list>
+    <gree-block-title>选择列表 - slot-scope模式</gree-block-title>
+    <gree-radio-list :options="subscribes">
+      <template slot-scope="{ option, index, selected }">
+        <div class="custom-title">{{ option.text }}</div>
+        <div class="custom-brief">
+          {{ option.text }} - {{ index }} - {{ selected }}
+        </div>
+      </template>
+    </gree-radio-list>
+  </div>
+</gree-block>
 
 <script>
+  import { RadioList } from 'gree-ui';
+
   export default {
+    components: {
+      [RadioList.name]: RadioList
+    },
     data() {
       return {
-        myMode: '0',
+        mode: '0',
         modes: [
           {
             value: '0',
@@ -133,7 +191,142 @@ Vue.component(RadioList.name, RadioList);
             value: '3',
             text: '自动模式'
           }
+        ],
+        subscribe: '1',
+        subscribes: [
+          {
+            value: '1',
+            text: '1小时',
+            brief: '自动判断房间无人时节能'
+          },
+          {
+            value: '2',
+            text: '2小时',
+            brief: '自动判断房间无人时节能'
+          },
+          {
+            value: '3',
+            text: '3小时',
+            brief: '自动判断房间无人时节能'
+          },
+          {
+            value: '4',
+            text: '4小时',
+            brief: '自动判断房间无人时节能'
+          }
         ]
+      };
+    }
+  };
+</script>
+
+<style lang="scss">
+  .gree-example-child-radio-1 {
+    .custom-title {
+      background: linear-gradient(90deg, #d400ff, #ff320a);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 700;
+      font-size: 40px;
+      letter-spacing: 0.58px;
+      display: inline-block;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .custom-brief {
+      color: #bfbfbf;
+      font-size: 32px;
+    }
+  }
+</style>
+```
+
+:::
+
+### 单选框
+
+:::demo
+
+```html
+<gree-block>
+  <div
+    class="gree-example-child gree-example-child-radio gree-example-child-radio-2"
+  >
+    <gree-block>
+      <gree-radio-box
+        name="coldcloset"
+        v-model="position"
+        label="冷藏室"
+      ></gree-radio-box>
+      <gree-radio-box
+        name="freezer"
+        v-model="position"
+        label="冷冻室"
+      ></gree-radio-box>
+      <gree-radio-box
+        name="greenhouse"
+        v-model="position"
+        label="变温室"
+      ></gree-radio-box>
+    </gree-block>
+  </div>
+</gree-block>
+
+<script>
+  import { RadioBox } from 'gree-ui';
+
+  export default {
+    components: {
+      [RadioBox.name]: RadioBox
+    },
+    data() {
+      return {
+        position: ''
+      };
+    }
+  };
+</script>
+```
+
+:::
+
+### 单选框组
+
+:::demo
+
+```html
+<gree-block>
+  <div
+    class="gree-example-child gree-example-child-radio gree-example-child-radio-3"
+  >
+    <gree-block>
+      <gree-radio-group v-model="weeks">
+        <gree-radio-box name="monday">星期一</gree-radio-box>
+        <gree-radio-box name="tuesday">星期二</gree-radio-box>
+        <gree-radio-box name="wednesday">星期三</gree-radio-box>
+        <gree-radio-box name="thursday">星期四</gree-radio-box>
+        <gree-radio-box name="friday">星期五</gree-radio-box>
+        <gree-radio-box name="saturday">星期六</gree-radio-box>
+        <gree-radio-box name="sunday">星期日</gree-radio-box>
+      </gree-radio-group>
+    </gree-block>
+  </div>
+</gree-block>
+
+<script>
+  import { RadioBox, RadioGroup } from 'gree-ui';
+
+  export default {
+    components: {
+      [RadioBox.name]: RadioBox,
+      [RadioGroup.name]: RadioGroup
+    },
+    data() {
+      return {
+        weeks: 'wednesday'
       };
     }
   };
@@ -148,25 +341,51 @@ Vue.component(RadioList.name, RadioList);
 | ------------- | -------------- | ------- | ---------------- | ---- |
 | v-model       | 选中项的`name` | any     | \-               |      |
 | name          | 唯一键值       | any     | \-               | \-   |
-| label         | 描述文案       | String  | \-               |      |
+| label         | 描述文案       | String- | \-               |      |
 | disabled      | 是否禁用选项   | Boolean | `false`          | \-   |
 | inline        | 是否内联显示   | Boolean | `false`          | \-   |
 | icon          | 选中项的图标   | String  | `checked`        | \-   |
-| icon-inverse  | 非选中项的图标 | String  | `check`          | \-   |
+| icon-inverse  | 非选中项的图标 | String  | `unchecked`      | \-   |
 | icon-disabled | 禁用项的图标   | String  | `check-disabled` | \-   |
-| size          | 图标大小       | String  | `md`             |
+| icon-svg      | 使用 svg 图标  | Boolean | `false`          | \-   |
+| size          | 图标大小       | String  | `md`             | \-   |
+
+## RadioBox Props
+
+| 属性     | 说明         | 类型    | 默认值  | 备注                   |
+| -------- | ------------ | ------- | ------- | ---------------------- |
+| name     | 唯一键值     | any     | `true`  | 当选中时，双向绑定的值 |
+| v-model  | 选中的值     | any     | `false` | \-                     |
+| disabled | 是否禁用选择 | Boolean | `false` | \-                     |
+
+## RadioGroup Props
+
+| 属性    | 说明         | 类型   | 默认值 | 备注       |
+| ------- | ------------ | ------ | ------ | ---------- |
+| v-model | 选中的值     | Array  | \-     | \-         |
+| max     | 最多选择几个 | Number | `0`    | 0 为不限制 |
+
+## RadioGroup Methods
+
+### check(name)
+
+| 参数 | 说明           | 类型   | 默认值 |
+| ---- | -------------- | ------ | ------ |
+| name | 需要选中的键值 | String | \-     |
 
 ## Radio List Props
 
-| 属性          | 说明            | 类型   | 默认值           | 备注                     |
-| ------------- | --------------- | ------ | ---------------- | ------------------------ |
-| v-model       | 选中项的`value` | any    | \-               |                          |
-| options       | 选项数据源      | Array  | `[]`             | `disabled`为选项是否禁用 |
-| icon          | 选中项的图标    | String | `checked`        | \-                       |
-| icon-inverse  | 非选中项的图标  | String | `check`          | \-                       |
-| icon-disabled | 禁用项的图标    | String | `check-disabled` | \-                       |
-| icon-size     | 图标大小        | String | `lg`             | \-                       |
-| icon-position | 图标位置        | String | `left`           | `left`,`right`           |
+| 属性          | 说明                             | 类型    | 默认值           | 备注                     |
+| ------------- | -------------------------------- | ------- | ---------------- | ------------------------ |
+| v-model       | 选中项的`value`                  | any     | \-               |                          |
+| options       | 选项数据源                       | Array   | `[]`             | `disabled`为选项是否禁用 |
+| icon          | 选中项的图标                     | String  | `checked`        | \-                       |
+| icon-inverse  | 非选中项的图标                   | String  | `unchecked`      | \-                       |
+| icon-disabled | 禁用项的图标                     | String  | `check-disabled` | \-                       |
+| icon-size     | 图标大小                         | String  | `md`             | \-                       |
+| icon-svg      | 使用 svg 图标                    | Boolean | `false`          | \-                       |
+| icon-position | 图标位置                         | String  | `right`          | `left`,`right`           |
+| is-slot-scope | 是否强制使用或不使用`slot-scope` | Boolean | \-               | \-                       |
 
 ## Radio List Methods
 
@@ -195,7 +414,7 @@ export default {
     return {
       rice: '1',
       taste: '2',
-      myMode: '0',
+      mode: '0',
       modes: [
         {
           value: '0',
@@ -214,27 +433,85 @@ export default {
           value: '3',
           text: '自动模式'
         }
-      ]
+      ],
+      subscribe: '1',
+      subscribes: [
+        {
+          value: '1',
+          text: '1小时',
+          brief: '自动判断房间无人时节能'
+        },
+        {
+          value: '2',
+          text: '2小时',
+          brief: '自动判断房间无人时节能'
+        },
+        {
+          value: '3',
+          text: '3小时',
+          brief: '自动判断房间无人时节能'
+        },
+        {
+          value: '4',
+          text: '4小时',
+          brief: '自动判断房间无人时节能'
+        }
+      ],
+      position: '',
+      weeks: 'wednesday'
     };
   }
 };
 </script>
 
-<style lang="less" scoped>
-.row {
-  margin-left: 0;
-  margin-right: 0;
-  .gree-radio {
-    &.is-inline {
-      border: 1px solid #e4e4e4;
-      border-radius: 4px;
-      width: 72px;
-      height: 42px;
-      justify-content: center;
-      &.is-checked {
-        border-color: #f2da7c;
-        background-color: #f2da7c;
+<style lang="less">
+.gree-example-child-radio {
+  color: #404657;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &.gree-example-child-radio-0 {
+    .gree-radio {
+      &.is-inline {
+        border: 1px solid #e4e4e4;
+        border-radius: 4px;
+        width: 72px;
+        height: 42px;
+        justify-content: center;
+
+        &.is-checked {
+          border-color: #f2da7c;
+          background-color: #f2da7c;
+        }
       }
+    }
+  }
+  &.gree-example-child-radio-1 {
+    .custom-title {
+      background: linear-gradient(90deg, #d400ff, #ff320a);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.29px;
+      display: inline-block;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .custom-brief {
+      color: #bfbfbf;
+      font-size: 16px;
+    }
+  }
+  &.gree-example-child-radio-2,
+  &.gree-example-child-radio-3 {
+    .gree-check-base-box {
+      border-width: 1px;
+      margin-right: 5px;
     }
   }
 }

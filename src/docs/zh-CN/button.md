@@ -10,7 +10,7 @@ import { Button } from 'gree-ui';
 Vue.component(Button.name, Button);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

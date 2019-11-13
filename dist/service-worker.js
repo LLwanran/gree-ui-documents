@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fe3f66d448688d4a2cb0995e5261ac8e.js"
+  "/precache-manifest.44a8f974af55aa1a72112d30591eed5e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "gree-ui-docs"});

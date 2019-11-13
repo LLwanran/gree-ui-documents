@@ -33,11 +33,6 @@ export default {
           </router-link>
           <mu-menu>
             <div class="app-version">v{this.version}</div>
-            {/* <mu-list slot="content" dense>
-              <mu-list-item button to={'/' + this.locale}>
-                <mu-list-item-title>v{this.version}</mu-list-item-title>
-              </mu-list-item>
-            </mu-list> */}
           </mu-menu>
         </mu-appbar>
       );

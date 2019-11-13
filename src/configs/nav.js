@@ -21,6 +21,10 @@ export default {
           path: '/development'
         },
         {
+          name: 'VSCode团队规范',
+          path: '/vscode'
+        },
+        {
           name: 'Git提交规范',
           path: '/git-commit-message'
         },
@@ -173,6 +177,10 @@ export default {
           path: '/agree'
         },
         {
+          name: 'AnimatedNumber',
+          path: '/animated-number'
+        },
+        {
           name: 'Check',
           path: '/check'
         },
@@ -199,6 +207,10 @@ export default {
         {
           name: 'Slider',
           path: '/slider'
+        },
+        {
+          name: 'SliderCircle',
+          path: '/slider-circle'
         },
         {
           name: 'Stepper',

@@ -52,7 +52,7 @@ Vue.component(Agree.name, Agree);
 
 :::
 
-### 未选中不可用状态
+### 未选中状态
 
 :::demo
 
@@ -74,10 +74,52 @@ Vue.component(Agree.name, Agree);
       return {
         agreeConf2: {
           checked: false,
-          name: 'agree3',
+          name: 'agree1',
+          size: 'md',
+          disabled: false,
+          introduction: '未选中状态'
+        }
+      };
+    },
+    methods: {
+      onChange(name, checked) {
+        console.log(
+          `agree name = ${name} is ${checked ? 'checked' : 'unchecked'}`
+        );
+      }
+    }
+  };
+</script>
+```
+
+:::
+
+### 禁止选择状态
+
+:::demo
+
+```html
+<gree-agree
+  v-model="agreeConf3.checked"
+  :disabled="agreeConf3.disabled"
+  :size="agreeConf3.size"
+  @change="onChange(agreeConf3.name, agreeConf3.checked, $event)"
+>
+  我已阅读并同意格力
+  <a>用户注册协议</a>和
+  <a>隐私政策</a>
+</gree-agree>
+
+<script>
+  export default {
+    data() {
+      return {
+        agreeConf3: {
+          checked: true,
+          name: 'agree2',
           size: 'md',
           disabled: true,
-          introduction: '未选中不可用状态'
+          introduction: '禁止选择状态'
         }
       };
     },
@@ -126,10 +168,17 @@ export default {
       },
       agreeConf2: {
         checked: false,
-        name: 'agree3',
+        name: 'agree1',
+        size: 'md',
+        disabled: false,
+        introduction: '未选中状态'
+      },
+      agreeConf3: {
+        checked: true,
+        name: 'agree2',
         size: 'md',
         disabled: true,
-        introduction: '未选中不可用状态'
+        introduction: '禁止选择状态'
       }
     };
   },

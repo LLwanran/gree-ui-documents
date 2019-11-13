@@ -35,11 +35,6 @@ Vue.component(CheckList.name, CheckList);
       return {
         times: []
       };
-    },
-    methods: {
-      input(val) {
-        console.log(val);
-      }
     }
   };
 </script>
@@ -114,22 +109,27 @@ Vue.component(CheckList.name, CheckList);
 
 ```html
 <gree-block>
-  <gree-check-list :options="costume" v-model="favorites"></gree-check-list>
+  <gree-check-list
+    :options="types"
+    v-model="favorites"
+    icon="check"
+    icon-inverse=""
+  ></gree-check-list>
 </gree-block>
 
 <script>
   export default {
     data() {
       return {
-        favorites: ['mixture'],
-        costume: [
+        types: [
           { value: 'shirt', text: '衬衫' },
           { value: 'mixture', text: '混合' },
           { value: 'quick_drying', text: '快速洗烘' },
           { value: 'silk', text: '丝绸' },
           { value: 'wool', text: '羊毛', disabled: true },
           { value: 'down_coat', text: '羽绒服' }
-        ]
+        ],
+        favorites: ['mixture']
       };
     }
   };
@@ -261,8 +261,7 @@ export default {
       times: [],
       patterns: [],
       mode: '',
-      favorites: ['mixture'],
-      costume: [
+      types: [
         { value: 'shirt', text: '衬衫' },
         { value: 'mixture', text: '混合' },
         { value: 'quick_drying', text: '快速洗烘' },
@@ -270,6 +269,7 @@ export default {
         { value: 'wool', text: '羊毛', disabled: true },
         { value: 'down_coat', text: '羽绒服' }
       ],
+      favorites: ['mixture'],
       speed: ['2'],
       speeds: [
         {

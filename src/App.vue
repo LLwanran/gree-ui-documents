@@ -35,7 +35,7 @@
         v-if="!isMobile"
         slot="right"
         @click="$Message.info({
-          content: '你点我干哈？',
+          content: '你点我干啥？',
           duration: 10,
           closable: true
         })"

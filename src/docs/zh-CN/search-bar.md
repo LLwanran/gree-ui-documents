@@ -10,7 +10,7 @@ import { SearchBar } from 'gree-ui';
 Vue.component(SearchBar.name, SearchBar);
 ```
 
-## 基础用法
+## 基础
 
 :::demo
 

@@ -74,6 +74,7 @@ Vue.use(GreeUI);
 ```bash
 git clone git@gitlab.example.com:ipenny861025/iotfe-boilerplate.git
 cd vue-cli3-air-conditioner # 空调
+cd vue-cli3-ai-sensor # AI感知器
 cd vue-cli3-co-alarm # 一氧化碳报警器
 cd vue-cli3-combustible-gas # 可燃气体报警器
 cd vue-cli3-danger-button # SOS紧急按钮
@@ -82,7 +83,10 @@ cd vue-cli3-door-sensor # 智能门磁
 cd vue-cli3-electric-cooker # 电饭煲
 cd vue-cli3-environment-sensor # 环境感知器
 cd vue-cli3-human-infrared-sensor # 人体红外感应器
+cd vue-cli3-humidifier # 除湿机
 cd vue-cli3-humiture-sensor # 温湿度感知器
+cd vue-cli3-rgb-box # RGB盒子
+cd vue-cli3-smart-curtain # 智能窗帘
 cd vue-cli3-smoke-sensor # 烟雾传感器 && 烟雾报警器
 cd vue-cli3-steaming-roast # 蒸烤一体|双能机
 cd vue-cli3-water-sensor # 水浸感知器

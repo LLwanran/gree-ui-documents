@@ -63,6 +63,14 @@ export default {
           path: '/button'
         },
         {
+          name: 'CollapseTransition',
+          path: '/collapse-transition'
+        },
+        {
+          name: 'Dropdown',
+          path: '/dropdown'
+        },
+        {
           name: 'Header',
           path: '/header'
         },
@@ -89,6 +97,14 @@ export default {
         {
           name: 'SearchBar',
           path: '/search-bar'
+        },
+        {
+          name: 'SegmentedControl',
+          path: '/segmented-control'
+        },
+        {
+          name: 'Steps',
+          path: '/steps'
         },
         {
           name: 'TabBar',

@@ -5,7 +5,7 @@
 ## 按需引入
 
 ```javascript
-import { ActivityIndicator } from "gree-ui";
+import { ActivityIndicator } from 'gree-ui';
 
 Vue.component(ActivityIndicator.name, ActivityIndicator);
 ```
@@ -15,7 +15,7 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-1">
+<gree-block class="gree-example-child-activity-indicator-0">
   <gree-activity-indicator :size="20" :text-size="16"
     >水平加载中...</gree-activity-indicator
   >
@@ -35,7 +35,7 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-2">
+<gree-block class="gree-example-child-activity-indicator-1">
   <gree-activity-indicator type="spinner" :size="30" :text-size="20"
     >加载中...</gree-activity-indicator
   >
@@ -59,7 +59,7 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-3">
+<gree-block class="gree-example-child-activity-indicator-2">
   <gree-activity-indicator type="carousel" :size="15"></gree-activity-indicator>
   <gree-block>
     <gree-button type="positive" @click="doClick">
@@ -100,11 +100,38 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 
 :::
 
+### Bars
+
+:::demo
+
+```html
+<gree-block class="gree-example-child-activity-indicator-3">
+  <gree-activity-indicator type="bars" :size="30"></gree-activity-indicator>
+</gree-block>
+```
+
+:::
+
+### Hourglass
+
+:::demo
+
+```html
+<gree-block class="gree-example-child-activity-indicator-3">
+  <gree-activity-indicator
+    type="hour-glass"
+    :size="30"
+  ></gree-activity-indicator>
+</gree-block>
+```
+
+:::
+
 ## Props
 
 | 属性       | 说明                 | 类型    | 默认值         | 备注                                               |
 | ---------- | -------------------- | ------- | -------------- | -------------------------------------------------- |
-| type       | 类型                 | String  | `roller`       | `roller`,`spinner`,`carousel`                      |
+| type       | 类型                 | String  | `roller`       | `roller`,`spinner`,`carousel`,`bars`,`hour-glass`  |
 | size       | 图标大小             | Number  | `70`           | 单位`px`                                           |
 | width      | 图标宽度             | Number  | \-             | 单位`px`, 仅用于类型`roller`                       |
 | color      | 图标颜色             | String  | `#fc9153/dark` | `spinner`无法自定义色值，可选值只有`dark`和`light` |
@@ -134,7 +161,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.gree-example-child-activity-indicator-1 {
+.gree-example-child-activity-indicator-0 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +178,7 @@ export default {
     }
   }
 }
-.gree-example-child-activity-indicator-2 {
+.gree-example-child-activity-indicator-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +202,7 @@ export default {
     }
   }
 }
-.gree-example-child-activity-indicator-3 {
+.gree-example-child-activity-indicator-2 {
   display: flex;
   flex-direction: column;
   align-items: center;

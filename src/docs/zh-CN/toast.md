@@ -27,6 +27,11 @@ Vue.component(Toast.name, Toast); // 组件引入
   ></gree-list-item>
   <gree-list-item
     link
+    title="长文字"
+    @click.native="showLongTextToast()"
+  ></gree-list-item>
+  <gree-list-item
+    link
     title="成功"
     @click.native="showTextToastSuccess()"
   ></gree-list-item>
@@ -59,6 +64,9 @@ Vue.component(Toast.name, Toast); // 组件引入
     methods: {
       showTextToast() {
         Toast.info('白日依山尽，黄河入海流');
+      },
+      showLongTextToast() {
+        Toast.info('这是一条长文字提示，超过一定字数则溢出文本显示省略号');
       },
       showTextToastSuccess() {
         Toast.succeed('发送成功');
@@ -157,6 +165,9 @@ export default {
   methods: {
     showTextToast() {
       this.$toast.info('白日依山尽，黄河入海流');
+    },
+    showLongTextToast() {
+      this.$toast.info('这是一条长文字提示，超过一定字数则溢出文本显示省略号');
     },
     showTextToastSuccess() {
       this.$toast.succeed('发送成功');

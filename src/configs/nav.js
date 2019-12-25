@@ -47,10 +47,6 @@ export default {
       icon: '',
       children: [
         {
-          name: 'Accordion',
-          path: '/accordion'
-        },
-        {
           name: 'ActionBar',
           path: '/action-bar'
         },
@@ -63,12 +59,20 @@ export default {
           path: '/button'
         },
         {
+          name: 'Collapse',
+          path: '/collapse'
+        },
+        {
           name: 'CollapseTransition',
           path: '/collapse-transition'
         },
         {
           name: 'Dropdown',
           path: '/dropdown'
+        },
+        {
+          name: 'DropdownMenu',
+          path: '/dropdown-menu'
         },
         {
           name: 'Header',
@@ -111,6 +115,10 @@ export default {
           path: '/tab-bar'
         },
         {
+          name: 'Tabs',
+          path: '/tabs'
+        },
+        {
           name: 'Tag',
           path: '/tag'
         }
@@ -120,6 +128,10 @@ export default {
       name: '布局组件',
       icon: '',
       children: [
+        {
+          name: 'Block',
+          path: '/block'
+        },
         {
           name: 'Card',
           path: '/card'
@@ -137,6 +149,10 @@ export default {
           path: '/list-view'
         },
         {
+          name: 'Sidebar',
+          path: '/sidebar'
+        },
+        {
           name: 'ToolBar',
           path: '/tool-bar'
         }
@@ -149,6 +165,10 @@ export default {
         {
           name: 'ActionSheet',
           path: '/action-sheet'
+        },
+        {
+          name: 'Backtop',
+          path: '/backtop'
         },
         {
           name: 'Calendar',
@@ -171,8 +191,16 @@ export default {
           path: '/popup'
         },
         {
+          name: 'PopupActivity',
+          path: '/popup-activity'
+        },
+        {
           name: 'Selector',
           path: '/selector'
+        },
+        {
+          name: 'TabPicker',
+          path: '/tab-picker'
         },
         {
           name: 'Toast',

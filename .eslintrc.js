@@ -11,6 +11,6 @@ module.exports = {
     semi: [2, 'always']
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    // parser: 'babel-eslint'
   }
 };

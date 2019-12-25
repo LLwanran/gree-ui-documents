@@ -480,9 +480,15 @@ export default {
         height: 42px;
         justify-content: center;
 
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
         &.is-checked {
           border-color: #f2da7c;
           background-color: #f2da7c;
+        }
+        .gree-radio-label {
+          margin-left: 0;
         }
       }
     }

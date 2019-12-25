@@ -81,7 +81,7 @@ this.$dialog.alert({ content: '' }); // 全量引入
 <gree-dialog title="窗外" v-model="slotDialog.open" :btns="slotDialog.btns">
   <div class="dialog-banner" slot="header">
     <img
-      src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2016/08/22/20160822-111603_U7195_M188332_419e.jpg"
+      src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=92afee66fd36afc3110c39658318eb85/908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg"
       alt
     />
   </div>

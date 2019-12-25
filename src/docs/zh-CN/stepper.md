@@ -41,7 +41,23 @@ Vue.component(Stepper.name, Stepper);
 
 :::
 
-### 禁用状态
+### 只读
+
+:::demo
+
+```html
+<gree-list>
+  <gree-list-item title="只读">
+    <section slot="after">
+      <gree-stepper slot="right" read-only></gree-stepper>
+    </section>
+  </gree-list-item>
+</gree-list>
+```
+
+:::
+
+### 禁用
 
 :::demo
 
@@ -57,15 +73,47 @@ Vue.component(Stepper.name, Stepper);
 
 :::
 
-### 高级用法
+### 步进
 
 :::demo
 
 ```html
 <gree-list>
-  <gree-list-item title="step为小数1.5">
+  <gree-list-item title="只读">
     <section slot="after">
-      <gree-stepper slot="right" :step="1.5"></gree-stepper>
+      <gree-stepper
+        slot="right"
+        v-model="value3"
+        :step="2"
+        :min="2"
+        is-integer
+      ></gree-stepper>
+    </section>
+  </gree-list-item>
+</gree-list>
+
+<script>
+  export default {
+    data() {
+      return {
+        value3: 3
+      };
+    }
+  };
+</script>
+```
+
+:::
+
+### step 为小数
+
+:::demo
+
+```html
+<gree-list>
+  <gree-list-item title="step为小数1.3">
+    <section slot="after">
+      <gree-stepper slot="right" :step="1.3"></gree-stepper>
     </section>
   </gree-list-item>
 </gree-list>
@@ -112,7 +160,8 @@ Vue.component(Stepper.name, Stepper);
 export default {
   data() {
     return {
-      value: 0
+      value: 0,
+      value3: 3
     };
   }
 };

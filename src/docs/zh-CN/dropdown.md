@@ -16,13 +16,29 @@ Vue.component(Dropdown.name, Dropdown);
 
 ```html
 <gree-block>
-  <gree-dropdown>
+  <gree-dropdown @active-change="activeChange">
     <gree-button type="positive" inline slot="trigger">点我啊！</gree-button>
     <gree-dropdown-item>NO.1 詹姆斯(热火)</gree-dropdown-item>
     <gree-dropdown-item>NO.2 杜兰特(雷霆)</gree-dropdown-item>
     <gree-dropdown-item>NO.3 科比(湖人)</gree-dropdown-item>
   </gree-dropdown>
+  <gree-overlay v-show="showOverlay" />
 </gree-block>
+
+<script>
+  export default {
+    data() {
+      return {
+        showOverlay: false
+      };
+    },
+    methods: {
+      activeChange() {
+        this.showOverlay = !this.showOverlay;
+      }
+    }
+  };
+</script>
 ```
 
 :::
@@ -144,8 +160,14 @@ export default {
   data() {
     return {
       navigation: 'home',
-      selectedOptions: []
+      selectedOptions: [],
+      showOverlay: false
     };
+  },
+  methods: {
+    activeChange() {
+      this.showOverlay = !this.showOverlay;
+    }
   }
 };
 </script>

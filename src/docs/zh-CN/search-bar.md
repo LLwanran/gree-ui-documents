@@ -16,118 +16,118 @@ Vue.component(SearchBar.name, SearchBar);
 
 ```html
 <gree-block>
-  <gree-searchbar></gree-searchbar>
+  <gree-search-bar
+    placeholder="目的地/景点关键词"
+    v-model="value"
+  ></gree-search-bar>
 </gree-block>
 ```
 
 :::
 
-## 自定义右侧搜索按钮
+## 事件监听
 
 :::demo
 
 ```html
 <gree-block>
-  <gree-searchbar
-    place-text="请输入自定义文案"
-    :has-search-button="false"
-  ></gree-searchbar>
+  <form action="/">
+    <gree-search-bar
+      v-model="value"
+      placeholder="目的地/景点关键词"
+      show-action
+      @search="onSearch"
+      @cancel="onCancel"
+    ></gree-search-bar>
+  </form>
 </gree-block>
 ```
 
 :::
 
-## 更多配置
+## 自定义按钮
 
 :::demo
 
 ```html
 <gree-block>
-  <gree-searchbar
-    place-text="请选择食物类别"
-    :has-icon="true"
-    :has-text-button="true"
-    custom-class="my-search-class"
-  ></gree-searchbar>
+  <gree-search-bar
+    v-model="value"
+    placeholder="目的地/景点关键词"
+    show-action
+    shape="round"
+    label="热搜"
+    @search="onSearch"
+    @input="onInput"
+    @focus="onFocus"
+    @blur="onBlur"
+  >
+    <div slot="action" style="color: #ff5257;" @click="onClick">出发</div>
+  </gree-search-bar>
 </gree-block>
-```
-
-:::
-
-## 事件
-
-:::demo
-
-```html
-<gree-block>
-  <gree-searchbar
-    place-text="请输入自定义文案"
-    @focus="focusFun"
-    @input="inputFun"
-    @blur="blurFun"
-    @submit="submitFun"
-  ></gree-searchbar>
-</gree-block>
-
-<script>
-  export default {
-    methods: {
-      focusFun() {
-        console.log('获取焦点');
-      },
-      inputFun(value) {
-        console.log(value);
-      },
-      blurFun(value) {
-        console.log(value);
-        console.log('失去焦点');
-      },
-      submitFun(value) {
-        console.log(value);
-      }
-    }
-  };
-</script>
 ```
 
 :::
 
 ## Props
 
-| 属性              | 说明                         | 类型    | 默认值          | 备注 |
-| ----------------- | ---------------------------- | ------- | --------------- | ---- |
-| has-icon          | 是否显示输入框前面的 icon    | Boolean | `false`         | \-   |
-| place-text        | 输入框 placeholder 内容      | String  | `请输入内容...` | \-   |
-| has-search-button | 是否显示右侧搜索按钮         | Boolean | `true`          | \-   |
-| has-text-button   | 右侧搜索按钮是否为文字按钮   | Boolean | `false`         | \-   |
-| text-info         | 右侧文字搜索按钮文案         | String  | `搜索`          | \-   |
-| animation         | 是否需要默认的搜索框显示动画 | Boolean | `false`         | \-   |
-| custom-class      | 自定义 class                 | String  | \-              | \-   |
+| 属性        | 说明                                             | 类型    | 默认值   |
+| ----------- | ------------------------------------------------ | ------- | -------- |
+| value       | 绑定值                                           | String  | \-       |
+| label       | 搜索框左侧文本                                   | String  | \-       |
+| right-icon  | 输入框右侧图标名称或图片链接，可选值见 Icon 组件 | String  | \-       |
+| action-text | 取消按钮文字                                     | String  | `取消`   |
+| show-action | 是否在搜索框右侧显示取消按钮                     | Boolean | `false`  |
+| shape       | 搜索框形状，可选值为 round                       | String  | `square` |
+| clearable   | 是否启用清除控件                                 | Boolean | `true`   |
+| background  | 搜索框背景色                                     | String  | `#fff`   |
+| left-icon   | 输入框左侧图标名称或图片链接，可选值见 Icon 组件 | String  | `search` |
+| placeholder | 占位提示文字                                     | String  | \-       |
 
-## Events
+### Events
 
 | 参数    | 说明                     |
 | ------- | ------------------------ |
-| @focus  | 输入框获取焦点时触发事件 |
-| @input  | 输入框输入内容时触发事件 |
+| @search | 确定搜索时触发事件       |
+| @input  | 输入框内容变化时触发事件 |
+| @focus  | 输入框获得焦点时触发事件 |
 | @blur   | 输入框失去焦点时触发事件 |
-| @submit | 默认提交事件             |
+| @cancel | 点击取消按钮时触发事件   |
+
+### Slots
+
+| 名称       | 说明                                              |
+| ---------- | ------------------------------------------------- |
+| label      | 自定义搜索框左侧文本                              |
+| action     | 自定义搜索框右侧按钮，设置`show-action`属性后展示 |
+| left-icon  | 自定义输入框左侧图标                              |
+| right-icon | 自定义输入框右侧图标                              |
 
 <script>
   export default {
+    data() {
+      return {
+        value: ''
+      };
+    },
     methods: {
-      focusFun() {
-        console.log('获取焦点');
+      onSearch() {
+        this.$toast.info(this.value);
       },
-      inputFun(value) {
-        console.log(value);
+      onCancel() {
+        this.$toast.info('取消');
       },
-      blurFun(value) {
-        console.log(value);
-        console.log('失去焦点');
+      onInput() {
+        console.log(this.value);
       },
-      submitFun(value) {
-        console.log(value);
+      onFocus() {
+        console.log('onFocus');
+      },
+      onBlur() {
+        console.log('onBlur');
+      },
+      onClick() {
+        this.$toast.info(this.value);
       }
     }
   };

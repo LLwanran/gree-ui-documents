@@ -129,6 +129,65 @@ Vue.component(Progress.name, Progress);
 
 :::
 
+### 仪表盘形进度条
+
+:::demo
+
+```html
+<gree-block class="gree-example-child-progress-2">
+  <gree-progress
+    type="dashboard"
+    :width="200"
+    :stroke-width="5"
+    :value="value"
+    :color="colors"
+  ></gree-progress>
+  <gree-row>
+    <gree-col width="50">
+      <gree-button type="positive" size="small" inline @click="decrease"
+        >-</gree-button
+      >
+      <gree-button type="assertive" size="small" inline @click="increase"
+        >+</gree-button
+      >
+    </gree-col>
+  </gree-row>
+</gree-block>
+
+<script>
+  export default {
+    data() {
+      return {
+        value: 0.1,
+        colors: [
+          { color: '#f56c6c', percentage: 0.2 },
+          { color: '#e6a23c', percentage: 0.4 },
+          { color: '#5cb87a', percentage: 0.6 },
+          { color: '#1989fa', percentage: 0.8 },
+          { color: '#6f7ad3', percentage: 1 }
+        ]
+      };
+    },
+    methods: {
+      increase() {
+        this.value += 0.1;
+        if (this.value > 1) {
+          this.value = 1;
+        }
+      },
+      decrease() {
+        this.value -= 0.1;
+        if (this.value < 0) {
+          this.value = 0;
+        }
+      }
+    }
+  };
+</script>
+```
+
+:::
+
 ## Props
 
 | 属性         | 说明                 | 类型    | 默认值              | 备注 |
@@ -144,36 +203,44 @@ Vue.component(Progress.name, Progress);
 | transition   | 进度变化是否使用动效 | Boolean | `false`             | \-   |
 | duration     | 进度变化动效时长     | Number  | `1000`              | \-   |
 
-<style lang="less">
-.gree-example-child-progress {
-    display: flex;
-    justify-content: center;
-
-    .gree-progress {
-      position: relative;
-      margin: 0 10px;
-
-      .rolling-container {
-        position: relative;
+<script>
+export default {
+  data() {
+    return {
+      value: 0.1,
+      colors: [
+        { color: '#f56c6c', percentage: 0.2 },
+        { color: '#e6a23c', percentage: 0.4 },
+        { color: '#5cb87a', percentage: 0.6 },
+        { color: '#1989fa', percentage: 0.8 },
+        { color: '#6f7ad3', percentage: 1 }
+      ]
+    };
+  },
+  methods: {
+    increase() {
+      this.value += 0.1;
+      if (this.value > 1) {
+        this.value = 1;
       }
-      .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0 !important;
-        transform: none !important;
-
-        .progress-value {
-          font-size: 14px;
-        }
+    },
+    decrease() {
+      this.value -= 0.1;
+      if (this.value < 0) {
+        this.value = 0;
       }
     }
   }
-  .gree-example-child-progress {
+};
+</script>
+
+<style lang="less">
+.gree-example-child-progress {
   display: flex;
   justify-content: center;
 
   .gree-progress {
+    position: relative;
     margin: 0 10px;
 
     .rolling-container {
@@ -190,6 +257,20 @@ Vue.component(Progress.name, Progress);
         font-size: 14px;
       }
     }
+  }
+}
+.gree-example-child-progress-2 {
+  flex-direction: column;
+
+  .row {
+    justify-content: center;
+    .gree-button {
+      margin: 0 !important;
+    }
+  }
+  .gree-progress-dashboard {
+    display: block;
+    margin: 0 auto;
   }
 }
 </style>

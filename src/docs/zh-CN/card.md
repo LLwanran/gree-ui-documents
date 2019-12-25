@@ -49,11 +49,7 @@ Vue.component(CardFooter.name, CardFooter);
 
 ```html
 <gree-card class="demo-card-header-pic">
-  <gree-card-header
-    valign="bottom"
-    style="background-image:url(https://img.alicdn.com/imgextra/i3/3079263591/O1CN018rgUB01cOins3cNlc_!!3079263591.jpg_1080x1800Q50s50.jpg_.webp)"
-    >电饭煲系列</gree-card-header
-  >
+  <gree-card-header valign="bottom">电饭煲系列</gree-card-header>
   <gree-card-content>
     <p class="title">
       Gree/格力 GDF-5025C格力电饭煲家用大容量5L官方旗舰店电饭锅
@@ -71,7 +67,7 @@ Vue.component(CardFooter.name, CardFooter);
 
 :::
 
-## **card** Props
+## Card Props
 
 | 属性      | 说明       | 类型           | 默认值 |
 | --------- | ---------- | -------------- | ------ |
@@ -83,7 +79,7 @@ Vue.component(CardFooter.name, CardFooter);
 | no-border | 无边线     | Boolean        | \-     |
 | padding   | 间距       | Boolean        | `true` |
 
-## **card content** Props
+## CardContent Props
 
 | 属性    | 说明 | 类型    | 默认值 |
 | ------- | ---- | ------- | ------ |
@@ -97,6 +93,7 @@ Vue.component(CardFooter.name, CardFooter);
       height: 40vw;
       background-size: cover;
       background-position: center;
+      background-color: #ffcc63;
       color: #404657;
     }
     .card-content-padding {

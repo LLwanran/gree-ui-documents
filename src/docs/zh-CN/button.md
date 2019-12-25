@@ -16,16 +16,12 @@ Vue.component(Button.name, Button);
 
 ```html
 <gree-block>
-  <gree-row>
-    <gree-button>默认</gree-button>
-  </gree-row>
-  <gree-row>
-    <gree-button type="positive">蓝色</gree-button>
-    <gree-button type="positive" loading>加载中</gree-button>
-    <gree-button type="assertive">红色</gree-button>
-    <gree-button type="assertive" inactive>未激活</gree-button>
-    <gree-button type="disabled">禁用</gree-button>
-  </gree-row>
+  <gree-button>默认</gree-button>
+  <gree-button type="positive">蓝色</gree-button>
+  <gree-button type="positive" loading>加载中</gree-button>
+  <gree-button type="assertive">红色</gree-button>
+  <gree-button type="assertive" inactive>未激活</gree-button>
+  <gree-button type="disabled">禁用</gree-button>
 </gree-block>
 ```
 
@@ -37,9 +33,9 @@ Vue.component(Button.name, Button);
 
 ```html
 <gree-block>
-  <gree-row>
-    <gree-button plain>默认</gree-button>
-  </gree-row>
+  <gree-button plain>默认</gree-button>
+  <gree-button type="positive" plain round loading>蓝色</gree-button>
+  <gree-button type="assertive" plain round loading>红色</gree-button>
 </gree-block>
 ```
 
@@ -51,11 +47,17 @@ Vue.component(Button.name, Button);
 
 ```html
 <gree-block>
-  <gree-row class="gree-example-child-button-3">
-    <gree-button type="positive" icon="warning" inline>带图标</gree-button>
-    <gree-button type="positive" inline plain>线性按钮</gree-button>
-    <gree-button type="assertive" inline>红色</gree-button>
-    <gree-button type="disabled" inline>禁用</gree-button>
+  <gree-row>
+    <gree-col>
+      <gree-button type="positive" icon="warning" inline>带图标</gree-button>
+      <gree-button type="positive" inline plain>线性</gree-button>
+    </gree-col>
+  </gree-row>
+  <gree-row>
+    <gree-col>
+      <gree-button type="assertive" inline>红色</gree-button>
+      <gree-button type="disabled" inline>禁用</gree-button>
+    </gree-col>
   </gree-row>
 </gree-block>
 ```
@@ -68,9 +70,10 @@ Vue.component(Button.name, Button);
 
 ```html
 <gree-block>
-  <gree-row>
-    <gree-button round>默认</gree-button>
-  </gree-row>
+  <gree-button type="default" round>默认</gree-button>
+  <gree-button type="positive" round>蓝色</gree-button>
+  <gree-button type="assertive" round>红色</gree-button>
+  <gree-button type="disabled" round>禁用</gree-button>
 </gree-block>
 ```
 
@@ -83,10 +86,12 @@ Vue.component(Button.name, Button);
 ```html
 <gree-block>
   <gree-row>
-    <gree-button size="small" inline>默认</gree-button>
-    <gree-button type="positive" size="small" inline>蓝色</gree-button>
-    <gree-button type="assertive" size="small" inline>红色</gree-button>
-    <gree-button type="disabled" size="small" inline>禁用</gree-button>
+    <gree-col>
+      <gree-button size="small" inline>默认</gree-button>
+      <gree-button type="positive" size="small" inline>蓝色</gree-button>
+      <gree-button type="assertive" size="small" inline>红色</gree-button>
+      <gree-button type="disabled" size="small" inline>禁用</gree-button>
+    </gree-col>
   </gree-row>
 </gree-block>
 ```
@@ -99,7 +104,7 @@ Vue.component(Button.name, Button);
 
 ```html
 <gree-block>
-  <gree-row class="gree-example-child-button-5">
+  <gree-row>
     <gree-button type="link" icon="location">收货地址</gree-button>
     <gree-button type="link" inactive>
       反馈
@@ -130,15 +135,3 @@ Vue.component(Button.name, Button);
 ### @click(event)
 
 按钮点击事件
-
-<style lang="less" scoped>
-.gree-button.block {
-  margin-bottom: 20px;
-}
-.gree-example-child-button-3 {
-  justify-content: space-around;
-}
-.gree-example-child-button-5 {
-  justify-content: flex-start;
-}
-</style>

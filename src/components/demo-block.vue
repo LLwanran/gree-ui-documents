@@ -79,7 +79,7 @@ export default {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 10;
+  z-index: 1;
   .mu-button {
     color: rgba(0, 0, 0, 0.54);
   }
@@ -98,5 +98,8 @@ export default {
   .demo-block-tools {
     display: block;
   }
+}
+.view {
+  width: 100%;
 }
 </style>

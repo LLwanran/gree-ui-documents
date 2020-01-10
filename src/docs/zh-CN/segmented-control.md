@@ -112,8 +112,8 @@ Vue.component(SegmentedControl.name, SegmentedControl);
 <gree-block>
   <gree-segmented-control
     :values="values2"
-    @onChange="onChange"
-    @onValueChange="onValueChange"
+    @on-change="onChange"
+    @on-value-change="onValueChange"
   ></gree-segmented-control>
 </gree-block>
 

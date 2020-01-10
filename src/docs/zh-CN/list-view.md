@@ -11,7 +11,7 @@ Vue.component(List.name, List);
 Vue.component(Item.name, Item);
 ```
 
-### 基本
+### 基础
 
 :::demo
 
@@ -115,14 +115,19 @@ Vue.component(Item.name, Item);
 
 :::
 
-## **List** Props
+## API
 
-| 属性       | 说明         | 类型    | 默认值 |
-| ---------- | ------------ | ------- | ------ |
-| inset      | 嵌入         | Boolean | \-     |
-| media-list | 媒体列表风格 | Boolean | \-     |
+### List Props
 
-## **List Item** Props
+| 属性                 | 说明                     | 类型    | 默认值  |
+| -------------------- | ------------------------ | ------- | ------- |
+| inset                | 嵌入                     | Boolean | `false` |
+| media-list           | 媒体列表风格             | Boolean | `false` |
+| no-hairlines         | 删除外边线               | Boolean | `false` |
+| no-hairlines-between | 删除 item 之间的内部边线 | Boolean | `false` |
+| contacts-list        | 是否启用联系人列表       | Boolean | `false` |
+
+### List Item Props
 
 | 属性       | 说明                     | 类型              | 默认值 |
 | ---------- | ------------------------ | ----------------- | ------ |

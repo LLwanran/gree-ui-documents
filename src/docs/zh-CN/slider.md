@@ -10,7 +10,7 @@ import { Slider } from 'gree-ui';
 Vue.component(Slider.name, Slider);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

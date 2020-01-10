@@ -10,7 +10,7 @@ import { Stepper } from 'gree-ui';
 Vue.component(Stepper.name, Stepper);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

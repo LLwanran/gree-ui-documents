@@ -10,12 +10,17 @@ import { ActionBar } from 'gree-ui';
 Vue.component(ActionBar.name, ActionBar);
 ```
 
-### 基本
+### 基础
 
 :::demo
 
 ```html
-<gree-action-bar :actions="data1"></gree-action-bar>
+<div
+  class="gree-example-child gree-example-child-action-bar gree-example-child-action-bar-0"
+>
+  <gree-action-bar :actions="data1"></gree-action-bar>
+</div>
+
 <script>
   export default {
     data() {
@@ -44,7 +49,12 @@ Vue.component(ActionBar.name, ActionBar);
 :::demo
 
 ```html
-<gree-action-bar :actions="data2"></gree-action-bar>
+<div
+  class="gree-example-child gree-example-child-action-bar gree-example-child-action-bar-1"
+>
+  <gree-action-bar :actions="data2"></gree-action-bar>
+</div>
+
 <script>
   export default {
     data() {
@@ -80,7 +90,12 @@ Vue.component(ActionBar.name, ActionBar);
 :::demo
 
 ```html
-<gree-action-bar :actions="data3"></gree-action-bar>
+<div
+  class="gree-example-child gree-example-child-action-bar gree-example-child-action-bar-2"
+>
+  <gree-action-bar :actions="data3"></gree-action-bar>
+</div>
+
 <script>
   export default {
     data() {
@@ -113,14 +128,19 @@ Vue.component(ActionBar.name, ActionBar);
 :::demo
 
 ```html
-<gree-action-bar :actions="data4" @click="onBtnClick4">
-  <span class="price">
-    <span class="voice">
-      &yen;语音助手
-      <small>发送</small>
+<div
+  class="gree-example-child gree-example-child-action-bar gree-example-child-action-bar-3"
+>
+  <gree-action-bar :actions="data4" @click="onBtnClick4">
+    <span class="price">
+      <span class="voice">
+        &yen;语音助手
+        <small>发送</small>
+      </span>
     </span>
-  </span>
-</gree-action-bar>
+  </gree-action-bar>
+</div>
+
 <script>
   export default {
     data() {
@@ -152,21 +172,23 @@ Vue.component(ActionBar.name, ActionBar);
 
 :::
 
-## Props
+## API
+
+### Props
 
 | 属性    | 说明   | 类型  | 默认值 | 备注 |
 | ------- | ------ | ----- | ------ | ---- |
 | actions | 按钮组 | Array | \-     | \-   |
 
-## Slots
+### Slots
 
-### default
+#### default
 
 左侧文案内容
 
-## Events
+### Events
 
-### @click(event, action)
+#### @click(event, action)
 
 按钮点击事件
 
@@ -174,7 +196,7 @@ Vue.component(ActionBar.name, ActionBar);
 | ------ | ------------------------------------ | ---------------- |
 | action | actions 列表中与被点击按钮对应的对象 | 参考组件`Button` |
 
-### 提示
+#### 提示
 
 默认使用`position: fixed`固定在页面底部，为避免遮挡内容区底部预留不小于`100px`的空白（iPhone 还需额外增加`constant(safe-area-inset-bottom)`）
 

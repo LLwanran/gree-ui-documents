@@ -10,7 +10,7 @@ import { DragVerify } from 'gree-ui';
 Vue.component(DragVerify.name, DragVerify);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

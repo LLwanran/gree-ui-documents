@@ -1,27 +1,27 @@
-import Vue from 'vue';
+import FastClickDefault, { FastClick } from 'fastclick';
+import GreeUI, { Lazyload } from 'gree-ui';
+import 'gree-ui/lib/gree-ui.css';
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+import MuseUI from 'muse-ui';
+import 'muse-ui/dist/muse-ui.css';
 import 'typeface-roboto';
-
+import Vue from 'vue';
+import App from './App';
+import './assets/atom-one-light.css';
 import './assets/font-icons/material/material-icons.css';
 import './assets/font-icons/style.css';
 import './assets/github-markdown.css';
-import './assets/atom-one-light.css';
-import 'gree-ui/lib/gree-ui.css';
-import 'muse-ui/dist/muse-ui.css';
-import 'iview/dist/styles/iview.css';
-
-import GreeUI from 'gree-ui';
-import MuseUI from 'muse-ui';
-import iView from 'iview';
-
-import FastClickDefault, { FastClick } from 'fastclick';
-import App from './App';
+import './assets/js/flexible';
 import DemoBlock from './components/demo-block';
-import router from './router';
 import { changeLocale } from './locale';
 import './registerServiceWorker';
-import './assets/js/flexible';
+import router from './router';
 
 Vue.use(GreeUI);
+Vue.use(Lazyload, {
+  lazyComponent: true
+});
 Vue.use(MuseUI);
 Vue.use(iView);
 Vue.component(DemoBlock.name, DemoBlock);

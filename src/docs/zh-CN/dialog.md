@@ -12,7 +12,7 @@ Dialog.alert({ content: '' });
 this.$dialog.alert({ content: '' }); // 全量引入
 ```
 
-### 基本
+### 基础
 
 :::demo
 

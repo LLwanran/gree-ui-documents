@@ -10,7 +10,7 @@ import { Calendar } from 'gree-ui';
 Vue.component(Calendar.name, Calendar);
 ```
 
-### 基本
+### 基础
 
 :::demo
 
@@ -18,138 +18,95 @@ Vue.component(Calendar.name, Calendar);
 <gree-notice-bar type="activity" mode="closable" icon="warning" scrollable>
   为了更好的体验效果，建议在 iOS 或 Android 设备上体验！
 </gree-notice-bar>
-<gree-list>
-  <gree-list-item
-    link
-    title="日期选择（无默认日期）"
-    @click.native="switchPicker('isVisible1')"
-  >
-    <div slot="after">
-      <p>{{ date1 ? `${date1} ${dateWeek}` : '请选择日期' }}</p>
-    </div>
-  </gree-list-item>
-  <gree-list-item
-    link
-    title="日期选择（有默认日期，选择后自动回填）"
-    @click.native="switchPicker('isVisible2')"
-  >
-    <div slot="after">
-      <p>{{ date2 ? date2 : '请选择日期' }}</p>
-    </div>
-  </gree-list-item>
-  <gree-list-item
-    link
-    title="日期区间选择（有默认日期）"
-    @click.native="switchPicker('isVisible3')"
-  >
-    <div slot="after">
-      <p>{{ date3 ? `${date3[0]}至${date3[1]}` : '请选择日期' }}</p>
-    </div>
-  </gree-list-item>
-  <gree-list-item
-    link
-    title="日期区间选择（不限制开始结束时间）"
-    @click.native="switchPicker('isVisible4')"
-  >
-    <div slot="after">
-      <p>{{ date4 ? `${date4[0]}至${date4[1]}` : '请选择日期' }}</p>
-    </div>
-  </gree-list-item>
-</gree-list>
-<gree-calendar
-  :is-visible="isVisible1"
-  :default-value="date1"
-  @close="switchPicker('isVisible1')"
-  @choose="setChooseValue1"
-  :start-date="`2019-03-25`"
-  :end-date="`2019-10-25`"
-></gree-calendar>
-<gree-calendar
-  :is-visible="isVisible2"
-  :default-value="date2"
-  :is-auto-back-fill="true"
-  @close="switchPicker('isVisible2')"
-  @choose="setChooseValue2"
-></gree-calendar>
-<gree-calendar
-  :is-visible="isVisible3"
-  :default-value="date3"
-  type="range"
-  :start-date="null"
-  :end-date="null"
-  @close="switchPicker('isVisible3')"
-  @choose="setChooseValue3"
-></gree-calendar>
-<gree-calendar
-  :is-visible="isVisible4"
-  :default-value="date4"
-  type="range"
-  :start-date="null"
-  :end-date="null"
-  @close="switchPicker('isVisible4')"
-  @choose="setChooseValue4"
-></gree-calendar>
+<div
+  class="gree-example-child gree-example-child-calendar gree-example-child-calendar-0"
+>
+  <gree-list>
+    <gree-list-item
+      link
+      title="选择单个日期"
+      :text="formatFullDate(date.selectSingle)"
+      @click.native="show('single', 'selectSingle')"
+    ></gree-list-item>
+    <gree-list-item
+      link
+      title="选择日期区间"
+      :text="formatRange(date.selectRange)"
+      @click.native="show('range', 'selectRange')"
+    ></gree-list-item>
+  </gree-list>
+  <gree-calendar
+    v-model="showCalendar"
+    :type="type"
+    :color="color"
+    :round="round"
+    :min-date="minDate"
+    :max-date="maxDate"
+    :position="position"
+    :formatter="formatter"
+    :show-confirm="showConfirm"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+  />
+</div>
 
 <script>
-  Date.prototype.format = function(fmt) {
-    var o = {
-      'M+': this.getMonth() + 1, // 月份
-      'd+': this.getDate(), // 日
-      'h+': this.getHours(), // 小时
-      'm+': this.getMinutes(), // 分
-      's+': this.getSeconds(), // 秒
-      'q+': Math.floor((this.getMonth() + 3) / 3), // 季度
-      S: this.getMilliseconds() // 毫秒
-    };
-    if (/(y+)/.test(fmt)) {
-      fmt = fmt.replace(
-        RegExp.$1,
-        (this.getFullYear() + '').substr(4 - RegExp.$1.length)
-      );
-    }
-    for (var k in o) {
-      if (new RegExp('(' + k + ')').test(fmt)) {
-        fmt = fmt.replace(
-          RegExp.$1,
-          RegExp.$1.length == 1
-            ? o[k]
-            : ('00' + o[k]).substr(('' + o[k]).length)
-        );
-      }
-    }
-    return fmt;
-  };
-
   export default {
     data() {
       return {
-        isVisible1: false,
-        isVisible2: false,
-        isVisible3: false,
-        isVisible4: false,
-        date1: null,
-        date2: new Date().format('yyyy-MM-dd'),
-        date3: ['2019-08-05', '2019-08-25'],
-        date4: null,
-        dateWeek: null
+        date: {
+          selectSingle: null,
+          selectRange: []
+        },
+        showCalendar: false,
+        type: 'single',
+        color: undefined,
+        round: true,
+        minDate: undefined,
+        maxDate: undefined,
+        position: undefined,
+        formatter: undefined,
+        showConfirm: false
       };
     },
     methods: {
-      switchPicker(param) {
-        this[`${param}`] = !this[`${param}`];
+      resetSettings() {
+        this.round = true;
+        this.color = undefined;
+        this.minDate = undefined;
+        this.maxDate = undefined;
+        this.position = undefined;
+        this.formatter = undefined;
+        this.showConfirm = true;
       },
-      setChooseValue1(param) {
-        this.date1 = param[3];
-        this.dateWeek = param[4];
+      show(type, id) {
+        this.resetSettings();
+        this.id = id;
+        this.type = type;
+        this.showCalendar = true;
       },
-      setChooseValue2(param) {
-        this.date2 = param[3];
+      formatDate(date) {
+        if (date) {
+          return `${date.getMonth() + 1}/${date.getDate()}`;
+        }
       },
-      setChooseValue3(param) {
-        this.date3 = [...[param[0][3], param[1][3]]];
+      formatFullDate(date) {
+        if (date) {
+          return `${date.getFullYear()}/${this.formatDate(date)}`;
+        }
       },
-      setChooseValue4(param) {
-        this.date4 = [...[param[0][3], param[1][3]]];
+      formatRange(dateRange) {
+        if (dateRange.length) {
+          const [start, end] = dateRange;
+          return `${this.formatDate(start)} - ${this.formatDate(end)}`;
+        }
+      },
+      onConfirm(date) {
+        this.showCalendar = false;
+        this.date[this.id] = date;
+      },
+      onCancel() {
+        this.showCalendar = false;
       }
     }
   };
@@ -158,86 +115,165 @@ Vue.component(Calendar.name, Calendar);
 
 :::
 
-## Props
+### 平铺展示
 
-| 属性                 | 说明                                                   | 类型    | 默认值          |
-| -------------------- | ------------------------------------------------------ | ------- | --------------- |
-| type                 | 类型，日期选择`one`，区间选择`range`                   | String  | `one`           |
-| is-visible           | 是否可见                                               | Boolean | `false`         |
-| animation            | 日历进入方向，右滑'greeSlideRight'， 上拉'greeSlideUp' | String  | `greeSlideUp`   |
-| is-auto-back-fill    | 是否自动回填                                           | Boolean | `false`         |
-| is-open-range-select | 是否开启区间选择                                       | Boolean | `false`         |
-| title                | 显示标题                                               | String  | `选择日期`      |
-| default-value        | 默认值，日期选择 String 格式，区间选择 Array 格式      | String  | \-              |
-| start-date           | 开始日期， 如果不限制开始日期传`null`                  | String  | `今天`          |
-| end-date             | 结束日期，如果不限制结束日期传`null`                   | String  | `距离今天365天` |
+:::demo
 
-## Events
-
-| 属性   | 说明                         | 回调参数                     |
-| ------ | ---------------------------- | ---------------------------- |
-| choose | 选择之后或是点击确认按钮触发 | 日期数组（包含年月日和星期） |
-| close  | 关闭时触发                   | \-                           |
+```html
+<div
+  class="gree-example-child gree-example-child-calendar gree-example-child-calendar-3"
+>
+  <gree-calendar
+    title="日历"
+    :poppable="false"
+    :show-confirm="false"
+    :min-date="tiledMinDate"
+    :max-date="tiledMaxDate"
+  />
+</div>
 
 <script>
-Date.prototype.format = function(fmt) {
-  var o = {
-    'M+': this.getMonth() + 1, // 月份
-    'd+': this.getDate(), // 日
-    'h+': this.getHours(), // 小时
-    'm+': this.getMinutes(), // 分
-    's+': this.getSeconds(), // 秒
-    'q+': Math.floor((this.getMonth() + 3) / 3), // 季度
-    S: this.getMilliseconds() // 毫秒
+  export default {
+    data() {
+      return {
+        tiledMinDate: new Date(2008, 7, 8),
+        tiledMaxDate: new Date(2008, 9, 8)
+      };
+    }
   };
-  if (/(y+)/.test(fmt)) {
-    fmt = fmt.replace(
-      RegExp.$1,
-      (this.getFullYear() + '').substr(4 - RegExp.$1.length)
-    );
-  }
-  for (var k in o) {
-    if (new RegExp('(' + k + ')').test(fmt)) {
-      fmt = fmt.replace(
-        RegExp.$1,
-        RegExp.$1.length == 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length)
-      );
-    }
-  }
-  return fmt;
-};
+</script>
+```
 
-export default {
-  data() {
-    return {
-      isVisible1: false,
-      isVisible2: false,
-      isVisible3: false,
-      isVisible4: false,
-      date1: null,
-      date2: new Date().format('yyyy-MM-dd'),
-      date3: ['2019-08-05', '2019-08-25'],
-      date4: null,
-      dateWeek: null
-    };
-  },
-  methods: {
-    switchPicker(param) {
-      this[`${param}`] = !this[`${param}`];
+:::
+
+### 更多示例请查看[在线 Demo](http://167.88.176.153:8086/#/calendar)
+
+## API
+
+### Props
+
+| 属性                   | 说明                                                        | 类型              | 默认值             |
+| ---------------------- | ----------------------------------------------------------- | ----------------- | ------------------ |
+| v-model                | 是否显示日历弹窗                                            | Boolean           | `false`            |
+| type                   | 选择类型，`single`表示选择单个日期，`range`表示选择日期区间 | String            | `single`           |
+| title                  | 日历标题                                                    | String            | `日期选择`         |
+| color                  | 颜色，对选中日期生效                                        | String            | `#ff0202`          |
+| min-date               | 最小日期                                                    | Date              | 当前日期           |
+| max-date               | 最大日期                                                    | Date              | 当前日期的六个月后 |
+| default-date           | 默认选中的日期                                              | [Date, Date\[\]]  | 今天               |
+| row-height             | 日期行高                                                    | Number            | `64`               |
+| formatter              | 日期格式化函数                                              | (day: Day) => Day | \-                 |
+| position               | 弹出位置，可选值为`top`、`right`、`left`                    | String            | `bottom`           |
+| poppable               | 是否以弹层的形式展示日历                                    | Boolean           | `true`             |
+| round                  | 是否显示圆角弹窗                                            | Boolean           | `true`             |
+| show-mark              | 是否显示月份背景水印                                        | Boolean           | `false`            |
+| show-confirm           | 是否展示确认按钮                                            | Boolean           | `true`             |
+| close-on-click-overlay | 是否在点击遮罩层后关闭                                      | Boolean           | `true`             |
+| safe-area-inset-bottom | 是否开启底部安全区适配                                      | Boolean           | `true`             |
+
+### Day 数据结构
+
+日历中的每个日期都对应一个 Day 对象，通过`formatter`属性可以自定义 Day 对象的内容
+
+| 键名       | 说明                                                               | 类型   |
+| ---------- | ------------------------------------------------------------------ | ------ |
+| date       | 日期对应的 Date 对象                                               | Date   |
+| type       | 日期类型，可选值为`selected`、`start`、`middle`、`end`、`disabled` | String |
+| text       | 中间显示的文字                                                     | String |
+| topInfo    | 上方的提示信息                                                     | String |
+| bottomInfo | 下方的提示信息                                                     | String |
+| className  | 额外类名                                                           | String |
+
+### Events
+
+| 事件名  | 说明                                                               | 回调参数    |
+| ------- | ------------------------------------------------------------------ | ----------- |
+| select  | 点击任意日期时触发                                                 | value: Date | Date[] |
+| confirm | 日期选择完成后触发，若`show-confirm`为`true`，则点击确认按钮后触发 | value: Date | Date[] |
+
+### Slots
+
+| 名称   | 说明               |
+| ------ | ------------------ |
+| title  | 自定义标题         |
+| footer | 自定义底部区域内容 |
+
+### 方法
+
+通过[ref](https://cn.vuejs.org/v2/api/#ref)可以获取到 Calendar 实例并调用实例方法
+
+| 方法名 | 说明                   | 参数 | 返回值 |
+| ------ | ---------------------- | ---- | ------ |
+| reset  | 重置选中的日期到默认值 | \-   | \-     |
+
+## 常见问题
+
+### 在 iOS 系统上初始化组件失败？
+
+如果你遇到了在 iOS 上无法渲染组件的问题，请确认在创建 Date 对象时没有使用`new Date('2020-01-01')`这样的写法，iOS 不支持以中划线分隔的日期格式，正确写法是`new Date('2020/01/01')`。
+
+对此问题的详细解释：[stackoverflow](https://stackoverflow.com/questions/13363673/javascript-date-is-invalid-on-ios)。
+
+<script>
+  export default {
+    data() {
+      return {
+        date: {
+          selectSingle: null,
+          selectRange: [],
+          tiledMinDate: new Date(2008, 7, 8),
+          tiledMaxDate: new Date(2008, 9, 8)
+        },
+        showCalendar: false,
+        type: 'single',
+        color: undefined,
+        round: true,
+        minDate: undefined,
+        maxDate: undefined,
+        position: undefined,
+        formatter: undefined,
+        showConfirm: false
+      };
     },
-    setChooseValue1(param) {
-      this.date1 = param[3];
-      this.dateWeek = param[4];
-    },
-    setChooseValue2(param) {
-      this.date2 = param[3];
-    },
-    setChooseValue3(param) {
-      this.date3 = [...[param[0][3], param[1][3]]];
-    },
-    setChooseValue4(param) {
-      this.date4 = [...[param[0][3], param[1][3]]];
+    methods: {
+      resetSettings() {
+        this.round = true;
+        this.color = undefined;
+        this.minDate = undefined;
+        this.maxDate = undefined;
+        this.position = undefined;
+        this.formatter = undefined;
+        this.showConfirm = true;
+      },
+      show(type, id) {
+        this.resetSettings();
+        this.id = id;
+        this.type = type;
+        this.showCalendar = true;
+      },
+      formatDate(date) {
+        if (date) {
+          return `${date.getMonth() + 1}/${date.getDate()}`;
+        }
+      },
+      formatFullDate(date) {
+        if (date) {
+          return `${date.getFullYear()}/${this.formatDate(date)}`;
+        }
+      },
+      formatRange(dateRange) {
+        if (dateRange.length) {
+          const [start, end] = dateRange;
+          return `${this.formatDate(start)} - ${this.formatDate(end)}`;
+        }
+      },
+      onConfirm(date) {
+        this.showCalendar = false;
+        this.date[this.id] = date;
+      },
+      onCancel() {
+        this.showCalendar = false;
+      }
     }
-  }
-};
+  };
 </script>

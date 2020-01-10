@@ -35,6 +35,7 @@ module.exports = {
         permalinkBefore: true
       }
     ],
+    // 运行代码的容器定义，用":::"匹配md文件中的需要运行的代码块
     [
       require('markdown-it-container'),
       'demo',
@@ -42,7 +43,6 @@ module.exports = {
         validate: function(params) {
           return params.trim().match(/^demo\s*(.*)$/);
         },
-
         render: function(tokens, idx) {
           var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
           if (tokens[idx].nesting === 1) {

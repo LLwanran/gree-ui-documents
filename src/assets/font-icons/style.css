@@ -15,6 +15,9 @@ th,
 td {
   vertical-align: middle !important;
 }
+.gree-example-child {
+  width: 100%;
+}
 .gree-header .gree-header-title {
   border-bottom: none;
 }
@@ -58,9 +61,9 @@ td {
   border-width: 1px !important;
   margin-right: 3px !important;
 }
-.gree-popup {
-  padding-left: 256px;
-}
 .gree-notice-bar {
   z-index: 1 !important;
+}
+.gree-sidebar-item--disabled {
+  color: #c5cad5 !important;
 }

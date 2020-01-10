@@ -11,7 +11,7 @@ Vue.component(Timeline.name, Timeline);
 Vue.component(TimelineItem.name, TimelineItem);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

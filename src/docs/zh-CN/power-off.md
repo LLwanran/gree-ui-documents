@@ -10,7 +10,7 @@ import { PowerOff } from 'gree-ui';
 Vue.component(PowerOff.name, PowerOff);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

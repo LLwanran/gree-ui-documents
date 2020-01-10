@@ -10,7 +10,7 @@ import { Switch } from 'gree-ui';
 Vue.component(Switch.name, Switch);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

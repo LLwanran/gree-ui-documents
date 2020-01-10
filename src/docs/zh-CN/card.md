@@ -13,7 +13,7 @@ Vue.component(CardContent.name, CardContent);
 Vue.component(CardFooter.name, CardFooter);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

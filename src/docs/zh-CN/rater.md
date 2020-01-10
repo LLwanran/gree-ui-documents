@@ -10,7 +10,7 @@ import { Rater } from 'gree-ui';
 Vue.component(Rater.name, Rater);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

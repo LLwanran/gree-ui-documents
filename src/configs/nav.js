@@ -80,7 +80,18 @@ export default {
         },
         {
           name: 'Icon',
-          path: '/icon'
+          path: '/icon',
+          badge: 'feature'
+        },
+        {
+          name: 'Image',
+          path: '/image',
+          badge: 'new'
+        },
+        {
+          name: 'Lazyload',
+          path: '/lazyload',
+          badge: 'new'
         },
         {
           name: 'NoticeBar',
@@ -111,8 +122,14 @@ export default {
           path: '/steps'
         },
         {
+          name: 'Swiper',
+          path: '/swiper',
+          badge: 'new'
+        },
+        {
           name: 'TabBar',
-          path: '/tab-bar'
+          path: '/tab-bar',
+          badge: 'feature'
         },
         {
           name: 'Tabs',
@@ -125,7 +142,7 @@ export default {
       ]
     },
     {
-      name: '布局组件',
+      name: '布局&&导航',
       icon: '',
       children: [
         {
@@ -146,11 +163,17 @@ export default {
         },
         {
           name: 'ListView',
-          path: '/list-view'
+          path: '/list-view',
+          badge: 'feature'
         },
         {
           name: 'Sidebar',
           path: '/sidebar'
+        },
+        {
+          name: 'TreeSelect',
+          path: '/tree-select',
+          badge: 'new'
         },
         {
           name: 'ToolBar',
@@ -172,7 +195,8 @@ export default {
         },
         {
           name: 'Calendar',
-          path: '/calendar'
+          path: '/calendar',
+          badge: 'fix'
         },
         {
           name: 'DatePicker',
@@ -184,7 +208,8 @@ export default {
         },
         {
           name: 'Picker',
-          path: '/picker'
+          path: '/picker',
+          badge: 'feature'
         },
         {
           name: 'Popup',
@@ -204,7 +229,8 @@ export default {
         },
         {
           name: 'Toast',
-          path: '/toast'
+          path: '/toast',
+          badge: 'feature'
         },
         {
           name: 'Transition',
@@ -230,7 +256,8 @@ export default {
         },
         {
           name: 'Countdown',
-          path: '/countdown'
+          path: '/countdown',
+          badge: 'fix'
         },
         {
           name: 'InputItem',

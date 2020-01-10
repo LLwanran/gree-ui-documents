@@ -12,7 +12,7 @@ Vue.component(ActionSheet.name, ActionSheet);
 this.$actionsheet.create({}); // 全量引入
 ```
 
-### 基本
+### 基础
 
 :::demo
 

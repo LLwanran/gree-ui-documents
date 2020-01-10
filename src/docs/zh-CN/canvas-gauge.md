@@ -10,7 +10,7 @@ import { CanvasGauge } from 'gree-ui';
 Vue.component(CanvasGauge.name, CanvasGauge);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

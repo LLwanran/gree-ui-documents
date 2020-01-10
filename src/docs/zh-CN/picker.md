@@ -15,57 +15,39 @@ Vue.component(Picker.name, Picker);
 :::demo
 
 ```html
-<gree-block>
-  <gree-row>
-    <gree-col width="33">
-      <gree-button
-        size="small"
-        type="positive"
-        inline
-        @click="$_refreshColumnValues"
-        >设置单列数据</gree-button
-      >
-    </gree-col>
-  </gree-row>
-</gree-block>
-<gree-picker
-  class="picker1"
-  ref="picker"
-  :data="pickerData"
-  :cols="1"
-  :line-height="90"
-  :default-index="pickerDefaultIndex"
-  :default-value="pickerDefaultValue"
-  is-view
-  @initialed="onPickerInitialed"
-  @change="onPickerConfirm"
-></gree-picker>
+<div
+  class="gree-example-child gree-example-child-picker gree-example-child-picker-0"
+>
+  <gree-picker
+    ref="picker1"
+    :data="pickerData1"
+    :cols="1"
+    :line-height="90"
+    is-view
+    :multi-line="false"
+    @initialed="onPickerInitialed1"
+    @change="onPickerConfirm1"
+  ></gree-picker>
+</div>
 
 <script>
-  let Data1 = [];
-  for (let i = 1; i < 24; i++) {
-    Data1[i - 1] = { text: `${i}`, value: i };
-  }
-  Data1 = [Data1];
-
   export default {
     data() {
+      let Data1 = [];
+      for (let i = 1; i < 24; i++) {
+        Data1[i - 1] = { text: `${i}`, value: i };
+      }
+      Data1 = [Data1];
       return {
-        pickerData: Data1,
-        pickerDefaultIndex: [2],
-        pickerDefaultValue: [3],
-        pickerValue: ''
+        pickerData1: Data1
       };
     },
     methods: {
-      onPickerInitialed() {
-        const columnValues = this.$refs.picker.getColumnValues();
-        let value = '';
-        columnValues.forEach(item => {
-          value += `${item.value}-`;
-        });
+      onPickerInitialed1() {
+        const value = this.$refs.picker1.getColumnValues();
+        console.log(`Picker Initialed: ${JSON.stringify(value)}`);
       },
-      onPickerConfirm(columnIndex, itemIndex, value) {
+      onPickerConfirm1(columnIndex, itemIndex, value) {
         if (value) {
           this.pickerValue = value.text;
         }
@@ -75,27 +57,25 @@ Vue.component(Picker.name, Picker);
 </script>
 
 <style lang="less" scoped>
-  .gree-picker {
-    &.picker1 {
-      .gree-picker-column {
-        padding: 0 27px;
-        .gree-picker-column-container {
-          .gree-picker-column-list {
-            .gree-picker-column-item {
-              &::after {
-                content: '小时后关机';
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 0;
-                color: #00aeff;
-                font-size: 16px;
-              }
-            }
-            .column-item {
+  .gree-example-child-picker-0 {
+    .gree-picker-column {
+      padding: 0 27px;
+      .gree-picker-column-container {
+        .gree-picker-column-list {
+          .gree-picker-column-item {
+            &::after {
+              content: '小时后关机';
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 0;
               color: #00aeff;
-              font-size: 50px;
+              font-size: 16px;
             }
+          }
+          .column-item {
+            color: #00aeff;
+            font-size: 50px;
           }
         }
       }
@@ -111,74 +91,23 @@ Vue.component(Picker.name, Picker);
 :::demo
 
 ```html
-<gree-block>
-  <gree-row>
-    <gree-col width="33">
-      <gree-button
-        size="small"
-        type="positive"
-        inline
-        @click="$_setColumnValues"
-        >设置某列数据</gree-button
-      >
-    </gree-col>
-  </gree-row>
-</gree-block>
-<gree-picker
-  class="picker2"
-  ref="picker2"
-  :data="pickerData2"
-  :cols="2"
-  :line-height="65"
-  :default-index="pickerDefaultIndex2"
-  is-view
-  is-cascade
-  @change="onPickerConfirm"
-></gree-picker>
+<div
+  class="gree-example-child gree-example-child-picker gree-example-child-picker-1"
+>
+  <gree-picker
+    ref="picker2"
+    :data="pickerData2"
+    :cols="2"
+    :line-height="65"
+    :default-index="pickerDefaultIndex2"
+    is-view
+    is-cascade
+    @change="onPickerConfirm2"
+  />
+</div>
 
 <script>
-  let Data2 = [
-    [
-      {
-        text: '01',
-        value: 1,
-        children: [
-          {
-            text: '30',
-            value: 30
-          },
-          {
-            text: '31',
-            value: 31
-          }
-        ]
-      },
-      {
-        text: '02',
-        value: 2,
-        children: [
-          {
-            text: '00',
-            value: 0
-          },
-          {
-            text: '01',
-            value: 1
-          }
-        ]
-      },
-      {
-        text: '03',
-        value: 3,
-        children: [
-          {
-            text: '00',
-            value: 0
-          }
-        ]
-      }
-    ]
-  ];
+  import Data2 from '../../configs/cascade';
 
   export default {
     data() {
@@ -188,7 +117,7 @@ Vue.component(Picker.name, Picker);
       };
     },
     methods: {
-      onPickerConfirm(columnIndex, itemIndex, value) {
+      onPickerConfirm2(columnIndex, itemIndex, value) {
         if (value) {
           this.pickerValue = value.text;
         }
@@ -198,46 +127,44 @@ Vue.component(Picker.name, Picker);
 </script>
 
 <style lang="less" scoped>
-  .gree-picker {
-    &.picker2 {
-      .gree-picker-column {
-        .gree-picker-column-container {
-          .gree-picker-column-masker {
-            &.top {
-              &::before {
-                visibility: hidden;
-              }
+  .gree-example-child-picker-1 {
+    .gree-picker-column {
+      .gree-picker-column-container {
+        .gree-picker-column-masker {
+          &.top {
+            &::before {
+              visibility: hidden;
             }
-            &.bottom {
+          }
+          &.bottom {
+            &::after {
+              visibility: hidden;
+            }
+          }
+        }
+        .gree-picker-column-list {
+          .gree-picker-column-item {
+            &:nth-of-type(1)::after {
+              content: '小时';
+            }
+            &:nth-of-type(2)::after {
+              content: '分钟';
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
               &::after {
-                visibility: hidden;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                font-size: 22px;
               }
             }
           }
-          .gree-picker-column-list {
-            .gree-picker-column-item {
-              &:nth-of-type(1)::after {
-                content: '小时';
-              }
-              &:nth-of-type(2)::after {
-                content: '分钟';
-              }
-              &:nth-of-type(1),
-              &:nth-of-type(2) {
-                &::after {
-                  position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: 0;
-                  font-size: 22px;
-                }
-              }
-            }
-            .column-list {
-              .column-item {
-                color: #111a34;
-                font-size: 55px;
-              }
+          .column-list {
+            .column-item {
+              color: #111a34;
+              font-size: 55px;
             }
           }
         }
@@ -249,75 +176,27 @@ Vue.component(Picker.name, Picker);
 
 :::
 
-### 弹出展示
-
-:::demo
-
-```html
-<gree-list>
-  <gree-list-item
-    link
-    title="选择年份"
-    :text="pickerText3"
-    @click.native="isPickerShow3 = true"
-  ></gree-list-item>
-</gree-list>
-<gree-picker
-  class="picker3"
-  ref="picker3"
-  v-model="isPickerShow3"
-  :data="pickerData3"
-  @confirm="onPickerConfirm3()"
-  title="自定义标题"
-  ok-text="确认"
-  cancel-text="取消"
-></gree-picker>
-
-<script>
-  import years from '../../configs/years';
-
-  export default {
-    data() {
-      return {
-        pickerText3: '查看',
-        pickerValue3: '',
-        isPickerShow3: false,
-        pickerData3: years
-      };
-    },
-    methods: {
-      onPickerConfirm3() {
-        const values = this.$refs['picker3'].getColumnValues();
-        let res = '';
-        values.forEach(value => {
-          value && (res += `${value.text || value.label} `);
-        });
-        this.pickerText3 = this.pickerValue3 = res;
-      }
-    }
-  };
-</script>
-```
-
-:::
-
 ### 3 级联动数据
 
 :::demo
 
 ```html
-<gree-picker
-  class="picker4"
-  ref="picker4"
-  :data="pickerData4"
-  :cols="3"
-  :default-index="pickerDefaultIndex4"
-  :default-value="pickerDefaultValue4"
-  is-view
-  is-cascade
-  @initialed="onPickerInitialed4"
-  @change="onPickerConfirm4"
-></gree-picker>
+<div
+  class="gree-example-child gree-example-child-picker gree-example-child-picker-2"
+>
+  <gree-picker
+    ref="picker3"
+    :data="pickerData3"
+    :cols="3"
+    :default-index="pickerDefaultIndex3"
+    :default-value="pickerDefaultValue3"
+    is-view
+    is-cascade
+    keep-index
+    @initialed="onPickerInitialed3"
+    @change="onPickerConfirm3"
+  ></gree-picker>
+</div>
 
 <script>
   import times from '../../configs/times';
@@ -325,33 +204,33 @@ Vue.component(Picker.name, Picker);
   export default {
     data() {
       return {
-        pickerData4: [],
-        pickerDefaultIndex4: [],
-        pickerDefaultValue4: [],
-        pickerValue4: ''
+        pickerData3: [],
+        pickerDefaultIndex3: [],
+        pickerDefaultValue3: [],
+        pickerValue3: ''
       };
     },
     mounted() {
-      this.pickerData4 = times;
-      this.pickerDefaultIndex4 = [1, 2, 5];
+      this.pickerData3 = times;
+      this.pickerDefaultIndex3 = [1, 2, 5];
       setTimeout(() => {
-        this.$refs.picker4.refresh();
+        this.$refs.picker3.refresh();
       }, 0);
     },
     methods: {
-      onPickerInitialed4() {
-        const columnValues = this.$refs.picker4.getColumnValues();
+      onPickerInitialed3() {
+        const columnValues = this.$refs.picker3.getColumnValues();
         let value = '';
         columnValues.forEach(item => {
           value += `${item.label}-`;
         });
         console.log(
-          `Picker4 getColumnValues: ${value.substr(0, value.length - 1)}`
+          `Picker getColumnValues: ${value.substr(0, value.length - 1)}`
         );
       },
-      onPickerConfirm4(columnIndex, itemIndex, value) {
+      onPickerConfirm3(columnIndex, itemIndex, value) {
         if (value) {
-          this.pickerValue4 = value.text;
+          this.pickerValue3 = value.text;
         }
       }
     }
@@ -420,7 +299,64 @@ Vue.component(Picker.name, Picker);
 
 :::
 
-## Props
+### 弹出展示
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-picker gree-example-child-picker-3"
+>
+  <gree-list>
+    <gree-list-item
+      link
+      title="选择年份"
+      :text="pickerText"
+      @click.native="isPickerShow = true"
+    ></gree-list-item>
+  </gree-list>
+  <gree-picker
+    class="picker"
+    ref="picker4"
+    v-model="isPickerShow"
+    :data="pickerData4"
+    @confirm="onPickerConfirm4()"
+    title="自定义标题"
+    ok-text="确认"
+    cancel-text="取消"
+  ></gree-picker>
+</div>
+
+<script>
+  import years from '../../configs/years';
+
+  export default {
+    data() {
+      return {
+        pickerData4: years,
+        pickerText: '查看',
+        isPickerShow: false
+      };
+    },
+    methods: {
+      onPickerConfirm4() {
+        const values = this.$refs['picker4'].getColumnValues();
+        let res = '';
+        values.forEach(value => {
+          value && (res += `${value.text || value.label} `);
+        });
+        this.pickerText = this.pickerValue = res;
+      }
+    }
+  };
+</script>
+```
+
+:::
+
+## API
+
+### Props
 
 | 属性          | 说明                                 | 类型      | 默认值  | 备注                                                   |
 | ------------- | ------------------------------------ | --------- | ------- | ------------------------------------------------------ |
@@ -433,6 +369,7 @@ Vue.component(Picker.name, Picker);
 | line-height   | 选择器选项行高                       | Number    | `45`    | 单位`px`                                               |
 | is-view       | 是否内嵌在页面内展示，否则以弹层形式 | Boolean   | `false` | \-                                                     |
 | is-cascade    | 各列数据是否级联                     | Boolean   | `false` | 级联数据格式见 Demo 源码                               |
+| keep-index    | 当列数据变化时保持上次停留的位置     | Boolean   | `false` | 仅用于级联数据                                         |
 | title         | 选择器标题                           | String    | \-      | \-                                                     |
 | describe      | 选择器描述                           | String    | \-      | \-                                                     |
 | ok-text       | 选择器确认文案                       | String    | `确认`  | \-                                                     |
@@ -440,9 +377,9 @@ Vue.component(Picker.name, Picker);
 | large-radius  | 选择器标题栏大圆角模式               | Boolean   | `false` | \-                                                     |
 | mask-closable | 点击蒙层是否可关闭弹出层             | Boolean   | `true`  | \-                                                     |
 
-## Methods
+### Methods
 
-### refresh(callback, startColumnIndex)
+#### refresh(callback, startColumnIndex)
 
 重新初始化选择器，如更新 data、default-index、invalid-index 或调用 setColumnValues
 
@@ -451,7 +388,7 @@ Vue.component(Picker.name, Picker);
 | callback         | 初始化完成回调           | Function |
 | startColumnIndex | 从某列开始重置，默认为 0 | Function |
 
-### getColumnValue(index): activeItemValue
+#### getColumnValue(index): activeItemValue
 
 获取某列当前选中项的值，需在`initialed`事件触发之后或异步调用
 
@@ -459,7 +396,7 @@ Vue.component(Picker.name, Picker);
 | ----- | ------ | ------ |
 | index | 列索引 | Number |
 
-### getColumnValues(): columnsValue
+#### getColumnValues(): columnsValue
 
 获取所有列选中项的值，需在`initialed`事件触发之后或异步调用
 
@@ -469,7 +406,7 @@ Vue.component(Picker.name, Picker);
 | ------------ | ---------------- | ----- |
 | columnsValue | 所有列选中项的值 | Array |
 
-### getColumnIndex(index): activeItemIndex
+#### getColumnIndex(index): activeItemIndex
 
 获取某列当前选中项的索引值，需在`initialed`事件触发之后或异步调用
 
@@ -477,7 +414,7 @@ Vue.component(Picker.name, Picker);
 | ----- | ------ | ------ |
 | index | 列索引 | Number |
 
-### getColumnIndexs(): columnsIndex
+#### getColumnIndexs(): columnsIndex
 
 获取所有列选中项的索引值，需在`initialed`事件触发之后或异步调用
 
@@ -487,7 +424,7 @@ Vue.component(Picker.name, Picker);
 | ------------ | -------------------- | ----- |
 | columnsIndex | 所有列选中项的索引值 | Array |
 
-### setColumnValues(index, values, callback)
+#### setColumnValues(index, values, callback)
 
 设置某列数据
 
@@ -497,13 +434,13 @@ Vue.component(Picker.name, Picker);
 | values   | 列数据             | Array    |
 | callback | 列数据设置完成回调 | Function |
 
-## Events
+### Events
 
-### @initialed()
+#### @initialed()
 
 选择器数据初始化完成事件，可调用`getColumnIndex`,`getColumnIndexs`,`getColumnValue`,`getColumnValues`方法
 
-### @change(columnIndex, itemIndex, value)
+#### @change(columnIndex, itemIndex, value)
 
 选择器选中项更改事件
 
@@ -513,7 +450,7 @@ Vue.component(Picker.name, Picker);
 | itemIndex   | 更改列选中项的索引值 | Number                      |
 | value       | 更改列选中项的的值   | Object: {value, label, ...} |
 
-### @confirm(columnsValue)
+#### @confirm(columnsValue)
 
 选择器确认选择事件（仅`is-view`为`false`）
 
@@ -521,286 +458,208 @@ Vue.component(Picker.name, Picker);
 | ------------ | ---------------- | ----- |
 | columnsValue | 所有列选中项的值 | Array |
 
-### @cancel()
+#### @cancel()
 
 选择器取消选择事件（仅`is-view`为`false`）
 
-### @show()
+#### @show()
 
 选择器弹层展示事件（仅`is-view`为`false`）
 
-### @hide()
+#### @hide()
 
 选择器弹层隐藏事件（仅`is-view`为`false`）
 
 <script>
-import years from '../../configs/years';
+import Data2 from '../../configs/cascade';
 import times from '../../configs/times';
-
-let Data1 = [];
-for (let i = 1; i < 24; i++) {
-  Data1[i - 1] = { text: `${i}`, value: i };
-}
-Data1 = [Data1];
-
-let Data2 = [
-  [
-    {
-      text: '01',
-      value: 1,
-      children: [
-        {
-          text: '30',
-          value: 30
-        },
-        {
-          text: '31',
-          value: 31
-        }
-      ]
-    },
-    {
-      text: '02',
-      value: 2,
-      children: [
-        {
-          text: '00',
-          value: 0
-        },
-        {
-          text: '01',
-          value: 1
-        }
-      ]
-    },
-    {
-      text: '03',
-      value: 3,
-      children: [
-        {
-          text: '00',
-          value: 0
-        }
-      ]
-    }
-  ]
-];
-
-let DataNew = [
-  {
-    text: '00',
-    value: 0
-  },
-  {
-    text: '01',
-    value: 1
-  },
-  {
-    text: '02',
-    value: 2
-  }
-];
+import years from '../../configs/years';
 
 export default {
   data() {
+    let Data1 = [];
+    for (let i = 1; i < 24; i++) {
+      Data1[i - 1] = { text: `${i}`, value: i };
+    }
+    Data1 = [Data1];
     return {
-      pickerData: Data1,
+      pickerData1: Data1,
       pickerData2: Data2,
-      pickerDefaultIndex: [2],
-      pickerDefaultValue: [3],
       pickerDefaultIndex2: [1, 0],
-      pickerValue: '',
-      pickerText3: '查看',
+      pickerData3: [],
+      pickerDefaultIndex3: [],
+      pickerDefaultValue3: [],
       pickerValue3: '',
-      isPickerShow3: false,
-      pickerData3: years,
-      pickerData4: [],
-      pickerDefaultIndex4: [],
-      pickerDefaultValue4: [],
-      pickerValue4: ''
+      pickerData4: years,
+      pickerText: '查看',
+      isPickerShow: false
     };
   },
   mounted() {
-    this.pickerData4 = times;
-    this.pickerDefaultIndex4 = [1, 2, 5];
+    this.pickerData3 = times;
+    this.pickerDefaultIndex3 = [1, 2, 5];
     setTimeout(() => {
-      this.$refs.picker4.refresh();
+      this.$refs.picker3.refresh();
     }, 0);
   },
   methods: {
-    onPickerInitialed() {
-      const columnValues = this.$refs.picker.getColumnValues();
-      let value = '';
-      columnValues.forEach(item => {
-        value += `${item.value}-`;
-      });
+    onPickerInitialed1() {
+      const value = this.$refs.picker1.getColumnValues();
+      console.log(`Picker Initialed: ${JSON.stringify(value)}`);
     },
-    onPickerConfirm(columnIndex, itemIndex, value) {
+    onPickerConfirm1(columnIndex, itemIndex, value) {
       if (value) {
         this.pickerValue = value.text;
       }
     },
-    $_refreshColumnValues() {
-      this.pickerDefaultIndex = [10];
-      this.pickerDefaultValue = [11];
-      setTimeout(() => {
-        this.$refs.picker.refresh();
-      }, 0);
+    onPickerConfirm2(columnIndex, itemIndex, value) {
+      if (value) {
+        this.pickerValue = value.text;
+      }
     },
-    $_setColumnValues() {
-      this.$refs['picker2'].setColumnValues(1, DataNew, vm => {
-        // 仅更新列
-        vm.refresh(null, 1);
-        //   // 全部更新
-        //   // this.pickerDefaultIndex2[1] = 2;
-        //   // vm.refresh();
-      });
-    },
-    onPickerConfirm3() {
-      const values = this.$refs['picker3'].getColumnValues();
-      let res = '';
-      values.forEach(value => {
-        value && (res += `${value.text || value.label} `);
-      });
-      this.pickerText3 = this.pickerValue3 = res;
-    },
-    onPickerInitialed4() {
-      const columnValues = this.$refs.picker4.getColumnValues();
+    onPickerInitialed3() {
+      const columnValues = this.$refs.picker3.getColumnValues();
       let value = '';
       columnValues.forEach(item => {
         value += `${item.label}-`;
       });
       console.log(
-        `Picker4 getColumnValues: ${value.substr(0, value.length - 1)}`
+        `Picker getColumnValues: ${value.substr(0, value.length - 1)}`
       );
     },
-    onPickerConfirm4(columnIndex, itemIndex, value) {
+    onPickerConfirm3(columnIndex, itemIndex, value) {
       if (value) {
-        this.pickerValue4 = value.text;
+        this.pickerValue3 = value.text;
       }
+    },
+    onPickerConfirm4() {
+      const values = this.$refs['picker4'].getColumnValues();
+      let res = '';
+      values.forEach(value => {
+        value && (res += `${value.text || value.label} `);
+      });
+      this.pickerText = this.pickerValue = res;
     }
   }
 };
 </script>
 
 <style lang="less" scoped>
-/deep/ .gree-picker {
-  &.picker1 {
-    .gree-picker-column {
-      padding: 0 27px;
-      .gree-picker-column-container {
-        .gree-picker-column-list {
-          .gree-picker-column-item {
+.gree-example-child-picker-0 {
+  /deep/.gree-picker-column {
+    padding: 0 27px;
+    .gree-picker-column-container {
+      .gree-picker-column-list {
+        .gree-picker-column-item {
+          &::after {
+            content: '小时后关机';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            color: #00aeff;
+            font-size: 16px;
+          }
+        }
+        .column-item {
+          color: #00aeff;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+.gree-example-child-picker-1 {
+  /deep/.gree-picker-column {
+    .gree-picker-column-container {
+      .gree-picker-column-masker {
+        &.top {
+          &::before {
+            visibility: hidden;
+          }
+        }
+        &.bottom {
+          &::after {
+            visibility: hidden;
+          }
+        }
+      }
+      .gree-picker-column-list {
+        .gree-picker-column-item {
+          &:nth-of-type(1)::after {
+            content: '小时';
+          }
+          &:nth-of-type(2)::after {
+            content: '分钟';
+          }
+          &:nth-of-type(1),
+          &:nth-of-type(2) {
             &::after {
-              content: '小时后关机';
               position: absolute;
               top: 50%;
               transform: translateY(-50%);
               right: 0;
-              color: #00aeff;
-              font-size: 16px;
-            }
-          }
-          .column-item {
-            color: #00aeff;
-            font-size: 50px;
-          }
-        }
-      }
-    }
-  }
-  &.picker2 {
-    .gree-picker-column {
-      .gree-picker-column-container {
-        .gree-picker-column-masker {
-          &.top {
-            &::before {
-              visibility: hidden;
-            }
-          }
-          &.bottom {
-            &::after {
-              visibility: hidden;
-            }
-          }
-        }
-        .gree-picker-column-list {
-          .gree-picker-column-item {
-            &:nth-of-type(1)::after {
-              content: '小时';
-            }
-            &:nth-of-type(2)::after {
-              content: '分钟';
-            }
-            &:nth-of-type(1),
-            &:nth-of-type(2) {
-              &::after {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 0;
-                font-size: 22px;
-              }
-            }
-          }
-          .column-list {
-            .column-item {
-              color: #111a34;
-              font-size: 55px;
-            }
-          }
-        }
-      }
-    }
-  }
-  &.picker4 {
-    .gree-picker-column {
-      .gree-picker-column-container {
-        .gree-picker-column-masker {
-          &.top {
-            &:before {
-              visibility: hidden;
-            }
-          }
-          &.bottom {
-            &:after {
-              visibility: hidden;
-            }
-          }
-        }
-        .gree-picker-column-list {
-          .gree-picker-column-item {
-            &:nth-of-type(1) {
-              flex: 0.5;
-            }
-            &:nth-of-type(2):after {
-              content: '时';
-            }
-            &:nth-of-type(3):after {
-              content: '分完成';
-            }
-            &:nth-of-type(2), &:nth-of-type(3) {
-              &:after {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                font-size: 19px;
-              }
-            }
-          }
-          .column-list {
-            .column-item {
-              color: #111a34;
               font-size: 22px;
             }
           }
         }
-        .gree-picker-column-hooks {
-          .gree-picker-column-hook {
-            &:nth-of-type(1) {
-              flex: 0.5;
+        .column-list {
+          .column-item {
+            color: #111a34;
+            font-size: 55px;
+          }
+        }
+      }
+    }
+  }
+}
+.gree-example-child-picker-2 {
+  /deep/.gree-picker-column {
+    .gree-picker-column-container {
+      .gree-picker-column-masker {
+        &.top {
+          &:before {
+            visibility: hidden;
+          }
+        }
+        &.bottom {
+          &:after {
+            visibility: hidden;
+          }
+        }
+      }
+      .gree-picker-column-list {
+        .gree-picker-column-item {
+          &:nth-of-type(1) {
+            flex: 0.5;
+          }
+          &:nth-of-type(2):after {
+            content: '时';
+          }
+          &:nth-of-type(3):after {
+            content: '分完成';
+          }
+          &:nth-of-type(2), &:nth-of-type(3) {
+            &:after {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              font-size: 19px;
             }
+          }
+        }
+        .column-list {
+          .column-item {
+            color: #111a34;
+            font-size: 22px;
+          }
+        }
+      }
+      .gree-picker-column-hooks {
+        .gree-picker-column-hook {
+          &:nth-of-type(1) {
+            flex: 0.5;
           }
         }
       }

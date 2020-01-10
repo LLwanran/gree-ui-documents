@@ -15,14 +15,16 @@ Vue.component(Button.name, Button);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-0"
+>
   <gree-button>默认</gree-button>
   <gree-button type="positive">蓝色</gree-button>
   <gree-button type="positive" loading>加载中</gree-button>
   <gree-button type="assertive">红色</gree-button>
   <gree-button type="assertive" inactive>未激活</gree-button>
   <gree-button type="disabled">禁用</gree-button>
-</gree-block>
+</div>
 ```
 
 :::
@@ -32,11 +34,13 @@ Vue.component(Button.name, Button);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-1"
+>
   <gree-button plain>默认</gree-button>
   <gree-button type="positive" plain round loading>蓝色</gree-button>
   <gree-button type="assertive" plain round loading>红色</gree-button>
-</gree-block>
+</div>
 ```
 
 :::
@@ -46,7 +50,9 @@ Vue.component(Button.name, Button);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-2"
+>
   <gree-row>
     <gree-col>
       <gree-button type="positive" icon="warning" inline>带图标</gree-button>
@@ -59,7 +65,7 @@ Vue.component(Button.name, Button);
       <gree-button type="disabled" inline>禁用</gree-button>
     </gree-col>
   </gree-row>
-</gree-block>
+</div>
 ```
 
 :::
@@ -69,12 +75,14 @@ Vue.component(Button.name, Button);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-3"
+>
   <gree-button type="default" round>默认</gree-button>
   <gree-button type="positive" round>蓝色</gree-button>
   <gree-button type="assertive" round>红色</gree-button>
   <gree-button type="disabled" round>禁用</gree-button>
-</gree-block>
+</div>
 ```
 
 :::
@@ -84,7 +92,9 @@ Vue.component(Button.name, Button);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-4"
+>
   <gree-row>
     <gree-col>
       <gree-button size="small" inline>默认</gree-button>
@@ -93,7 +103,7 @@ Vue.component(Button.name, Button);
       <gree-button type="disabled" size="small" inline>禁用</gree-button>
     </gree-col>
   </gree-row>
-</gree-block>
+</div>
 ```
 
 :::
@@ -103,7 +113,9 @@ Vue.component(Button.name, Button);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-5"
+>
   <gree-row>
     <gree-button type="link" icon="location">收货地址</gree-button>
     <gree-button type="link" inactive>
@@ -111,12 +123,14 @@ Vue.component(Button.name, Button);
       <gree-icon name="arrow-right"></gree-icon>
     </gree-button>
   </gree-row>
-</gree-block>
+</div>
 ```
 
 :::
 
-## Props
+## API
+
+### Props
 
 | 属性     | 说明          | 类型    | 默认值    | 备注                                                 |
 | -------- | ------------- | ------- | --------- | ---------------------------------------------------- |
@@ -130,8 +144,23 @@ Vue.component(Button.name, Button);
 | inactive | 未激活        | Boolean | `false`   | `inactive`设为`true`和`disabled`类型的按钮都无法点击 |
 | loading  | 加载中状态    | Boolean | `false`   | \-                                                   |
 
-## Events
+### Events
 
-### @click(event)
+#### @click(event)
 
 按钮点击事件
+
+<style lang="less">
+.gree-example-child-button {
+  .gree-button.button-block {
+    margin-bottom: 10px;
+  }
+  &.gree-example-child-button-2 {
+    .row {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+</style>

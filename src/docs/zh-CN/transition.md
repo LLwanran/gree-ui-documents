@@ -10,7 +10,7 @@ import { Transition } from 'gree-ui';
 Vue.component(Transition.name, Transition);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

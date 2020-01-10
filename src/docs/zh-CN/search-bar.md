@@ -69,7 +69,9 @@ Vue.component(SearchBar.name, SearchBar);
 
 :::
 
-## Props
+## API
+
+### Props
 
 | 属性        | 说明                                             | 类型    | 默认值   |
 | ----------- | ------------------------------------------------ | ------- | -------- |
@@ -84,7 +86,7 @@ Vue.component(SearchBar.name, SearchBar);
 | left-icon   | 输入框左侧图标名称或图片链接，可选值见 Icon 组件 | String  | `search` |
 | placeholder | 占位提示文字                                     | String  | \-       |
 
-### Events
+#### Events
 
 | 参数    | 说明                     |
 | ------- | ------------------------ |
@@ -94,7 +96,7 @@ Vue.component(SearchBar.name, SearchBar);
 | @blur   | 输入框失去焦点时触发事件 |
 | @cancel | 点击取消按钮时触发事件   |
 
-### Slots
+#### Slots
 
 | 名称       | 说明                                              |
 | ---------- | ------------------------------------------------- |

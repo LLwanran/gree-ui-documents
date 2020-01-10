@@ -14,7 +14,7 @@ import { Divider } from 'gree-ui';
 Vue.component(Divider.name, Divider);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

@@ -10,7 +10,7 @@ import { ErrorPage } from 'gree-ui';
 Vue.component(ErrorPage.name, ErrorPage);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

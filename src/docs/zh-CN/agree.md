@@ -136,7 +136,7 @@ Vue.component(Agree.name, Agree);
 
 :::
 
-## Props
+### Props
 
 | 属性     | 说明     | 类型    | 默认值  | 备注                 |
 | -------- | -------- | ------- | ------- | -------------------- |
@@ -144,9 +144,9 @@ Vue.component(Agree.name, Agree);
 | disabled | 是否禁用 | Boolean | `false` | \-                   |
 | size     | 按钮大小 | String  | `md`    | 可选值参考组件`Icon` |
 
-## Events
+### Events
 
-### @change(name, checked)
+#### @change(name, checked)
 
 勾选状态发生变化事件
 

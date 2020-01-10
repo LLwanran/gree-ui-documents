@@ -11,7 +11,7 @@ Vue.component(Marquee.name, Marquee);
 Vue.component(MarqueeItem.name, MarqueeItem);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

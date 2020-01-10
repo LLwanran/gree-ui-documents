@@ -15,15 +15,17 @@ Vue.component(TabBar.name, TabBar);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-tab-bar gree-example-child-tab-bar-0"
+>
   <gree-tab-bar
     class="all-in-one"
     v-model="current1"
     :items="items1"
-    :hasInk="false"
+    :has-ink="false"
     @change="onChange"
   ></gree-tab-bar>
-</gree-block>
+</div>
 
 <script>
   export default {
@@ -41,14 +43,51 @@ Vue.component(TabBar.name, TabBar);
     methods: {
       onChange(item, index, prevIndex) {
         console.log(
-          `currentIndex: ${index}, prevIndex: ${prevIndex}, label: ${
-            item.label
-          }`
+          `currentIndex: ${index}, prevIndex: ${prevIndex}, label: ${item.label}`
         );
       }
     }
   };
 </script>
+
+<style lang="scss">
+  .gree-example-child-tab-bar-0 {
+    width: 80%;
+    color: #666f83;
+
+    .gree-tab-bar.all-in-one {
+      padding: 0;
+      background-color: #212127;
+      .gree-tab-bar-list {
+        .gree-tab-bar-item {
+          color: #bcbcbd;
+          font-size: 19px;
+          min-height: 65px;
+          flex: 1;
+          &:not(.is-active):before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: auto;
+            bottom: auto;
+            width: 200%;
+            height: 200%;
+            border-left: 1px solid #36363c;
+            box-sizing: border-box;
+            transform-origin: 0 0;
+            transform: scale(0.5);
+            z-index: 2;
+          }
+          &.is-active {
+            color: #fff !important;
+            background-color: #f1ae26;
+          }
+        }
+      }
+    }
+  }
+</style>
 ```
 
 :::
@@ -58,9 +97,11 @@ Vue.component(TabBar.name, TabBar);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-tabs gree-example-child-tab-bar-1"
+>
   <gree-tab-bar v-model="current2" :items="items2"></gree-tab-bar>
-</gree-block>
+</div>
 
 <script>
   export default {
@@ -86,13 +127,15 @@ Vue.component(TabBar.name, TabBar);
 :::demo
 
 ```html
-<gree-block>
+<div
+  class="gree-example-child gree-example-child-tabs gree-example-child-tab-bar-2"
+>
   <gree-tab-bar
     v-model="current3"
     :items="items3"
     :maxLength="5"
   ></gree-tab-bar>
-</gree-block>
+</div>
 
 <script>
   export default {
@@ -119,36 +162,190 @@ Vue.component(TabBar.name, TabBar);
 
 :::
 
-## 底部 TabBar
+### 手势切换
 
 :::demo
 
 ```html
-<gree-toolbar
-  position="bottom"
-  no-hairline
-  class="gree-example-child-tab-bar-4"
+<div
+  class="gree-example-child gree-example-child-tabs gree-example-child-tab-bar-4"
 >
-  <gree-tab-bar v-model="current4" :items="items4" :has-ink="false">
+  <gree-tab-bar
+    v-model="current4"
+    :items="items4"
+    :has-ink="false"
+    @change="onTabChange"
+  >
     <template slot="item" slot-scope="{ item }">
-      <div class="custom-item">
-        <div class="icon">
-          <gree-icon :name="item.icon"></gree-icon>
+      <div class="top-item">
+        <div class="text">
+          <span v-text="item.time"></span>
         </div>
         <div class="text">
-          <span v-text="item.label"></span>
+          <span v-text="item.text"></span>
         </div>
       </div>
     </template>
   </gree-tab-bar>
-</gree-toolbar>
+  <gree-swiper
+    ref="swiper"
+    :autoplay="0"
+    :is-prevent="false"
+    :is-loop="false"
+    :has-dots="false"
+    @before-change="onSwiperChange"
+  >
+    <gree-swiper-item>
+      <gree-list media-list no-hairlines>
+        <gree-list-item
+          link
+          title="范特西"
+          after="主打歌：爱在西元前"
+          subtitle="发行日期： 2001 年 9 月 14 日"
+          text="《范特西》是台湾歌手周杰伦第二张录音室专辑，由台湾博德曼音乐于2001年9月14日发行。专辑名《范特西》来自英文“Fantasy”音译。"
+          media-item
+        >
+          <img slot="media" src="../../assets/images/fantasy.jpg" width="80" />
+        </gree-list-item>
+      </gree-list>
+    </gree-swiper-item>
+    <gree-swiper-item>
+      <gree-list media-list no-hairlines>
+        <gree-list-item
+          link
+          title="叶惠美"
+          after="主打歌：以父之名"
+          subtitle="发行日期： 2003 年 7 月 29 日"
+          text="《叶惠美》是台湾歌手周杰伦的第四张录音室专辑，由台湾新力音乐于2003年7月31日发行。"
+          media-item
+        >
+          <img slot="media" src="../../assets/images/ukoo.jpg" width="80" />
+        </gree-list-item>
+      </gree-list>
+    </gree-swiper-item>
+    <gree-swiper-item>
+      <gree-list media-list no-hairlines>
+        <gree-list-item
+          link
+          title="七里香"
+          after="主打歌：我的地盘"
+          subtitle="发行日期： 2004 年 8 月 3 日"
+          text="《七里香》是台湾歌手周杰伦发行第五张国语专辑。由台湾新力音乐于2004年8月3日发行。"
+          media-item
+        >
+          <img
+            slot="media"
+            src="../../assets/images/daphne-odera.jpg"
+            width="80"
+          />
+        </gree-list-item>
+      </gree-list>
+    </gree-swiper-item>
+  </gree-swiper>
+</div>
 
 <script>
   export default {
     data() {
       return {
-        current4: 1,
+        current4: 0,
         items4: [
+          { name: 0, time: '17:00', text: '开抢中' },
+          { name: 1, time: '20:00', text: '即将开始' },
+          { name: 2, time: '00:00', text: '即将开始' }
+        ]
+      };
+    },
+    methods: {
+      onSwiperChange(from, to) {
+        this.current4 = to;
+      },
+      onTabChange(item, index) {
+        this.$refs.swiper.goto(index);
+      }
+    }
+  };
+</script>
+
+<style lang="scss">
+  .gree-example-child-tab-bar-4 {
+    .gree-tab-bar {
+      padding: 0;
+      background: #333;
+
+      .gree-scroll-view {
+        overflow: visible;
+      }
+      .gree-tab-bar-item {
+        min-height: 144px;
+        background: #333;
+        color: #fff !important;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &.is-active {
+          background: linear-gradient(-45deg, #df3348, #fb4056);
+          position: relative;
+
+          &::after {
+            content: '';
+            height: 0;
+            width: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -43px;
+            border-top: 23px solid #df3348;
+            border-left: 23px solid transparent;
+            border-right: 23px solid transparent;
+            border-bottom: 23px solid transparent;
+            z-index: 5;
+          }
+        }
+      }
+    }
+    .gree-swiper-item {
+      background: #fff;
+    }
+  }
+</style>
+```
+
+:::
+
+### 底部标签栏
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-tabs gree-example-child-tab-bar-3"
+>
+  <gree-toolbar position="bottom" no-hairline>
+    <gree-tab-bar v-model="current5" :items="items5" :has-ink="false">
+      <template slot="item" slot-scope="{ item }">
+        <div class="custom-item">
+          <div class="icon">
+            <gree-icon :name="item.icon"></gree-icon>
+          </div>
+          <div class="text">
+            <span v-text="item.label"></span>
+          </div>
+        </div>
+      </template>
+    </gree-tab-bar>
+  </gree-toolbar>
+</div>
+
+<script>
+  export default {
+    data() {
+      return {
+        current5: 1,
+        items5: [
           { name: 1, label: '首页', icon: 'home' },
           { name: 2, label: '我的', icon: 'voice' }
         ]
@@ -212,8 +409,14 @@ export default {
         { name: 9, label: '飞猪旅行' },
         { name: 10, label: '苏宁易购' }
       ],
-      current4: 1,
+      current4: 0,
       items4: [
+        { name: 0, time: '17:00', text: '开抢中' },
+        { name: 1, time: '20:00', text: '即将开始' },
+        { name: 2, time: '00:00', text: '即将开始' }
+      ],
+      current5: 1,
+      items5: [
         { name: 1, label: '首页', icon: 'home' },
         { name: 2, label: '我的', icon: 'voice' }
       ]
@@ -224,6 +427,12 @@ export default {
       console.log(
         `currentIndex: ${index}, prevIndex: ${prevIndex}, label: ${item.label}`
       );
+    },
+    onSwiperChange(from, to) {
+      this.current4 = to;
+    },
+    onTabChange(item, index) {
+      this.$refs.swiper.goto(index);
     }
   }
 };
@@ -233,7 +442,7 @@ export default {
 /deep/ .gree-tab-bar-item.is-active {
   color: #00aeff !important;
 }
-.block {
+.gree-example-child-tab-bar-0 {
   width: 80%;
   color: #666f83;
   /deep/ .gree-tab-bar.all-in-one {
@@ -268,7 +477,7 @@ export default {
     }
   }
 }
-.gree-example-child-tab-bar-4 {
+.gree-example-child-tab-bar-3 {
   /deep/ .gree-tab-bar {
     width: 100%;
     .custom-item {
@@ -282,6 +491,50 @@ export default {
         font-size: 18px;
       }
     }
+  }
+}
+
+.gree-example-child-tab-bar-4 {
+  /deep/.gree-tab-bar {
+    padding: 0;
+    background: #333;
+
+    .gree-scroll-view {
+      overflow: visible;
+    }
+    .gree-tab-bar-item {
+      min-height: 72px;
+      background: #333;
+      color: #fff !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &.is-active {
+        background: linear-gradient(-45deg, #df3348, #fb4056);
+        position: relative;
+
+        &::after {
+          content: '';
+          height: 0;
+          width: 0;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -21px;
+          border-top: 12px solid #df3348;
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-bottom: 12px solid transparent;
+          z-index: 5;
+        }
+      }
+    }
+  }
+  .gree-swiper-item {
+    background: #fff;
   }
 }
 </style>

@@ -10,7 +10,7 @@ import { ToolBar } from 'gree-ui';
 Vue.component(ToolBar.name, ToolBar);
 ```
 
-### 基本
+### 基础
 
 :::demo
 

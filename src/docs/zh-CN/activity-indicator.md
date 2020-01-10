@@ -15,7 +15,9 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-0">
+<div
+  class="gree-example-child gree-example-child-activity-indicator gree-example-child-activity-indicator-0"
+>
   <gree-activity-indicator :size="20" :text-size="16"
     >水平加载中...</gree-activity-indicator
   >
@@ -23,9 +25,9 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
     >垂直加载中...</gree-activity-indicator
   >
   <gree-activity-indicator class="gree-activity-indicator-css"
-    >大小加载中...</gree-activity-indicator
+    >加载中...</gree-activity-indicator
   >
-</gree-block>
+</div>
 ```
 
 :::
@@ -35,7 +37,9 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-1">
+<div
+  class="gree-example-child gree-example-child-activity-indicator gree-example-child-activity-indicator-1"
+>
   <gree-activity-indicator type="spinner" :size="30" :text-size="20"
     >加载中...</gree-activity-indicator
   >
@@ -49,7 +53,7 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
       >加载中...</gree-activity-indicator
     >
   </div>
-</gree-block>
+</div>
 ```
 
 :::
@@ -59,22 +63,22 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-2">
+<div
+  class="gree-example-child gree-example-child-activity-indicator gree-example-child-activity-indicator-2"
+>
   <gree-activity-indicator type="carousel" :size="15"></gree-activity-indicator>
-  <gree-block>
-    <gree-button type="positive" @click="doClick">
-      <gree-activity-indicator
-        v-if="loading"
-        class="gree-activity-indicator-css"
-        type="carousel"
-        :size="15"
-        color="#fff"
-        text-color="#fff"
-      ></gree-activity-indicator>
-      <span v-else>确认提交</span>
-    </gree-button>
-  </gree-block>
-</gree-block>
+  <gree-button type="positive" @click="doClick">
+    <gree-activity-indicator
+      v-if="loading"
+      class="gree-activity-indicator-css"
+      type="carousel"
+      :size="15"
+      color="white"
+      text-color="white"
+    ></gree-activity-indicator>
+    <span v-else>确认提交</span>
+  </gree-button>
+</div>
 
 <script>
   export default {
@@ -105,9 +109,11 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-3">
+<div
+  class="gree-example-child gree-example-child-activity-indicator gree-example-child-activity-indicator-3"
+>
   <gree-activity-indicator type="bars" :size="30"></gree-activity-indicator>
-</gree-block>
+</div>
 ```
 
 :::
@@ -117,17 +123,21 @@ Vue.component(ActivityIndicator.name, ActivityIndicator);
 :::demo
 
 ```html
-<gree-block class="gree-example-child-activity-indicator-3">
+<div
+  class="gree-example-child gree-example-child-activity-indicator gree-example-child-activity-indicator-4"
+>
   <gree-activity-indicator
     type="hour-glass"
     :size="30"
   ></gree-activity-indicator>
-</gree-block>
+</div>
 ```
 
 :::
 
-## Props
+## API
+
+### Props
 
 | 属性       | 说明                 | 类型    | 默认值         | 备注                                               |
 | ---------- | -------------------- | ------- | -------------- | -------------------------------------------------- |
@@ -203,9 +213,6 @@ export default {
   }
 }
 .gree-example-child-activity-indicator-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   .gree-activity-indicator {
     margin-bottom: 30px;
   }
@@ -221,5 +228,8 @@ export default {
       }
     }
   }
+}
+/deep/.gree-activity-indicator .indicator-container {
+  justify-content: center;
 }
 </style>

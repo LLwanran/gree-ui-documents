@@ -13,6 +13,29 @@ Vue.component(CheckGroup.name, CheckGroup);
 Vue.component(CheckList.name, CheckList);
 ```
 
+### 复选项
+
+:::demo
+
+```html
+<gree-block>
+  <gree-check v-model="checked" label="选项一"></gree-check>
+  <gree-check label="禁用" disabled></gree-check>
+</gree-block>
+
+<script>
+  export default {
+    data() {
+      return {
+        checked: false
+      };
+    }
+  };
+</script>
+```
+
+:::
+
 ### 复选项组
 
 :::demo
@@ -258,6 +281,7 @@ Vue.component(CheckList.name, CheckList);
 export default {
   data() {
     return {
+      checked: false,
       times: [],
       patterns: [],
       mode: '',

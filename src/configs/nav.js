@@ -89,6 +89,11 @@ export default {
           badge: 'new'
         },
         {
+          name: 'ImagePreview',
+          path: '/image-preview',
+          badge: 'new'
+        },
+        {
           name: 'Lazyload',
           path: '/lazyload',
           badge: 'new'
@@ -169,6 +174,11 @@ export default {
         {
           name: 'Sidebar',
           path: '/sidebar'
+        },
+        {
+          name: 'Skeleton',
+          path: '/skeleton',
+          badge: 'new'
         },
         {
           name: 'TreeSelect',
@@ -272,8 +282,8 @@ export default {
           path: '/radio'
         },
         {
-          name: 'Rater',
-          path: '/rater'
+          name: 'Rate',
+          path: '/rate'
         },
         {
           name: 'Slider',

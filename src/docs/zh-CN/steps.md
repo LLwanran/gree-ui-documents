@@ -276,6 +276,9 @@ Vue.component(Steps.name, Steps);
         height: 3px;
         border-radius: 50%;
       }
+      .bar.horizontal-bar {
+        height: 1px;
+      }
     }
   }
   .gree-example-child-steps-2 {
@@ -285,6 +288,9 @@ Vue.component(Steps.name, Steps);
     }
     .gree-steps {
       height: 450px;
+      .bar.vertical-bar {
+        width: 1px;
+      }
     }
   }
 </style>

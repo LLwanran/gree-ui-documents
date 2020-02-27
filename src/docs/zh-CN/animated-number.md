@@ -59,7 +59,13 @@ Vue.component(AnimatedNumber.name, AnimatedNumber);
   <div
     class="gree-example-child gree-example-child-animated-number gree-example-child-animated-number-1"
   >
-    <gree-animated-number :value="12699" has-separator />
+    <gree-animated-number :value="12699" has-separator></gree-animated-number>
+    <br />
+    <gree-animated-number
+      :value="-123456.123"
+      :precision="3"
+      has-separator
+    ></gree-animated-number>
   </div>
 </gree-block>
 

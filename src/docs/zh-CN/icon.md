@@ -155,6 +155,7 @@ export default {
   data() {
     return {
       iconList: [
+        'bell',
         'check',
         'close',
         'home',
@@ -167,10 +168,8 @@ export default {
         'move',
         'clock',
         'location',
-        'refresh',
         'feedback',
         'checked',
-        'voice',
         'back',
         'more',
         'search',
@@ -179,12 +178,18 @@ export default {
         'success',
         'fail',
         'photo',
+        'refresh',
         'menu',
         'check-disabled',
         'arrow-up',
         'arrow-left',
         'arrow-down',
-        'arrow-right'
+        'arrow-right',
+        'voice',
+        'like',
+        'like-o',
+        'star',
+        'star-o'
       ]
     };
   }

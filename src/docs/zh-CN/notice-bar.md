@@ -91,7 +91,7 @@ Vue.component(NoticeBar.name, NoticeBar);
 
 ```html
 <gree-notice-bar class="custom-notice-bar">
-  <gree-icon slot="left" name="power"></gree-icon>
+  <gree-icon slot="left" name="bell"></gree-icon>
   您的冷风扇已缺水，请加水。
 </gree-notice-bar>
 ```

@@ -48,101 +48,131 @@
 
 ```json
 {
-  // PowerShell
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  // 档案删除时确认
-  "explorer.confirmDelete": false,
-  // 主题风格
-  "workbench.colorTheme": "Monokai",
-  // 指定应该禁止哪些消息
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": false,
-    "suppressWelcomeNotice": true
-  },
-  // 指定用于GitLens快捷键的键映射
-  "gitlens.keymap": "alternate", // 增加一个替代组快捷键
-  "window.zoomLevel": 0,
-  // tab间隔
-  "editor.tabSize": 2,
-  // 每次保存的时候自动格式化
-  "editor.formatOnSave": true,
-  // 每次保存的时候将代码按eslint格式进行修复
-  "eslint.autoFixOnSave": true,
-  // 对于.vue文件,关闭prettier,交给eslint fix
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    }
-  ],
-  // 关闭eslint语法红色提示
-  "vetur.validation.template": false,
-  "vetur.format.defaultFormatterOptions": {
-    "vetur.format.defaultFormatter.html": "prettyhtml",
-    "vetur.format.defaultFormatter.css": "prettier",
-    "vetur.format.defaultFormatter.postcss": "prettier",
-    "vetur.format.defaultFormatter.scss": "prettier",
-    "vetur.format.defaultFormatter.less": "prettier",
-    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-    "vetur.format.defaultFormatter.js": "prettier",
-    "vetur.format.defaultFormatter.ts": "prettier",
-    "prettyhtml": {
-      "printWidth": 100, // Use different maximum line length (default: 80)
-      "wrapAttributes": true // Force to wrap attributes (when it has multiple, default: false)
+    // PowerShell
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "php.validate.executablePath": "C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\php.exe",
+    // 档案删除时确认
+    "explorer.confirmDelete": false,
+    // 主题风格
+    "workbench.colorTheme": "Monokai",
+    // 指定应该禁止哪些消息
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressWelcomeNotice": true
     },
-    "prettier": {
-      "semi": true,
-      "singleQuote": true
-    }
-  },
-  /* stylus 配置 */
-  // 是否插入冒号
-  "stylusSupremacy.insertColons": false,
-  // 是否插入分号
-  "stylusSupremacy.insertSemicolons": false,
-  // 是否插入大括号
-  "stylusSupremacy.insertBraces": false,
-  // import之后是否换行
-  "stylusSupremacy.insertNewLineAroundImports": false,
-  // 两个选择器中是否换行
-  "stylusSupremacy.insertNewLineAroundBlocks": true,
-  "explorer.confirmDragAndDrop": false,
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "breadcrumbs.enabled": true,
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "vsicons.dontShowNewVersionMessage": true,
-  "powershell.powerShellExePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": false,
-  "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
-  }
+    // 指定用于GitLens快捷键的键映射
+    "gitlens.keymap": "alternate", // 增加一个替代组快捷键
+    "window.zoomLevel": 0,
+    // tab间隔
+    "editor.tabSize": 2,
+    // 每次保存的时候自动格式化
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        // 这个属性能够在保存时，自动调整 import 语句相关顺序，能够让你的 import 语句按照字母顺序进行排列，推荐设置为true
+        "source.organizeImports": true
+    },
+    // 对于.vue文件,关闭prettier,交给eslint fix
+    "eslint.validate": [
+        "vue",
+        "html",
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact"
+    ],
+    // 关闭eslint语法红色提示
+    "vetur.validation.template": false,
+    "vetur.format.defaultFormatterOptions": {
+        "vetur.format.defaultFormatter.html": "prettyhtml",
+        "vetur.format.defaultFormatter.css": "prettier",
+        "vetur.format.defaultFormatter.postcss": "prettier",
+        "vetur.format.defaultFormatter.scss": "prettier",
+        "vetur.format.defaultFormatter.less": "prettier",
+        "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+        "vetur.format.defaultFormatter.js": "prettier",
+        "vetur.format.defaultFormatter.ts": "prettier",
+        "prettyhtml": {
+            "printWidth": 160, // 使用不同的最大行长度
+            "singleQuote": false,
+            "wrapAttributes": false, // 强制换行属性（当它有多个时，默认值为false）
+            "sortAttributes": false // 按字母顺序排序属性（默认值：false）
+        },
+        /* prettier的配置 */
+        "prettier": {
+            "printWidth": 160, // 超过最大值换行
+            "tabWidth": 2, // 缩进字节数
+            "useTabs": false, // 缩进不使用tab，使用空格
+            "semi": true, // 句尾添加分号
+            "singleQuote": true, // 使用单引号代替双引号
+            "proseWrap": "preserve", // 代码超出是否要换行 preserve保留
+            "arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
+            "bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+            "disableLanguages": [
+                "vue"
+            ], // 不格式化vue文件，vue文件的格式化单独设置
+            "endOfLine": "auto", // 结尾是 \n \r \n\r auto
+            "eslintIntegration": false, // 不让prettier使用eslint的代码格式进行校验
+            "htmlWhitespaceSensitivity": "ignore", // 包裹文字时候结束标签的结尾尖括号掉到了下一行?
+            "ignorePath": ".prettierignore", // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
+            "jsxBracketSameLine": false, // 在jsx中把'>' 是否单独放一行
+            "jsxSingleQuote": false, // 在jsx中使用单引号代替双引号
+            "parser": "babylon", // 格式化的解析器，默认是babylon
+            "requireConfig": false, // Require a 'prettierconfig' to format prettier
+            "stylelintIntegration": false, //不让prettier使用stylelint的代码格式进行校验
+            "flattenTernaries": false, // 三元运算
+            "trailingComma": "none", // 尾随逗号 <none, es5, all>
+            "tslintIntegration": false, // 不让prettier使用tslint的代码格式进行校验
+            "breakProperty": false, // 允许属性名和值断行
+            "alignObjectProperties": false // 对齐冒号
+        }
+    },
+    /* stylus 配置 */
+    // 是否插入冒号
+    "stylusSupremacy.insertColons": false,
+    // 是否插入分号
+    "stylusSupremacy.insertSemicolons": false,
+    // 是否插入大括号
+    "stylusSupremacy.insertBraces": false,
+    // import之后是否换行
+    "stylusSupremacy.insertNewLineAroundImports": false,
+    // 两个选择器中是否换行
+    "stylusSupremacy.insertNewLineAroundBlocks": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "breadcrumbs.enabled": true,
+    // "[html]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // 如果html的格式化效果不满意的话，可以单独设置html的格式化
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "powershell.powerShellExePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "editor.minimap.enabled": true,
+    "sync.gist": "4b3ab3b9ca314f59f9ace2702e70586c",
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "python.formatting.provider": "yapf"
 }
 ```
 

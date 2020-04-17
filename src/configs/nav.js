@@ -48,101 +48,121 @@ export default {
       children: [
         {
           name: 'ActionBar',
-          path: '/action-bar'
+          path: '/action-bar',
+          subtitle: '底部操作栏'
         },
         {
           name: 'ActivityIndicator',
-          path: '/activity-indicator'
+          path: '/activity-indicator',
+          subtitle: '活动指示器'
         },
         {
           name: 'Button',
-          path: '/button'
+          path: '/button',
+          subtitle: '按钮',
+          badge: 'feature'
         },
         {
           name: 'Collapse',
-          path: '/collapse'
+          path: '/collapse',
+          subtitle: '折叠面板'
         },
         {
           name: 'CollapseTransition',
-          path: '/collapse-transition'
+          path: '/collapse-transition',
+          subtitle: '折叠展开'
         },
         {
           name: 'Dropdown',
-          path: '/dropdown'
+          path: '/dropdown',
+          subtitle: '菜单'
         },
         {
           name: 'DropdownMenu',
-          path: '/dropdown-menu'
+          path: '/dropdown-menu',
+          subtitle: '下拉菜单'
         },
         {
           name: 'Header',
-          path: '/header'
+          path: '/header',
+          subtitle: '头部导航'
         },
         {
           name: 'Icon',
           path: '/icon',
+          subtitle: '图标',
           badge: 'feature'
         },
         {
           name: 'Image',
           path: '/image',
-          badge: 'new'
+          subtitle: '图片'
         },
         {
           name: 'ImagePreview',
           path: '/image-preview',
-          badge: 'new'
+          subtitle: '图片预览'
         },
         {
           name: 'Lazyload',
           path: '/lazyload',
-          badge: 'new'
+          subtitle: '图片懒加载'
         },
         {
           name: 'NoticeBar',
-          path: '/notice-bar'
+          path: '/notice-bar',
+          subtitle: '通知栏'
         },
         {
           name: 'Progress',
-          path: '/progress'
+          path: '/progress',
+          subtitle: '进度'
         },
         {
           name: 'ProgressBar',
-          path: '/progress-bar'
+          path: '/progress-bar',
+          subtitle: '进度条'
         },
         {
           name: 'ScrollView',
-          path: '/scroll-view'
+          path: '/scroll-view',
+          subtitle: '滚动区域'
         },
         {
           name: 'SearchBar',
-          path: '/search-bar'
+          path: '/search-bar',
+          subtitle: '搜索栏'
         },
         {
           name: 'SegmentedControl',
-          path: '/segmented-control'
+          path: '/segmented-control',
+          subtitle: '分段器'
         },
         {
           name: 'Steps',
-          path: '/steps'
+          path: '/steps',
+          subtitle: '步骤条'
         },
         {
           name: 'Swiper',
           path: '/swiper',
-          badge: 'new'
+          subtitle: '轮播'
         },
         {
           name: 'TabBar',
           path: '/tab-bar',
+          subtitle: '标签栏',
           badge: 'feature'
         },
         {
           name: 'Tabs',
-          path: '/tabs'
+          path: '/tabs',
+          subtitle: '标签页'
         },
         {
           name: 'Tag',
-          path: '/tag'
+          path: '/tag',
+          subtitle: '标签'
         }
       ]
     },
@@ -152,42 +172,50 @@ export default {
       children: [
         {
           name: 'Block',
-          path: '/block'
+          path: '/block',
+          subtitle: '块内容'
         },
         {
           name: 'Card',
-          path: '/card'
+          path: '/card',
+          subtitle: '卡片'
         },
         {
           name: 'Divider',
-          path: '/divider'
+          path: '/divider',
+          subtitle: '分割线'
         },
         {
           name: 'Flexbox',
-          path: '/flex-box'
+          path: '/flex-box',
+          subtitle: '布局'
         },
         {
           name: 'ListView',
           path: '/list-view',
+          subtitle: '列表',
           badge: 'feature'
         },
         {
           name: 'Sidebar',
-          path: '/sidebar'
+          path: '/sidebar',
+          subtitle: '侧边导航'
         },
         {
           name: 'Skeleton',
           path: '/skeleton',
+          subtitle: '骨架屏',
           badge: 'new'
         },
         {
           name: 'TreeSelect',
           path: '/tree-select',
-          badge: 'new'
+          subtitle: '分类选择'
         },
         {
           name: 'ToolBar',
-          path: '/tool-bar'
+          path: '/tool-bar',
+          subtitle: '工具栏'
         }
       ]
     },
@@ -197,54 +225,84 @@ export default {
       children: [
         {
           name: 'ActionSheet',
-          path: '/action-sheet'
+          path: '/action-sheet',
+          subtitle: '操作列表'
         },
         {
           name: 'Backtop',
-          path: '/backtop'
+          path: '/backtop',
+          subtitle: '回到顶部'
         },
         {
           name: 'Calendar',
           path: '/calendar',
+          subtitle: '日历',
           badge: 'fix'
         },
         {
           name: 'DatePicker',
-          path: '/date-picker'
+          path: '/date-picker',
+          subtitle: '日期选择'
         },
         {
           name: 'Dialog',
-          path: '/dialog'
+          path: '/dialog',
+          subtitle: '对话框'
+        },
+        {
+          name: 'IndexBar',
+          path: '/index-bar',
+          subtitle: '索引栏',
+          badge: 'new'
+        },
+        {
+          name: 'Overlay',
+          path: '/overlay',
+          subtitle: '遮罩层',
+          badge: 'new'
         },
         {
           name: 'Picker',
           path: '/picker',
+          subtitle: '选择器',
           badge: 'feature'
         },
         {
+          name: 'Popover',
+          path: '/popover',
+          subtitle: '气泡提示',
+          badge: 'new'
+        },
+        {
           name: 'Popup',
-          path: '/popup'
+          path: '/popup',
+          subtitle: '弹出层'
         },
         {
           name: 'PopupActivity',
-          path: '/popup-activity'
+          path: '/popup-activity',
+          subtitle: '活动弹窗'
         },
         {
           name: 'Selector',
-          path: '/selector'
+          path: '/selector',
+          subtitle: '列表选择器'
         },
         {
           name: 'TabPicker',
-          path: '/tab-picker'
+          path: '/tab-picker',
+          subtitle: '多级联动选择器'
         },
         {
           name: 'Toast',
           path: '/toast',
+          subtitle: '轻提示',
           badge: 'feature'
         },
         {
           name: 'Transition',
-          path: '/transition'
+          path: '/transition',
+          subtitle: '动画'
         }
       ]
     },
@@ -254,60 +312,92 @@ export default {
       children: [
         {
           name: 'Agree',
-          path: '/agree'
+          path: '/agree',
+          subtitle: '勾选按钮'
         },
         {
           name: 'AnimatedNumber',
-          path: '/animated-number'
+          path: '/animated-number',
+          subtitle: '动画数字'
         },
         {
           name: 'Check',
-          path: '/check'
+          path: '/check',
+          subtitle: '选项组'
+        },
+        {
+          name: 'CodeBox',
+          path: '/code-box',
+          subtitle: '验证码输入框',
+          badge: 'new'
         },
         {
           name: 'Countdown',
           path: '/countdown',
+          subtitle: '倒计时',
           badge: 'fix'
         },
         {
+          name: 'Field',
+          path: '/field',
+          subtitle: '区域组合',
+          badge: 'new'
+        },
+        {
           name: 'InputItem',
-          path: '/input-item'
+          path: '/input-item',
+          subtitle: '输入框'
         },
         {
           name: 'Marquee',
-          path: '/marquee'
+          path: '/marquee',
+          subtitle: '跑马灯'
         },
         {
           name: 'Radio',
-          path: '/radio'
+          path: '/radio',
+          subtitle: '单选框'
         },
         {
           name: 'Rate',
-          path: '/rate'
+          path: '/rate',
+          subtitle: '评分'
         },
         {
           name: 'Slider',
-          path: '/slider'
+          path: '/slider',
+          subtitle: '滑块'
         },
         {
           name: 'SliderCircle',
-          path: '/slider-circle'
+          path: '/slider-circle',
+          subtitle: '环状滑块'
         },
         {
           name: 'Stepper',
-          path: '/stepper'
+          path: '/stepper',
+          subtitle: '步进器'
         },
         {
           name: 'Switch',
-          path: '/switch'
+          path: '/switch',
+          subtitle: '开关'
         },
         {
           name: 'TextareaItem',
-          path: '/textarea-item'
+          path: '/textarea-item',
+          subtitle: '多行输入框'
         },
         {
           name: 'Timeline',
-          path: '/timeline'
+          path: '/timeline',
+          subtitle: '时间轴'
+        },
+        {
+          name: 'Uploader',
+          path: '/uploader',
+          subtitle: '文件上传',
+          badge: 'new'
         }
       ]
     },
@@ -317,27 +407,40 @@ export default {
       children: [
         {
           name: 'DragVerify',
-          path: '/drag-verify'
+          path: '/drag-verify',
+          subtitle: '拖动验证'
         },
         {
           name: 'ErrorPage',
-          path: '/error-page'
+          path: '/error-page',
+          subtitle: '错误页 + 新版故障页'
         },
         {
           name: 'Gauge',
-          path: '/gauge'
+          path: '/gauge',
+          subtitle: 'Gif仪表盘'
         },
         {
           name: 'CanvasGauge',
-          path: '/canvas-gauge'
+          path: '/canvas-gauge',
+          subtitle: '刻度仪表盘',
+          badge: 'fix'
         },
         {
           name: 'PowerOff',
-          path: '/power-off'
+          path: '/power-off',
+          subtitle: '电源关闭'
         },
         {
           name: 'SweepSelect',
-          path: '/sweep-select'
+          path: '/sweep-select',
+          subtitle: '扇形区域选择'
+        },
+        {
+          name: 'WaterMark',
+          path: '/water-mark',
+          subtitle: '水印',
+          badge: 'new'
         }
       ]
     }

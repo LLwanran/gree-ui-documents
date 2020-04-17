@@ -177,15 +177,9 @@ Vue.component(CountDown.name, CountDown);
       ></gree-count-down>
       <gree-row slot="after">
         <gree-col>
-          <gree-button type="positive" icon="power" inline plain @click="start"
-            >开始</gree-button
-          >
-          <gree-button type="assertive" icon="clock" inline plain @click="pause"
-            >暂停</gree-button
-          >
-          <gree-button icon="refresh" inline plain @click="reset"
-            >重置</gree-button
-          >
+          <gree-button type="primary" size="small" icon="power" plain @click="start">开始</gree-button>
+          <gree-button type="danger" size="small" icon="clock" plain @click="pause">暂停</gree-button>
+          <gree-button icon="refresh" plain size="small" @click="reset">重置</gree-button>
         </gree-col>
       </gree-row>
     </gree-list-item>

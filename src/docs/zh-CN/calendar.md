@@ -18,6 +18,7 @@ Vue.component(Calendar.name, Calendar);
 <gree-notice-bar type="activity" mode="closable" icon="warning" scrollable>
   为了更好的体验效果，建议在 iOS 或 Android 设备上体验！
 </gree-notice-bar>
+
 <div
   class="gree-example-child gree-example-child-calendar gree-example-child-calendar-0"
 >

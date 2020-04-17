@@ -15,6 +15,9 @@ Vue.component(SweepSelect.name, SweepSelect);
 :::demo
 
 ```html
+<gree-notice-bar type="activity" mode="closable" icon="warning" scrollable>
+  为了更好的体验效果，建议在 iOS 或 Android 设备上体验！
+</gree-notice-bar>
 <gree-sweep-select
   :canvas-id="canvasId1"
   :canvas-width="width1"

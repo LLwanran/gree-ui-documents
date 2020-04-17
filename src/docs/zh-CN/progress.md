@@ -142,16 +142,6 @@ Vue.component(Progress.name, Progress);
     :value="value"
     :color="colors"
   ></gree-progress>
-  <gree-row>
-    <gree-col width="50">
-      <gree-button type="positive" size="small" inline @click="decrease"
-        >-</gree-button
-      >
-      <gree-button type="assertive" size="small" inline @click="increase"
-        >+</gree-button
-      >
-    </gree-col>
-  </gree-row>
 </gree-block>
 
 <script>
@@ -167,20 +157,6 @@ Vue.component(Progress.name, Progress);
           { color: '#6f7ad3', percentage: 1 }
         ]
       };
-    },
-    methods: {
-      increase() {
-        this.value += 0.1;
-        if (this.value > 1) {
-          this.value = 1;
-        }
-      },
-      decrease() {
-        this.value -= 0.1;
-        if (this.value < 0) {
-          this.value = 0;
-        }
-      }
     }
   };
 </script>
@@ -216,20 +192,6 @@ export default {
         { color: '#6f7ad3', percentage: 1 }
       ]
     };
-  },
-  methods: {
-    increase() {
-      this.value += 0.1;
-      if (this.value > 1) {
-        this.value = 1;
-      }
-    },
-    decrease() {
-      this.value -= 0.1;
-      if (this.value < 0) {
-        this.value = 0;
-      }
-    }
   }
 };
 </script>

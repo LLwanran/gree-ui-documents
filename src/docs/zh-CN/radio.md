@@ -23,7 +23,15 @@ Vue.component(RadioList.name, RadioList);
     class="gree-example-child gree-example-child-radio gree-example-child-radio-0"
   >
     <gree-list>
-      <gree-list-item media-item>
+      <gree-list-item header="洗涤剂使用量">
+        <gree-row slot="title">
+          <gree-radio name="1" v-model="usage" inline>极少</gree-radio>
+          <gree-radio name="2" v-model="usage" inline>较少</gree-radio>
+          <gree-radio name="3" v-model="usage" inline>标准</gree-radio>
+          <gree-radio name="4" v-model="usage" inline>较多</gree-radio>
+        </gree-row>
+      </gree-list-item>
+      <gree-list-item class="special" media-item>
         <span slot="media">米种</span>
         <gree-row slot="title">
           <gree-radio
@@ -56,7 +64,7 @@ Vue.component(RadioList.name, RadioList);
           ></gree-radio>
         </gree-row>
       </gree-list-item>
-      <gree-list-item media-item>
+      <gree-list-item class="special" media-item>
         <span slot="media">口感</span>
         <gree-row slot="title">
           <gree-radio
@@ -88,9 +96,9 @@ Vue.component(RadioList.name, RadioList);
           ></gree-radio>
         </gree-row>
       </gree-list-item>
-    </gree-list>
+    </gree-list-item>
   </div>
-</gree-block>
+</gree-block-title>
 
 <script>
   import { Radio } from 'gree-ui';
@@ -101,6 +109,7 @@ Vue.component(RadioList.name, RadioList);
     },
     data() {
       return {
+        usage: '2',
         rice: '1',
         taste: '2'
       };
@@ -412,6 +421,7 @@ Vue.component(RadioList.name, RadioList);
 export default {
   data() {
     return {
+      usage: '2',
       rice: '1',
       taste: '2',
       mode: '0',
@@ -472,23 +482,25 @@ export default {
     margin-right: 0;
   }
   &.gree-example-child-radio-0 {
-    .gree-radio {
-      &.is-inline {
-        border: 1px solid #e4e4e4;
-        border-radius: 4px;
-        width: 72px;
-        height: 42px;
-        justify-content: center;
+    .list .special {
+      .gree-radio {
+        &.is-inline {
+          border: 1px solid #e4e4e4;
+          border-radius: 4px;
+          width: 72px;
+          height: 42px;
+          justify-content: center;
 
-        &:not(:last-child) {
-          margin-right: 15px;
-        }
-        &.is-checked {
-          border-color: #f2da7c;
-          background-color: #f2da7c;
-        }
-        .gree-radio-label {
-          margin-left: 0;
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+          &.is-checked {
+            border-color: #f2da7c;
+            background-color: #f2da7c;
+          }
+          .gree-radio-label {
+            margin-left: 0;
+          }
         }
       }
     }

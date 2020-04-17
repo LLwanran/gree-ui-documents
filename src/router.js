@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import navConfig from './configs/nav';
 import langs from './configs/lang';
-import Home from './views/home';
+import navConfig from './configs/nav';
 import locale from './locale';
+import Home from './views/home';
 Vue.use(Router);
 
 const routes = [];

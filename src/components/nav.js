@@ -24,11 +24,7 @@ export default {
     createHeader(h) {
       return (
         <mu-appbar zDepth={0} color="transparent" class="mu-app-drawer-header">
-          <router-link
-            tag="div"
-            class="mu-appbar-title-text"
-            to={'/' + this.locale}
-          >
+          <router-link tag="div" class="mu-appbar-title-text" to={'/' + this.locale}>
             Gree-UI
           </router-link>
           <mu-menu>
@@ -44,30 +40,28 @@ export default {
           value={menu.path}
           slot={isNested ? 'nested' : 'default'}
           button
-          nested={menu.children && menu.children.length > 0}
-        >
+          nested={menu.children && menu.children.length > 0}>
           <mu-list-item-content>
             <mu-list-item-title
               style={{
                 'font-size': isNested ? '14px' : '16px',
                 'font-weight': isNested ? '400' : '500'
-              }}
-            >
+              }}>
               {menu.name}
             </mu-list-item-title>
           </mu-list-item-content>
           {menu.children && menu.children.length > 0 ? (
             <mu-list-item-action>
-              <mu-icon
-                class="toggle-icon"
-                size="24"
-                value="keyboard_arrow_down"
-              />
+              <mu-icon class="toggle-icon" size="24" value="keyboard_arrow_down" />
             </mu-list-item-action>
           ) : null}
-          {!menu.children && menu.badge ? (
+          {!menu.children && (menu.badge || menu.subtitle) ? (
             <mu-list-item-action>
-              <mu-badge color={menu.badge === 'fix' ? 'green' : (menu.badge === 'new' ? 'red' : 'primary')} content={menu.badge} />
+              <mu-badge
+                color={menu.badge === 'fix' ? 'green' : menu.badge === 'new' ? 'red' : 'primary'}
+                content={menu.badge}
+              />
+              <mu-list-item-after-text>{menu.subtitle}</mu-list-item-after-text>
             </mu-list-item-action>
           ) : null}
           {menu.children &&

@@ -88,7 +88,7 @@ Vue.component(DropdownMenuItem.name, DropdownMenuItem);
           <gree-switch v-model="switch2" slot="after"></gree-switch>
         </gree-list-item>
       </gree-list>
-      <gree-button type="positive" @click="onConfirm">确认</gree-button>
+      <gree-button type="primary" block square @click="onConfirm">确认</gree-button>
     </gree-dropdown-menu-item>
   </gree-dropdown-menu>
 </gree-block>
@@ -103,7 +103,7 @@ Vue.component(DropdownMenuItem.name, DropdownMenuItem);
     },
     methods: {
       onConfirm() {
-        this.$refs.item.$_toggle();
+        this.$refs.item.toggle();
       }
     }
   };
@@ -296,7 +296,7 @@ export default {
   },
   methods: {
     onConfirm() {
-      this.$refs.item.$_toggle();
+      this.$refs.item.toggle();
     }
   }
 };

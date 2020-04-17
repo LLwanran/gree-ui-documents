@@ -16,10 +16,10 @@ Vue.component(ToolBar.name, ToolBar);
 
 ```html
 <gree-toolbar position="top" no-hairline>
-  <gree-button plain type="assertive">我是顶部Toolbar</gree-button>
+  <gree-button type="danger" block plain>我是顶部Toolbar</gree-button>
 </gree-toolbar>
 <gree-toolbar position="bottom" no-hairline>
-  <gree-button round type="positive">我是底部Toolbar</gree-button>
+  <gree-button type="primary" block round>我是底部Toolbar</gree-button>
 </gree-toolbar>
 ```
 

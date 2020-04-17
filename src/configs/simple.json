@@ -1,0 +1,2192 @@
+{
+  "Area": {
+    "A": [
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "兴安盟",
+        "CityId": 284,
+        "District": "阿尔山市",
+        "DistrictId": 402,
+        "PinYin": "aershan"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "阿克苏地区",
+        "CityId": 2288,
+        "District": "阿克苏地区",
+        "DistrictId": 2288,
+        "PinYin": "akesu"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "阿拉善盟",
+        "CityId": 283,
+        "District": "阿拉善右旗",
+        "DistrictId": 399,
+        "PinYin": "alashanyou"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "阿拉善盟",
+        "CityId": 283,
+        "District": "阿拉善左旗",
+        "DistrictId": 398,
+        "PinYin": "alashanzuo"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "阿勒泰地区",
+        "CityId": 2437,
+        "District": "阿勒泰地区",
+        "DistrictId": 2437,
+        "PinYin": "aletai"
+      },
+      {
+        "Province": "西藏自治区",
+        "ProvinceId": 26,
+        "City": "阿里地区",
+        "CityId": 2777,
+        "District": "阿里地区",
+        "DistrictId": 2777,
+        "PinYin": "ali"
+      },
+      {
+        "Province": "安徽省",
+        "ProvinceId": 407,
+        "City": "安庆市",
+        "CityId": 1067,
+        "District": "安庆市",
+        "DistrictId": 1067,
+        "PinYin": "anqing"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "鞍山市",
+        "CityId": 409,
+        "District": "鞍山市",
+        "DistrictId": 409,
+        "PinYin": "anshan"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "安顺市",
+        "CityId": 2648,
+        "District": "安顺市",
+        "DistrictId": 2648,
+        "PinYin": "anshun"
+      }
+    ],
+    "B": [
+      {
+        "Province": "吉林省",
+        "ProvinceId": 724,
+        "City": "白城市",
+        "CityId": 528,
+        "District": "白城市",
+        "DistrictId": 528,
+        "PinYin": "baicheng"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "百色市",
+        "CityId": 1999,
+        "District": "百色市",
+        "DistrictId": 1999,
+        "PinYin": "baise"
+      },
+      {
+        "Province": "吉林省",
+        "ProvinceId": 724,
+        "City": "白山市",
+        "CityId": 526,
+        "District": "白山市",
+        "DistrictId": 526,
+        "PinYin": "baishan"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "保山市",
+        "CityId": 2898,
+        "District": "保山市",
+        "DistrictId": 2898,
+        "PinYin": "baoshan"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "包头市",
+        "CityId": 274,
+        "District": "包头市",
+        "DistrictId": 274,
+        "PinYin": "baotou"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "巴彦淖尔市",
+        "CityId": 282,
+        "District": "巴彦淖尔市",
+        "DistrictId": 282,
+        "PinYin": "bayannaoer"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "巴中市",
+        "CityId": 2360,
+        "District": "巴中市",
+        "DistrictId": 2360,
+        "PinYin": "bazhong"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "北海市",
+        "CityId": 1994,
+        "District": "北海市",
+        "DistrictId": 1994,
+        "PinYin": "beihai"
+      },
+      {
+        "Province": "北京市",
+        "ProvinceId": 2,
+        "City": "北京市",
+        "CityId": 2,
+        "District": "北京市",
+        "DistrictId": 2,
+        "PinYin": "beijing"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "毕节市",
+        "CityId": 2650,
+        "District": "毕节市",
+        "DistrictId": 2650,
+        "PinYin": "bijie"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "博尔塔拉蒙古自治州",
+        "CityId": 2293,
+        "District": "博乐市",
+        "DistrictId": 2433,
+        "PinYin": "bole"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "阿勒泰地区",
+        "CityId": 2437,
+        "District": "布尔津县",
+        "DistrictId": 2635,
+        "PinYin": "buerjin"
+      }
+    ],
+    "C": [
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "临沧市",
+        "CityId": 2901,
+        "District": "沧源佤族自治县",
+        "DistrictId": 2989,
+        "PinYin": "cangyuan"
+      },
+      {
+        "Province": "吉林省",
+        "ProvinceId": 724,
+        "City": "长春市",
+        "CityId": 521,
+        "District": "长春市",
+        "DistrictId": 521,
+        "PinYin": "changchun"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "常德市",
+        "CityId": 1682,
+        "District": "常德市",
+        "DistrictId": 1682,
+        "PinYin": "changde"
+      },
+      {
+        "Province": "西藏自治区",
+        "ProvinceId": 26,
+        "City": "昌都地区",
+        "CityId": 2774,
+        "District": "昌都县",
+        "DistrictId": 2840,
+        "PinYin": "changdou"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "长沙市",
+        "CityId": 14,
+        "District": "长沙市",
+        "DistrictId": 14,
+        "PinYin": "changsha"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "长治市",
+        "CityId": 337,
+        "District": "长治市",
+        "DistrictId": 337,
+        "PinYin": "changzhi"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "常州市",
+        "CityId": 722,
+        "District": "常州市",
+        "DistrictId": 722,
+        "PinYin": "changzhou"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "朝阳市",
+        "CityId": 420,
+        "District": "朝阳市",
+        "DistrictId": 420,
+        "PinYin": "chaoyang"
+      },
+      {
+        "Province": "河北省",
+        "ProvinceId": 712,
+        "City": "承德市",
+        "CityId": 97,
+        "District": "承德市",
+        "DistrictId": 97,
+        "PinYin": "chengde"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "成都市",
+        "CityId": 9,
+        "District": "成都市",
+        "DistrictId": 9,
+        "PinYin": "chengdou"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "赤峰市",
+        "CityId": 276,
+        "District": "赤峰市",
+        "DistrictId": 276,
+        "PinYin": "chifeng"
+      },
+      {
+        "Province": "安徽省",
+        "ProvinceId": 407,
+        "City": "池州市",
+        "CityId": 1075,
+        "District": "池州市",
+        "DistrictId": 1075,
+        "PinYin": "chizhou"
+      },
+      {
+        "Province": "重庆市",
+        "ProvinceId": 20,
+        "City": "重庆市",
+        "CityId": 20,
+        "District": "重庆市",
+        "DistrictId": 20,
+        "PinYin": "chongqing"
+      }
+    ],
+    "D": [
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "大理白族自治州",
+        "CityId": 2907,
+        "District": "大理白族自治州",
+        "DistrictId": 2907,
+        "PinYin": "dali"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "大连市",
+        "CityId": 408,
+        "District": "大连市",
+        "DistrictId": 408,
+        "PinYin": "dalian"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "丹东市",
+        "CityId": 412,
+        "District": "丹东市",
+        "DistrictId": 412,
+        "PinYin": "dandong"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "甘孜藏族自治州",
+        "CityId": 2363,
+        "District": "稻城县",
+        "DistrictId": 2608,
+        "PinYin": "daocheng"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "大庆市",
+        "CityId": 704,
+        "District": "大庆市",
+        "DistrictId": 704,
+        "PinYin": "daqing"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "大同市",
+        "CityId": 335,
+        "District": "大同市",
+        "DistrictId": 335,
+        "PinYin": "datong"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "达州市",
+        "CityId": 2357,
+        "District": "达县",
+        "DistrictId": 2552,
+        "PinYin": "daxian"
+      },
+      {
+        "Province": "青海省",
+        "ProvinceId": 29,
+        "City": "海西蒙古族藏族自治州",
+        "CityId": 2684,
+        "District": "德令哈市",
+        "DistrictId": 2817,
+        "PinYin": "delingha"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "迪庆藏族自治州",
+        "CityId": 2910,
+        "District": "德钦县",
+        "DistrictId": 3050,
+        "PinYin": "deqin"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "东营市",
+        "CityId": 1391,
+        "District": "东营市",
+        "DistrictId": 1391,
+        "PinYin": "dongying"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "酒泉市",
+        "CityId": 2919,
+        "District": "敦煌市",
+        "DistrictId": 3093,
+        "PinYin": "dunhuang"
+      }
+    ],
+    "E": [
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "鄂尔多斯市",
+        "CityId": 278,
+        "District": "鄂尔多斯市",
+        "DistrictId": 278,
+        "PinYin": "eerduosi"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "阿拉善盟",
+        "CityId": 283,
+        "District": "额济纳旗",
+        "DistrictId": 400,
+        "PinYin": "ejina"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "恩施土家族苗族自治州",
+        "CityId": 1573,
+        "District": "恩施土家族苗族自治州",
+        "DistrictId": 1573,
+        "PinYin": "enshi"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "锡林郭勒盟",
+        "CityId": 281,
+        "District": "二连浩特市",
+        "DistrictId": 380,
+        "PinYin": "erlianhaote"
+      }
+    ],
+    "F": [
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "佛山市",
+        "CityId": 1859,
+        "District": "佛山市",
+        "DistrictId": 1859,
+        "PinYin": "foshan"
+      },
+      {
+        "Province": "安徽省",
+        "ProvinceId": 407,
+        "City": "阜阳市",
+        "CityId": 1070,
+        "District": "阜南县",
+        "DistrictId": 1148,
+        "PinYin": "funan"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "佳木斯市",
+        "CityId": 707,
+        "District": "抚远县",
+        "DistrictId": 948,
+        "PinYin": "fuyuan"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "阿勒泰地区",
+        "CityId": 2437,
+        "District": "富蕴县",
+        "DistrictId": 2636,
+        "PinYin": "fuyun"
+      },
+      {
+        "Province": "福建省",
+        "ProvinceId": 1404,
+        "City": "福州市",
+        "CityId": 18,
+        "District": "福清市",
+        "DistrictId": 1306,
+        "PinYin": "fuqing"
+      }
+    ],
+    "G": [
+      {
+        "Province": "江西省",
+        "ProvinceId": 1676,
+        "City": "赣州市",
+        "CityId": 1197,
+        "District": "赣县",
+        "DistrictId": 1240,
+        "PinYin": "ganxian"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "甘孜藏族自治州",
+        "CityId": 2363,
+        "District": "甘孜藏族自治州",
+        "DistrictId": 2363,
+        "PinYin": "ganzi"
+      },
+      {
+        "Province": "青海省",
+        "ProvinceId": 29,
+        "City": "海西蒙古族藏族自治州",
+        "CityId": 2684,
+        "District": "格尔木市",
+        "DistrictId": 2818,
+        "PinYin": "geermu"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "广元市",
+        "CityId": 2350,
+        "District": "广元市",
+        "DistrictId": 2350,
+        "PinYin": "guangyuan"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "广州市",
+        "CityId": 7,
+        "District": "广州市",
+        "DistrictId": 7,
+        "PinYin": "guangzhou"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "桂林市",
+        "CityId": 1992,
+        "District": "恭城瑶族自治县",
+        "DistrictId": 2042,
+        "PinYin": "gongcheng"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "贵阳市",
+        "CityId": 2645,
+        "District": "贵阳市",
+        "DistrictId": 2645,
+        "PinYin": "guiyang"
+      },
+      {
+        "Province": "青海省",
+        "ProvinceId": 29,
+        "City": "果洛藏族自治州",
+        "CityId": 2682,
+        "District": "甘德县",
+        "DistrictId": 2807,
+        "PinYin": "gande"
+      },
+      {
+        "Province": "宁夏回族自治区",
+        "ProvinceId": 30,
+        "City": "固原市",
+        "CityId": 2644,
+        "District": "固原市",
+        "DistrictId": 2644,
+        "PinYin": "guyuan"
+      }
+    ],
+    "H": [
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "哈尔滨市",
+        "CityId": 699,
+        "District": "哈尔滨市",
+        "DistrictId": 699,
+        "PinYin": "haerbin"
+      },
+      {
+        "Province": "海南省",
+        "ProvinceId": 979,
+        "City": "海口市",
+        "CityId": 2241,
+        "District": "海口市",
+        "DistrictId": 2241,
+        "PinYin": "haikou"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "哈密地区",
+        "CityId": 2286,
+        "District": "哈密地区",
+        "DistrictId": 2286,
+        "PinYin": "hami"
+      },
+      {
+        "Province": "河北省",
+        "ProvinceId": 712,
+        "City": "邯郸市",
+        "CityId": 93,
+        "District": "邯郸市",
+        "DistrictId": 93,
+        "PinYin": "handan"
+      },
+      {
+        "Province": "安徽省",
+        "ProvinceId": 407,
+        "City": "黄山市",
+        "CityId": 1068,
+        "District": "黄山市",
+        "DistrictId": 1068,
+        "PinYin": "huangshan"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "杭州市",
+        "CityId": 3,
+        "District": "杭州市",
+        "DistrictId": 3,
+        "PinYin": "hangzhou"
+      },
+      {
+        "Province": "陕西省",
+        "ProvinceId": 27,
+        "City": "汉中市",
+        "CityId": 3144,
+        "District": "汉中市",
+        "DistrictId": 3144,
+        "PinYin": "hanzhong"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "河池市",
+        "CityId": 2001,
+        "District": "河池市",
+        "DistrictId": 2001,
+        "PinYin": "hechi"
+      },
+      {
+        "Province": "安徽省",
+        "ProvinceId": 407,
+        "City": "合肥市",
+        "CityId": 16,
+        "District": "合肥市",
+        "DistrictId": 16,
+        "PinYin": "hefei"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "黑河市",
+        "CityId": 709,
+        "District": "黑河市",
+        "DistrictId": 709,
+        "PinYin": "heihe"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "衡阳市",
+        "CityId": 1679,
+        "District": "衡东县",
+        "DistrictId": 1901,
+        "PinYin": "hengdong"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "和田地区",
+        "CityId": 2287,
+        "District": "和田地区",
+        "DistrictId": 2287,
+        "PinYin": "hetian"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "阿坝藏族羌族自治州",
+        "CityId": 2362,
+        "District": "红原县",
+        "DistrictId": 2591,
+        "PinYin": "hongyuan"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "淮安市",
+        "CityId": 715,
+        "District": "洪泽县",
+        "DistrictId": 762,
+        "PinYin": "hongze"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "怀化市",
+        "CityId": 1687,
+        "District": "洪江市",
+        "DistrictId": 1966,
+        "PinYin": "hongjiang"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "黔东南苗族侗族自治州",
+        "CityId": 2652,
+        "District": "黄平县",
+        "DistrictId": 2745,
+        "PinYin": "huangping"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "呼和浩特市",
+        "CityId": 273,
+        "District": "和林格尔县",
+        "DistrictId": 291,
+        "PinYin": "helingeer"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "惠州市",
+        "CityId": 1854,
+        "District": "惠东县",
+        "DistrictId": 2175,
+        "PinYin": "huidong"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "呼伦贝尔市",
+        "CityId": 279,
+        "District": "呼伦贝尔市",
+        "DistrictId": 279,
+        "PinYin": "hulunbeier"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "通辽市",
+        "CityId": 277,
+        "District": "霍林郭勒市",
+        "DistrictId": 319,
+        "PinYin": "huolinguole"
+      }
+    ],
+    "J": [
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "大兴安岭地区",
+        "CityId": 711,
+        "District": "加格达奇市",
+        "DistrictId": 3454,
+        "PinYin": "jiagedaqishi"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "佳木斯市",
+        "CityId": 707,
+        "District": "佳木斯市",
+        "DistrictId": 707,
+        "PinYin": "jiamusi"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "嘉峪关市",
+        "CityId": 2915,
+        "District": "嘉峪关市",
+        "DistrictId": 2915,
+        "PinYin": "jiayuguan"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "揭阳市",
+        "CityId": 1866,
+        "District": "揭东县",
+        "DistrictId": 2233,
+        "PinYin": "jiedong"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "济南市",
+        "CityId": 1387,
+        "District": "济南市",
+        "DistrictId": 1387,
+        "PinYin": "jinan"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "金昌市",
+        "CityId": 2912,
+        "District": "金昌市",
+        "DistrictId": 2912,
+        "PinYin": "jinchang"
+      },
+      {
+        "Province": "江西省",
+        "ProvinceId": 1676,
+        "City": "景德镇市",
+        "CityId": 1192,
+        "District": "景德镇市",
+        "DistrictId": 1192,
+        "PinYin": "jingdezhen"
+      },
+      {
+        "Province": "江西省",
+        "ProvinceId": 1676,
+        "City": "吉安市",
+        "CityId": 1198,
+        "District": "井冈山市",
+        "DistrictId": 1257,
+        "PinYin": "jinggangshan"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "济宁市",
+        "CityId": 1395,
+        "District": "嘉祥县",
+        "DistrictId": 1499,
+        "PinYin": "jiaxiang"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "锦州市",
+        "CityId": 413,
+        "District": "锦州市",
+        "DistrictId": 413,
+        "PinYin": "jinzhou"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "阿坝藏族羌族自治州",
+        "CityId": 2362,
+        "District": "九寨沟县",
+        "DistrictId": 2584,
+        "PinYin": "jiuzhaigou"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "鸡西市",
+        "CityId": 703,
+        "District": "鸡东县",
+        "DistrictId": 901,
+        "PinYin": "jidong"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "荆门市",
+        "CityId": 1567,
+        "District": "京山市",
+        "DistrictId": 3582,
+        "PinYin": "jingshan"
+      }
+    ],
+    "K": [
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "甘孜藏族自治州",
+        "CityId": 2363,
+        "District": "康定县",
+        "DistrictId": 2592,
+        "PinYin": "kangding"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "喀什地区",
+        "CityId": 2289,
+        "District": "喀什地区",
+        "DistrictId": 2289,
+        "PinYin": "kashi"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "克拉玛依市",
+        "CityId": 2283,
+        "District": "克拉玛依市",
+        "DistrictId": 2283,
+        "PinYin": "kelamayi"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "阿克苏地区",
+        "CityId": 2288,
+        "District": "库车县",
+        "DistrictId": 2393,
+        "PinYin": "kuche"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "巴音郭楞蒙古自治州",
+        "CityId": 2291,
+        "District": "库尔勒市",
+        "DistrictId": 2416,
+        "PinYin": "kuerle"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "昆明市",
+        "CityId": 2895,
+        "District": "昆明市",
+        "DistrictId": 2895,
+        "PinYin": "kunming"
+      }
+    ],
+    "L": [
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "普洱市",
+        "CityId": 2900,
+        "District": "澜沧拉祜族自治县",
+        "DistrictId": 2980,
+        "PinYin": "lancanglahuzu"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "兰州市",
+        "CityId": 2911,
+        "District": "兰州市",
+        "DistrictId": 2911,
+        "PinYin": "lanzhou"
+      },
+      {
+        "Province": "西藏自治区",
+        "ProvinceId": 26,
+        "City": "拉萨市",
+        "CityId": 2772,
+        "District": "拉萨市",
+        "DistrictId": 2772,
+        "PinYin": "lasa"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "连云港市",
+        "CityId": 714,
+        "District": "连云港市",
+        "DistrictId": 714,
+        "PinYin": "lianyungang"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "黔南布依族苗族自治州",
+        "CityId": 2653,
+        "District": "荔波县",
+        "DistrictId": 2762,
+        "PinYin": "libo"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "丽江市",
+        "CityId": 2902,
+        "District": "丽江市",
+        "DistrictId": 2902,
+        "PinYin": "lijiang"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "临沧市",
+        "CityId": 2901,
+        "District": "临沧市",
+        "DistrictId": 2901,
+        "PinYin": "lincang"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "临汾市",
+        "CityId": 343,
+        "District": "临汾市",
+        "DistrictId": 343,
+        "PinYin": "linfen"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "临沂市",
+        "CityId": 1399,
+        "District": "兰陵县",
+        "DistrictId": 1518,
+        "PinYin": "lanling"
+      },
+      {
+        "Province": "西藏自治区",
+        "ProvinceId": 26,
+        "City": "林芝地区",
+        "CityId": 2778,
+        "District": "朗县",
+        "DistrictId": 2894,
+        "PinYin": "langxian"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "黔东南苗族侗族自治州",
+        "CityId": 2652,
+        "District": "黎平县",
+        "DistrictId": 2754,
+        "PinYin": "liping"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "六盘水市",
+        "CityId": 2646,
+        "District": "六盘水市",
+        "DistrictId": 2646,
+        "PinYin": "liupanshui"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "柳州市",
+        "CityId": 1991,
+        "District": "柳城县",
+        "DistrictId": 2021,
+        "PinYin": "liucheng"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "陇南市",
+        "CityId": 2922,
+        "District": "两当县",
+        "DistrictId": 3120,
+        "PinYin": "liangdang"
+      },
+      {
+        "Province": "福建省",
+        "ProvinceId": 1404,
+        "City": "龙岩市",
+        "CityId": 1189,
+        "District": "连城县",
+        "DistrictId": 1377,
+        "PinYin": "liancheng"
+      },
+      {
+        "Province": "河南省",
+        "ProvinceId": 1060,
+        "City": "洛阳市",
+        "CityId": 1406,
+        "District": "栾川县",
+        "DistrictId": 1721,
+        "PinYin": "luanchuan"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "泸州市",
+        "CityId": 2347,
+        "District": "泸县",
+        "DistrictId": 2480,
+        "PinYin": "luxian"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "吕梁市",
+        "CityId": 344,
+        "District": "岚县",
+        "DistrictId": 635,
+        "PinYin": "lanxian"
+      }
+    ],
+    "M": [
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "德宏傣族景颇族自治州",
+        "CityId": 2908,
+        "District": "芒市",
+        "DistrictId": 3040,
+        "PinYin": "mangshi"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "呼伦贝尔市",
+        "CityId": 279,
+        "District": "满洲里市",
+        "DistrictId": 356,
+        "PinYin": "manzhouli"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "梅州市",
+        "CityId": 1853,
+        "District": "梅县",
+        "DistrictId": 2166,
+        "PinYin": "meixian"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "绵阳市",
+        "CityId": 2349,
+        "District": "绵阳市",
+        "DistrictId": 2349,
+        "PinYin": "mianyang"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "大兴安岭地区",
+        "CityId": 711,
+        "District": "漠河县",
+        "DistrictId": 971,
+        "PinYin": "mohe"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "牡丹江市",
+        "CityId": 706,
+        "District": "牡丹江市",
+        "DistrictId": 706,
+        "PinYin": "mudanjiang"
+      }
+    ],
+    "N": [
+      {
+        "Province": "江西省",
+        "ProvinceId": 1676,
+        "City": "南昌市",
+        "CityId": 1191,
+        "District": "南昌市",
+        "DistrictId": 1191,
+        "PinYin": "nanchang"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "南充市",
+        "CityId": 2354,
+        "District": "南部县",
+        "DistrictId": 2530,
+        "PinYin": "nanbu"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "南京市",
+        "CityId": 4,
+        "District": "南京市",
+        "DistrictId": 4,
+        "PinYin": "nanjing"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "南宁市",
+        "CityId": 1990,
+        "District": "南宁市",
+        "DistrictId": 1990,
+        "PinYin": "nanning"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "南通市",
+        "CityId": 720,
+        "District": "南通市",
+        "DistrictId": 720,
+        "PinYin": "nantong"
+      },
+      {
+        "Province": "河南省",
+        "ProvinceId": 1060,
+        "City": "南阳市",
+        "CityId": 1416,
+        "District": "南阳市",
+        "DistrictId": 1416,
+        "PinYin": "nanyang"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "宁波市",
+        "CityId": 6,
+        "District": "宁波市",
+        "DistrictId": 6,
+        "PinYin": "ningbo"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "丽江市",
+        "CityId": 2902,
+        "District": "宁蒗彝族自治县",
+        "DistrictId": 2993,
+        "PinYin": "ninglang"
+      }
+    ],
+    "P": [
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "攀枝花市",
+        "CityId": 2346,
+        "District": "攀枝花市",
+        "DistrictId": 2346,
+        "PinYin": "panzhihua"
+      }
+    ],
+    "Q": [
+      {
+        "Province": "青海省",
+        "ProvinceId": 29,
+        "City": "海北藏族自治州",
+        "CityId": 2679,
+        "District": "祁连县",
+        "DistrictId": 2793,
+        "PinYin": "qilian"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "巴音郭楞蒙古自治州",
+        "CityId": 2291,
+        "District": "且末县",
+        "DistrictId": 2420,
+        "PinYin": "qiemo"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "青岛市",
+        "CityId": 1388,
+        "District": "青岛市",
+        "DistrictId": 1388,
+        "PinYin": "qingdao"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "庆阳市",
+        "CityId": 2920,
+        "District": "庆城县",
+        "DistrictId": 3099,
+        "PinYin": "qingcheng"
+      },
+      {
+        "Province": "河北省",
+        "ProvinceId": 712,
+        "City": "秦皇岛市",
+        "CityId": 92,
+        "District": "青龙满族自治县",
+        "DistrictId": 144,
+        "PinYin": "qinglong"
+      },
+      {
+        "Province": "海南省",
+        "ProvinceId": 979,
+        "City": "琼海市",
+        "CityId": 2245,
+        "District": "琼海市",
+        "DistrictId": 2245,
+        "PinYin": "qionghai"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "齐齐哈尔市",
+        "CityId": 700,
+        "District": "齐齐哈尔市",
+        "DistrictId": 700,
+        "PinYin": "qiqihaer"
+      },
+      {
+        "Province": "福建省",
+        "ProvinceId": 1404,
+        "City": "泉州市",
+        "CityId": 1186,
+        "District": "泉州市",
+        "DistrictId": 1186,
+        "PinYin": "quanzhou"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "衢州市",
+        "CityId": 838,
+        "District": "衢州市",
+        "DistrictId": 838,
+        "PinYin": "quzhou"
+      }
+    ],
+    "R": [
+      {
+        "Province": "西藏自治区",
+        "ProvinceId": 26,
+        "City": "日喀则市",
+        "CityId": 2776,
+        "District": "仁布县",
+        "DistrictId": 2872,
+        "PinYin": "renbu"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "日照市",
+        "CityId": 1397,
+        "District": "日照市",
+        "DistrictId": 1397,
+        "PinYin": "rizhao"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "巴音郭楞蒙古自治州",
+        "CityId": 2291,
+        "District": "若羌县",
+        "DistrictId": 2419,
+        "PinYin": "ruoqiang"
+      }
+    ],
+    "S": [
+      {
+        "Province": "福建省",
+        "ProvinceId": 1404,
+        "City": "三明市",
+        "CityId": 1184,
+        "District": "三明市",
+        "DistrictId": 1184,
+        "PinYin": "sanming"
+      },
+      {
+        "Province": "海南省",
+        "ProvinceId": 979,
+        "City": "三亚市",
+        "CityId": 2242,
+        "District": "三亚市",
+        "DistrictId": 2242,
+        "PinYin": "sanya"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "喀什地区",
+        "CityId": 2289,
+        "District": "莎车县",
+        "DistrictId": 2405,
+        "PinYin": "shache"
+      },
+      {
+        "Province": "上海市",
+        "ProvinceId": 1,
+        "City": "上海市",
+        "CityId": 1,
+        "District": "上海市",
+        "DistrictId": 1,
+        "PinYin": "shanghai"
+      },
+      {
+        "Province": "江西省",
+        "ProvinceId": 1676,
+        "City": "上饶市",
+        "CityId": 1201,
+        "District": "上饶市",
+        "DistrictId": 1201,
+        "PinYin": "shangrao"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "邵阳市",
+        "CityId": 1680,
+        "District": "邵东县",
+        "DistrictId": 1907,
+        "PinYin": "shaodong"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "神农架林区",
+        "CityId": 3498,
+        "District": "神农架林区",
+        "DistrictId": 3498,
+        "PinYin": "ShenNongJiaLinQu"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "沈阳市",
+        "CityId": 12,
+        "District": "沈阳市",
+        "DistrictId": 12,
+        "PinYin": "shenyang"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "深圳市",
+        "CityId": 5,
+        "District": "深圳市",
+        "DistrictId": 5,
+        "PinYin": "shenzhen"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "石河子市",
+        "CityId": 2340,
+        "District": "石河子市",
+        "DistrictId": 2340,
+        "PinYin": "shihezi"
+      },
+      {
+        "Province": "河北省",
+        "ProvinceId": 712,
+        "City": "石家庄市",
+        "CityId": 11,
+        "District": "深泽县",
+        "DistrictId": 118,
+        "PinYin": "shenze"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "十堰市",
+        "CityId": 1564,
+        "District": "十堰市",
+        "DistrictId": 1564,
+        "PinYin": "shiyan"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "普洱市",
+        "CityId": 2900,
+        "District": "思茅市",
+        "DistrictId": 2972,
+        "PinYin": "simao"
+      },
+      {
+        "Province": "吉林省",
+        "ProvinceId": 724,
+        "City": "松原市",
+        "CityId": 527,
+        "District": "松原市",
+        "DistrictId": 527,
+        "PinYin": "songyuan"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "苏州市",
+        "CityId": 8,
+        "District": "苏州市",
+        "DistrictId": 8,
+        "PinYin": "suzhou"
+      }
+    ],
+    "T": [
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "塔城地区",
+        "CityId": 2436,
+        "District": "塔城地区",
+        "DistrictId": 2436,
+        "PinYin": "tacheng"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "太原市",
+        "CityId": 15,
+        "District": "太原市",
+        "DistrictId": 15,
+        "PinYin": "taiyuan"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "台州市",
+        "CityId": 840,
+        "District": "台州市",
+        "DistrictId": 840,
+        "PinYin": "taizhou"
+      },
+      {
+        "Province": "河北省",
+        "ProvinceId": 712,
+        "City": "唐山市",
+        "CityId": 91,
+        "District": "唐山市",
+        "DistrictId": 91,
+        "PinYin": "tangshan"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "保山市",
+        "CityId": 2898,
+        "District": "腾冲县",
+        "DistrictId": 2958,
+        "PinYin": "tengchong"
+      },
+      {
+        "Province": "天津市",
+        "ProvinceId": 19,
+        "City": "天津市",
+        "CityId": 19,
+        "District": "天津市",
+        "DistrictId": 19,
+        "PinYin": "tianjin"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "天水市",
+        "CityId": 2914,
+        "District": "天水市",
+        "DistrictId": 2914,
+        "PinYin": "tianshui"
+      },
+      {
+        "Province": "吉林省",
+        "ProvinceId": 724,
+        "City": "通化市",
+        "CityId": 525,
+        "District": "通化市",
+        "DistrictId": 525,
+        "PinYin": "tonghua"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "通辽市",
+        "CityId": 277,
+        "District": "通辽市",
+        "DistrictId": 277,
+        "PinYin": "tongliao"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "铜仁市",
+        "CityId": 2649,
+        "District": "铜仁市",
+        "DistrictId": 2649,
+        "PinYin": "tongren"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "吐鲁番地区",
+        "CityId": 2285,
+        "District": "吐鲁番地区",
+        "DistrictId": 2285,
+        "PinYin": "tulufan"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "图木舒克市",
+        "CityId": 2342,
+        "District": "图木舒克市",
+        "DistrictId": 2342,
+        "PinYin": "tumushuke"
+      }
+    ],
+    "W": [
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "潍坊市",
+        "CityId": 1392,
+        "District": "潍坊市",
+        "DistrictId": 1392,
+        "PinYin": "weifang"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "威海市",
+        "CityId": 1394,
+        "District": "威海市",
+        "DistrictId": 1394,
+        "PinYin": "weihai"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "文山壮族苗族自治州",
+        "CityId": 2903,
+        "District": "文山壮族苗族自治州",
+        "DistrictId": 2903,
+        "PinYin": "wenshan"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "温州市",
+        "CityId": 833,
+        "District": "文成县",
+        "DistrictId": 1002,
+        "PinYin": "wencheng"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "黑河市",
+        "CityId": 709,
+        "District": "五大连池市",
+        "DistrictId": 955,
+        "PinYin": "wudalianchi"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "乌海市",
+        "CityId": 275,
+        "District": "乌海市",
+        "DistrictId": 275,
+        "PinYin": "wuhai"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "武汉市",
+        "CityId": 17,
+        "District": "武汉市",
+        "DistrictId": 17,
+        "PinYin": "wuhan"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "乌兰察布市",
+        "CityId": 280,
+        "District": "乌兰察布市",
+        "DistrictId": 280,
+        "PinYin": "wulanchabu"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "兴安盟",
+        "CityId": 284,
+        "District": "乌兰浩特市",
+        "DistrictId": 401,
+        "PinYin": "wulanhaote"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "巴彦淖尔市",
+        "CityId": 282,
+        "District": "乌拉特中旗",
+        "DistrictId": 395,
+        "PinYin": "wulatezhong"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "乌鲁木齐市",
+        "CityId": 2282,
+        "District": "乌鲁木齐市",
+        "DistrictId": 2282,
+        "PinYin": "wulumuqi"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "无锡市",
+        "CityId": 10,
+        "District": "无锡市",
+        "DistrictId": 10,
+        "PinYin": "wuxi"
+      },
+      {
+        "Province": "福建省",
+        "ProvinceId": 1404,
+        "City": "南平市",
+        "CityId": 1188,
+        "District": "武夷山市",
+        "DistrictId": 1363,
+        "PinYin": "wuyishan"
+      },
+      {
+        "Province": "广西壮族自治区",
+        "ProvinceId": 978,
+        "City": "梧州市",
+        "CityId": 1993,
+        "District": "梧州市",
+        "DistrictId": 1993,
+        "PinYin": "wuzhou"
+      }
+    ],
+    "X": [
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "甘南藏族自治州",
+        "CityId": 2923,
+        "District": "夏河县",
+        "DistrictId": 3129,
+        "PinYin": "xiahe"
+      },
+      {
+        "Province": "福建省",
+        "ProvinceId": 1404,
+        "City": "厦门市",
+        "CityId": 1183,
+        "District": "厦门市",
+        "DistrictId": 1183,
+        "PinYin": "xiamen"
+      },
+      {
+        "Province": "陕西省",
+        "ProvinceId": 27,
+        "City": "西安市",
+        "CityId": 3138,
+        "District": "西安市",
+        "DistrictId": 3138,
+        "PinYin": "xian"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "襄阳市",
+        "CityId": 1563,
+        "District": "襄阳市",
+        "DistrictId": 1563,
+        "PinYin": "xiangyang"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "凉山彝族自治州",
+        "CityId": 2364,
+        "District": "西昌市",
+        "DistrictId": 2610,
+        "PinYin": "xichang"
+      },
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "锡林郭勒盟",
+        "CityId": 281,
+        "District": "锡林浩特市",
+        "DistrictId": 379,
+        "PinYin": "xilinhaote"
+      },
+      {
+        "Province": "河南省",
+        "ProvinceId": 1060,
+        "City": "信阳市",
+        "CityId": 1418,
+        "District": "新县",
+        "DistrictId": 1826,
+        "PinYin": "xinxian"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "黔西南布依族苗族自治州",
+        "CityId": 2651,
+        "District": "兴义市",
+        "DistrictId": 2736,
+        "PinYin": "xingyi"
+      },
+      {
+        "Province": "青海省",
+        "ProvinceId": 29,
+        "City": "西宁市",
+        "CityId": 2677,
+        "District": "西宁市",
+        "DistrictId": 2677,
+        "PinYin": "xining"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "伊犁哈萨克自治州",
+        "CityId": 2294,
+        "District": "新源县",
+        "DistrictId": 2443,
+        "PinYin": "xinyuan"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "忻州市",
+        "CityId": 342,
+        "District": "忻州市",
+        "DistrictId": 342,
+        "PinYin": "xinzhou"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "西双版纳傣族自治州",
+        "CityId": 2905,
+        "District": "西双版纳傣族自治州",
+        "DistrictId": 2905,
+        "PinYin": "xishuangbanna"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "徐州市",
+        "CityId": 713,
+        "District": "新沂市",
+        "DistrictId": 744,
+        "PinYin": "xinyi"
+      }
+    ],
+    "Y": [
+      {
+        "Province": "陕西省",
+        "ProvinceId": 27,
+        "City": "延安市",
+        "CityId": 3143,
+        "District": "延安市",
+        "DistrictId": 3143,
+        "PinYin": "yanan"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "盐城市",
+        "CityId": 717,
+        "District": "盐城市",
+        "DistrictId": 717,
+        "PinYin": "yancheng"
+      },
+      {
+        "Province": "江苏省",
+        "ProvinceId": 723,
+        "City": "扬州市",
+        "CityId": 718,
+        "District": "扬州市",
+        "DistrictId": 718,
+        "PinYin": "yangzhou"
+      },
+      {
+        "Province": "吉林省",
+        "ProvinceId": 724,
+        "City": "延边朝鲜族自治州",
+        "CityId": 529,
+        "District": "延吉市",
+        "DistrictId": 691,
+        "PinYin": "yanji"
+      },
+      {
+        "Province": "山东省",
+        "ProvinceId": 334,
+        "City": "烟台市",
+        "CityId": 1393,
+        "District": "烟台市",
+        "DistrictId": 1393,
+        "PinYin": "yantai"
+      },
+      {
+        "Province": "四川省",
+        "ProvinceId": 23,
+        "City": "宜宾市",
+        "CityId": 2355,
+        "District": "宜宾市",
+        "DistrictId": 2355,
+        "PinYin": "yibin"
+      },
+      {
+        "Province": "湖北省",
+        "ProvinceId": 1561,
+        "City": "宜昌市",
+        "CityId": 1566,
+        "District": "宜昌市",
+        "DistrictId": 1566,
+        "PinYin": "yichang"
+      },
+      {
+        "Province": "黑龙江省",
+        "ProvinceId": 2344,
+        "City": "伊春市",
+        "CityId": 705,
+        "District": "伊春市",
+        "DistrictId": 705,
+        "PinYin": "yichun"
+      },
+      {
+        "Province": "江西省",
+        "ProvinceId": 1676,
+        "City": "宜春市",
+        "CityId": 1199,
+        "District": "宜春市",
+        "DistrictId": 1199,
+        "PinYin": "yichun"
+      },
+      {
+        "Province": "宁夏回族自治区",
+        "ProvinceId": 30,
+        "City": "银川市",
+        "CityId": 2641,
+        "District": "银川市",
+        "DistrictId": 2641,
+        "PinYin": "yinchuan"
+      },
+      {
+        "Province": "辽宁省",
+        "ProvinceId": 1847,
+        "City": "营口市",
+        "CityId": 415,
+        "District": "营口市",
+        "DistrictId": 415,
+        "PinYin": "yingkou"
+      },
+      {
+        "Province": "新疆维吾尔自治区",
+        "ProvinceId": 31,
+        "City": "伊犁哈萨克自治州",
+        "CityId": 2294,
+        "District": "伊宁市",
+        "DistrictId": 2438,
+        "PinYin": "yining"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "金华市",
+        "CityId": 837,
+        "District": "义乌市",
+        "DistrictId": 1027,
+        "PinYin": "yiwu"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "永州市",
+        "CityId": 1686,
+        "District": "永州市",
+        "DistrictId": 1686,
+        "PinYin": "yongzhou"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "岳阳市",
+        "CityId": 1681,
+        "District": "岳阳市",
+        "DistrictId": 1681,
+        "PinYin": "yueyang"
+      },
+      {
+        "Province": "陕西省",
+        "ProvinceId": 27,
+        "City": "榆林市",
+        "CityId": 3145,
+        "District": "榆林市",
+        "DistrictId": 3145,
+        "PinYin": "yulin"
+      },
+      {
+        "Province": "山西省",
+        "ProvinceId": 1848,
+        "City": "运城市",
+        "CityId": 341,
+        "District": "永济市",
+        "DistrictId": 583,
+        "PinYin": "yongji"
+      },
+      {
+        "Province": "青海省",
+        "ProvinceId": 29,
+        "City": "玉树藏族自治州",
+        "CityId": 2683,
+        "District": "玉树藏族自治州",
+        "DistrictId": 2683,
+        "PinYin": "yushu"
+      }
+    ],
+    "Z": [
+      {
+        "Province": "内蒙古自治区",
+        "ProvinceId": 832,
+        "City": "呼伦贝尔市",
+        "CityId": 279,
+        "District": "扎兰屯市",
+        "DistrictId": 357,
+        "PinYin": "zhalantun"
+      },
+      {
+        "Province": "湖南省",
+        "ProvinceId": 1182,
+        "City": "张家界市",
+        "CityId": 1683,
+        "District": "张家界市",
+        "DistrictId": 1683,
+        "PinYin": "zhangjiajie"
+      },
+      {
+        "Province": "河北省",
+        "ProvinceId": 712,
+        "City": "张家口市",
+        "CityId": 96,
+        "District": "张家口市",
+        "DistrictId": 96,
+        "PinYin": "zhangjiakou"
+      },
+      {
+        "Province": "甘肃省",
+        "ProvinceId": 28,
+        "City": "张掖市",
+        "CityId": 2917,
+        "District": "张掖市",
+        "DistrictId": 2917,
+        "PinYin": "zhangye"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "湛江市",
+        "CityId": 1861,
+        "District": "湛江市",
+        "DistrictId": 1861,
+        "PinYin": "zhanjiang"
+      },
+      {
+        "Province": "云南省",
+        "ProvinceId": 25,
+        "City": "昭通市",
+        "CityId": 2899,
+        "District": "昭通市",
+        "DistrictId": 2899,
+        "PinYin": "zhaotong"
+      },
+      {
+        "Province": "河南省",
+        "ProvinceId": 1060,
+        "City": "郑州市",
+        "CityId": 13,
+        "District": "郑州市",
+        "DistrictId": 13,
+        "PinYin": "zhengzhou"
+      },
+      {
+        "Province": "宁夏回族自治区",
+        "ProvinceId": 30,
+        "City": "中卫市",
+        "CityId": 3257,
+        "District": "中宁县",
+        "DistrictId": 3495,
+        "PinYin": "ZhongNing"
+      },
+      {
+        "Province": "浙江省",
+        "ProvinceId": 90,
+        "City": "舟山市",
+        "CityId": 839,
+        "District": "舟山市",
+        "DistrictId": 839,
+        "PinYin": "zhoushan"
+      },
+      {
+        "Province": "广东省",
+        "ProvinceId": 831,
+        "City": "珠海市",
+        "CityId": 1849,
+        "District": "珠海市",
+        "DistrictId": 1849,
+        "PinYin": "zhuhai"
+      },
+      {
+        "Province": "贵州省",
+        "ProvinceId": 24,
+        "City": "遵义市",
+        "CityId": 2647,
+        "District": "正安县",
+        "DistrictId": 2705,
+        "PinYin": "zhengan"
+      }
+    ]
+  },
+  "HotCities": [
+    {
+      "Province": "上海市",
+      "ProvinceId": 1,
+      "City": "上海市",
+      "CityId": 1,
+      "District": "上海市",
+      "DistrictId": 1,
+      "PinYin": "shanghai"
+    },
+    {
+      "Province": "北京市",
+      "ProvinceId": 2,
+      "City": "北京市",
+      "CityId": 2,
+      "District": "北京市",
+      "DistrictId": 2,
+      "PinYin": "beijing"
+    },
+    {
+      "Province": "广东省",
+      "ProvinceId": 831,
+      "City": "广州市",
+      "CityId": 7,
+      "District": "广州市",
+      "DistrictId": 7,
+      "PinYin": "guangzhou"
+    },
+    {
+      "Province": "广东省",
+      "ProvinceId": 831,
+      "City": "深圳市",
+      "CityId": 5,
+      "District": "深圳市",
+      "DistrictId": 5,
+      "PinYin": "shenzhen"
+    },
+    {
+      "Province": "江苏省",
+      "ProvinceId": 723,
+      "City": "南京市",
+      "CityId": 4,
+      "District": "南京市",
+      "DistrictId": 4,
+      "PinYin": "nanjing"
+    },
+    {
+      "Province": "浙江省",
+      "ProvinceId": 90,
+      "City": "杭州市",
+      "CityId": 3,
+      "District": "杭州市",
+      "DistrictId": 3,
+      "PinYin": "hangzhou"
+    },
+    {
+      "Province": "湖北省",
+      "ProvinceId": 1561,
+      "City": "武汉市",
+      "CityId": 17,
+      "District": "武汉市",
+      "DistrictId": 17,
+      "PinYin": "wuhan"
+    },
+    {
+      "Province": "四川省",
+      "ProvinceId": 23,
+      "City": "成都市",
+      "CityId": 9,
+      "District": "成都市",
+      "DistrictId": 9,
+      "PinYin": "chengdou"
+    }
+  ]
+}

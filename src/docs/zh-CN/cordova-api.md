@@ -1,6 +1,6 @@
 # 主体 Cordova 接口
 
-##### [源码地址](http://gitlab.example.com/iot-4/android/greeplus_in/blob/master/GreePlus-Plu-In/plugin_headpage/src/main/java/com/greeplugin/cordova/PluginInterface.java)
+##### [源码地址](http://gitlab.example.com/iot-4/android/greeplus_in/blob/dev_4.0/GreePlus-Plu-In/plugin_headpage/src/main/java/com/greeplugin/cordova/PluginInterface.java)
 
 <details>
 <summary><strong style="color: #19be6b;">showToast</strong> - Toast提示</summary>

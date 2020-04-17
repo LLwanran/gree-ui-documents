@@ -73,6 +73,9 @@ Vue.use(GreeUI);
 
 ```bash
 git clone git@gitlab.example.com:ipenny861025/iotfe-boilerplate.git
+cd activity-lottery-lucky # 格力+兑换码&抽奖活动
+cd linkpad # Linkpad
+cd smart-curtain # 格力智能窗帘
 cd vue-cli3-air-conditioner # 空调
 cd vue-cli3-ai-sensor # AI感知器
 cd vue-cli3-co-alarm # 一氧化碳报警器
@@ -90,7 +93,8 @@ cd vue-cli3-smart-curtain # 智能窗帘
 cd vue-cli3-smoke-sensor # 烟雾传感器 && 烟雾报警器
 cd vue-cli3-steaming-roast # 蒸烤一体|双能机
 cd vue-cli3-water-sensor # 水浸感知器
-yarn install
+cd tuya_cn-??? #国内涂鸦传感器系列
+yarn
 yarn serve
 ```
 

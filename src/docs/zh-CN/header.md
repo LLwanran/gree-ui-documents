@@ -53,7 +53,7 @@ Vue.component(Header.name, Header);
   <gree-block-title>示例7</gree-block-title>
   <gree-header title="slot:overwrite-title">
     <section slot="overwrite-title">
-      <gree-button type="positive" round>自定义Title插槽</gree-button>
+      <gree-button type="primary" block round slot="overwrite-title">自定义Title插槽</gree-button>
     </section>
   </gree-header>
 </gree-row>

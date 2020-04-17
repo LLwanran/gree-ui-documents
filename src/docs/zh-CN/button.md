@@ -10,7 +10,7 @@ import { Button } from 'gree-ui';
 Vue.component(Button.name, Button);
 ```
 
-### 基础
+### 按钮类型
 
 :::demo
 
@@ -18,18 +18,34 @@ Vue.component(Button.name, Button);
 <div
   class="gree-example-child gree-example-child-button gree-example-child-button-0"
 >
-  <gree-button>默认</gree-button>
-  <gree-button type="positive">蓝色</gree-button>
-  <gree-button type="positive" loading>加载中</gree-button>
-  <gree-button type="assertive">红色</gree-button>
-  <gree-button type="assertive" inactive>未激活</gree-button>
-  <gree-button type="disabled">禁用</gree-button>
+  <gree-row>
+    <gree-col>
+      <gree-button type="default">默认按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button type="primary">主要按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button type="info">信息按钮</gree-button>
+    </gree-col>
+  </gree-row>
+  <gree-row>
+    <gree-col>
+      <gree-button type="success">成功按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button type="warning">警告按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button type="danger">危险按钮</gree-button>
+    </gree-col>
+  </gree-row>
 </div>
 ```
 
 :::
 
-### 线性
+### 朴素按钮
 
 :::demo
 
@@ -37,15 +53,20 @@ Vue.component(Button.name, Button);
 <div
   class="gree-example-child gree-example-child-button gree-example-child-button-1"
 >
-  <gree-button plain>默认</gree-button>
-  <gree-button type="positive" plain round loading>蓝色</gree-button>
-  <gree-button type="assertive" plain round loading>红色</gree-button>
+  <gree-row>
+    <gree-col>
+      <gree-button plain type="primary">朴素按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button plain type="info">朴素按钮</gree-button>
+    </gree-col>
+  </gree-row>
 </div>
 ```
 
 :::
 
-### 行内
+### 细边框
 
 :::demo
 
@@ -55,14 +76,10 @@ Vue.component(Button.name, Button);
 >
   <gree-row>
     <gree-col>
-      <gree-button type="positive" icon="warning" inline>带图标</gree-button>
-      <gree-button type="positive" inline plain>线性</gree-button>
+      <gree-button plain hairline type="primary">细边框按钮</gree-button>
     </gree-col>
-  </gree-row>
-  <gree-row>
     <gree-col>
-      <gree-button type="assertive" inline>红色</gree-button>
-      <gree-button type="disabled" inline>禁用</gree-button>
+      <gree-button plain hairline type="info">细边框按钮</gree-button>
     </gree-col>
   </gree-row>
 </div>
@@ -70,7 +87,7 @@ Vue.component(Button.name, Button);
 
 :::
 
-### 圆角
+### 禁用状态
 
 :::demo
 
@@ -78,16 +95,20 @@ Vue.component(Button.name, Button);
 <div
   class="gree-example-child gree-example-child-button gree-example-child-button-3"
 >
-  <gree-button type="default" round>默认</gree-button>
-  <gree-button type="positive" round>蓝色</gree-button>
-  <gree-button type="assertive" round>红色</gree-button>
-  <gree-button type="disabled" round>禁用</gree-button>
+  <gree-row>
+    <gree-col>
+      <gree-button disabled type="primary">禁用状态</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button disabled type="info">禁用状态</gree-button>
+    </gree-col>
+  </gree-row>
 </div>
 ```
 
 :::
 
-### 小尺寸
+### 加载状态
 
 :::demo
 
@@ -97,10 +118,13 @@ Vue.component(Button.name, Button);
 >
   <gree-row>
     <gree-col>
-      <gree-button size="small" inline>默认</gree-button>
-      <gree-button type="positive" size="small" inline>蓝色</gree-button>
-      <gree-button type="assertive" size="small" inline>红色</gree-button>
-      <gree-button type="disabled" size="small" inline>禁用</gree-button>
+      <gree-button loading type="primary" />
+    </gree-col>
+    <gree-col>
+      <gree-button loading type="primary" loading-type="spinner" :loading-size="30" />
+    </gree-col>
+    <gree-col>
+      <gree-button loading type="info" loading-text="加载中..." />
     </gree-col>
   </gree-row>
 </div>
@@ -108,7 +132,7 @@ Vue.component(Button.name, Button);
 
 :::
 
-### 文字链接按钮
+### 按钮形状
 
 :::demo
 
@@ -117,11 +141,107 @@ Vue.component(Button.name, Button);
   class="gree-example-child gree-example-child-button gree-example-child-button-5"
 >
   <gree-row>
-    <gree-button type="link" icon="location">收货地址</gree-button>
-    <gree-button type="link" inactive>
-      反馈
-      <gree-icon name="arrow-right"></gree-icon>
-    </gree-button>
+    <gree-col>
+      <gree-button square type="primary">方形按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button round type="info">圆形按钮</gree-button>
+    </gree-col>
+  </gree-row>
+</div>
+```
+
+:::
+
+### 图标按钮
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-6"
+>
+  <gree-row>
+    <gree-col>
+      <gree-button icon="like-o" type="primary" />
+    </gree-col>
+    <gree-col>
+      <gree-button icon="like-o" type="primary">按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button icon="wechat" icon-svg type="info" plain>按钮</gree-button>
+    </gree-col>
+  </gree-row>
+</div>
+```
+
+:::
+
+### 按钮尺寸
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-7"
+>
+  <gree-row>
+    <gree-col>
+      <gree-button type="primary" size="large">大号按钮</gree-button>
+    </gree-col>
+  </gree-row>
+  <gree-row>
+    <gree-col>
+      <gree-button type="primary" size="normal">普通按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button type="primary" size="small">小型按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button type="primary" size="mini">迷你按钮</gree-button>
+    </gree-col>
+  </gree-row>
+</div>
+```
+
+:::
+
+### 块级元素
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-8"
+>
+  <gree-row>
+    <gree-col>
+      <gree-button type="primary" block>块级元素</gree-button>
+    </gree-col>
+  </gree-row>
+</div>
+```
+
+:::
+
+### 自定义颜色
+
+:::demo
+
+```html
+<div
+  class="gree-example-child gree-example-child-button gree-example-child-button-9"
+>
+  <gree-row>
+    <gree-col>
+      <gree-button color="#e33371">单色按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button color="#9a0036" plain>单色按钮</gree-button>
+    </gree-col>
+    <gree-col>
+      <gree-button color="linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%)">渐变色按钮</gree-button>
+    </gree-col>
   </gree-row>
 </div>
 ```
@@ -132,17 +252,29 @@ Vue.component(Button.name, Button);
 
 ### Props
 
-| 属性     | 说明          | 类型    | 默认值    | 备注                                                 |
-| -------- | ------------- | ------- | --------- | ---------------------------------------------------- |
-| type     | 样式          | String  | `default` | `default`,`positive`,`assertive`,`disabled`,`link`   |
-| size     | 尺寸          | String  | `large`   | `large/small`                                        |
-| plain    | 扁平          | Boolean | `false`   | \-                                                   |
-| round    | 圆角          | Boolean | `false`   | \-                                                   |
-| inline   | 行内          | Boolean | `false`   | \-                                                   |
-| icon     | 图标          | String  | \-        | 参考组件`Icon`                                       |
-| icon-svg | 使用 svg 图标 | Boolean | `false`   | \-                                                   |
-| inactive | 未激活        | Boolean | `false`   | `inactive`设为`true`和`disabled`类型的按钮都无法点击 |
-| loading  | 加载中状态    | Boolean | `false`   | \-                                                   |
+| 属性               | 说明                                    | 类型    | 默认值         | 备注                                                    |
+| ------------------ | --------------------------------------- | ------- | -------------- | ------------------------------------------------------- |
+| type               | 类型                                    | String  | `default`      | `default`,`primary`,`info`,`success`,`warning`,`danger` |
+| size               | 尺寸                                    | String  | `normal`       | `large`,`normal`,`small`,`mini`                         |
+| text               | 按钮文字                                | String  | \-             | \-                                                      |
+| icon               | 左侧图标名称                            | String  | \-             | 参考组件`Icon`                                          |
+| icon-svg           | 使用svg图标                             | Boolean | `false`        | \-                                                      |
+| color              | 按钮颜色，支持传入linear-gradient渐变色 | String  | \-             |                                                         |
+| block              | 是否为块级元素                          | Boolean | `false`        | \-                                                      |
+| plain              | 是否为朴素按钮                          | Boolean | `false`        | \-                                                      |
+| round              | 是否为圆形按钮                          | Boolean | `false`        | \-                                                      |
+| square             | 是否为方形按钮                          | Boolean | `false`        | \-                                                      |
+| loading            | 是否显示为加载状态                      | Boolean | `false`        | \-                                                      |
+| hairline           | 是否使用 0.5px 边框                     | Boolean | `false`        | \-                                                      |
+| disabled           | 是否禁用按钮                            | Boolean | `false`        | \-                                                      |
+| loading-type       | 加载图标类型                            | String  | `roller`       | 参考组件`ActivityIndicator`                             |
+| loading-size       | 加载图标大小                            | Number  | `20`           | \-                                                      |
+| loading-width      | 加载图标宽度                            | Number  | \-             | \-                                                      |
+| loading-color      | 加载图标颜色                            | String  | `light | #fff` | \-                                                      |
+| loading-text-color | 加载文字颜色                            | String  | `#fff`         | \-                                                      |
+| loading-text-size  | 加载文字大小                            | Number  | \-             | \-                                                      |
+| loading-vertical   | 加载图标文字是否垂直排列                | Boolean | `false`        | \-                                                      |
+| loading-text       | 加载状态提示文字                        | String  | \-             | \-                                                      |
 
 ### Events
 
@@ -152,15 +284,9 @@ Vue.component(Button.name, Button);
 
 <style lang="less">
 .gree-example-child-button {
-  .gree-button.button-block {
-    margin-bottom: 10px;
-  }
-  &.gree-example-child-button-2 {
-    .row {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
+  .row {
+    margin-bottom: 17px;
+    text-align: center;
   }
 }
 </style>

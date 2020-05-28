@@ -166,6 +166,7 @@ Vue.component(Calendar.name, Calendar);
 | formatter              | 日期格式化函数                                              | (day: Day) => Day | \-                 |
 | position               | 弹出位置，可选值为`top`、`right`、`left`                    | String            | `bottom`           |
 | poppable               | 是否以弹层的形式展示日历                                    | Boolean           | `true`             |
+| lazy-render            | 是否只渲染可视区域的内容                                    | Boolean           | `true`             |
 | round                  | 是否显示圆角弹窗                                            | Boolean           | `true`             |
 | show-mark              | 是否显示月份背景水印                                        | Boolean           | `false`            |
 | show-confirm           | 是否展示确认按钮                                            | Boolean           | `true`             |

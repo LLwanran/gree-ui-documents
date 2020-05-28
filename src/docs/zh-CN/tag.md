@@ -134,7 +134,7 @@ Vue.component(Tag.name, Tag);
     font-color="#fff"
     style="margin-right: 20px;"
   >
-    <gree-icon name="check"></gree-icon>
+    <gree-icon name="success"></gree-icon>
   </gree-tag>
   <gree-tag
     size="large"

@@ -59,8 +59,7 @@ export default {
         {
           name: 'Button',
           path: '/button',
-          subtitle: '按钮',
-          badge: 'feature'
+          subtitle: '按钮'
         },
         {
           name: 'Collapse',
@@ -91,7 +90,7 @@ export default {
           name: 'Icon',
           path: '/icon',
           subtitle: '图标',
-          badge: 'feature'
+          badge: '3.1.3'
         },
         {
           name: 'Image',
@@ -144,6 +143,12 @@ export default {
           subtitle: '步骤条'
         },
         {
+          name: 'Sticky',
+          path: '/sticky',
+          subtitle: '粘性布局',
+          badge: '3.1.2'
+        },
+        {
           name: 'Swiper',
           path: '/swiper',
           subtitle: '轮播'
@@ -151,8 +156,7 @@ export default {
         {
           name: 'TabBar',
           path: '/tab-bar',
-          subtitle: '标签栏',
-          badge: 'feature'
+          subtitle: '标签栏'
         },
         {
           name: 'Tabs',
@@ -170,6 +174,12 @@ export default {
       name: '布局&&导航',
       icon: '',
       children: [
+        {
+          name: 'Avatar',
+          path: '/avatar',
+          subtitle: '头像',
+          badge: '3.1.3'
+        },
         {
           name: 'Block',
           path: '/block',
@@ -193,8 +203,7 @@ export default {
         {
           name: 'ListView',
           path: '/list-view',
-          subtitle: '列表',
-          badge: 'feature'
+          subtitle: '列表'
         },
         {
           name: 'Sidebar',
@@ -205,7 +214,7 @@ export default {
           name: 'Skeleton',
           path: '/skeleton',
           subtitle: '骨架屏',
-          badge: 'new'
+          badge: '2.9.9'
         },
         {
           name: 'TreeSelect',
@@ -237,7 +246,7 @@ export default {
           name: 'Calendar',
           path: '/calendar',
           subtitle: '日历',
-          badge: 'fix'
+          badge: '3.1.2'
         },
         {
           name: 'DatePicker',
@@ -252,20 +261,19 @@ export default {
         {
           name: 'IndexBar',
           path: '/index-bar',
-          subtitle: '索引栏',
-          badge: 'new'
+          subtitle: '索引栏'
         },
         {
           name: 'Overlay',
           path: '/overlay',
           subtitle: '遮罩层',
-          badge: 'new'
+          badge: '2.8.1'
         },
         {
           name: 'Picker',
           path: '/picker',
           subtitle: '选择器',
-          badge: 'feature'
+          badge: '2.9.5'
         },
         {
           name: 'Popover',
@@ -282,6 +290,11 @@ export default {
           name: 'PopupActivity',
           path: '/popup-activity',
           subtitle: '活动弹窗'
+        },
+        {
+          name: 'Ruler',
+          path: '/ruler',
+          subtitle: '刻度尺'
         },
         {
           name: 'Selector',

@@ -15,22 +15,24 @@ Vue.component(Switch.name, Switch);
 :::demo
 
 ```html
-<gree-list>
+<gree-list class="gree-example-child gree-example-child-switch gree-example-child-switch-0">
   <gree-list-item title="开启状态">
-    <gree-switch
-      slot="after"
-      v-model="isActive"
-      @change="handler('switch1', isActive, $event)"
-    ></gree-switch>
+    <gree-switch v-model="checked1" slot="after"></gree-switch>
   </gree-list-item>
-  <gree-list-item title="关闭状态">
-    <gree-switch slot="after" v-model="isActive2"></gree-switch>
+  <gree-list-item title="禁用状态">
+    <gree-switch v-model="checked2" disabled slot="after"></gree-switch>
   </gree-list-item>
-  <gree-list-item title="开启不可用状态">
-    <gree-switch slot="after" v-model="isActive3" disabled></gree-switch>
+  <gree-list-item title="加载状态">
+    <gree-switch v-model="checked3" loading slot="after"></gree-switch>
   </gree-list-item>
-  <gree-list-item title="关闭不可用状态">
-    <gree-switch slot="after" v-model="isActive4" disabled></gree-switch>
+  <gree-list-item title="自定义大小">
+    <gree-switch v-model="checked4" size="24px" slot="after"></gree-switch>
+  </gree-list-item>
+  <gree-list-item title="自定义颜色">
+    <gree-switch v-model="checked5" active-color="#4caf50" inactive-color="#e91e63" slot="after"></gree-switch>
+  </gree-list-item>
+  <gree-list-item title="异步控制">
+    <gree-switch :value="checked6" :loading="loading" @click="onClick" @input="onInput" slot="after"></gree-switch>
   </gree-list-item>
 </gree-list>
 
@@ -38,128 +40,89 @@ Vue.component(Switch.name, Switch);
   export default {
     data() {
       return {
-        isActive: true,
-        isActive2: false,
-        isActive3: true,
-        isActive4: false
+        checked1: true,
+        checked2: true,
+        checked3: true,
+        checked4: true,
+        checked5: true,
+        checked6: true,
+        loading: false
       };
     },
     methods: {
-      handler(name, active) {
-        console.log(
-          `Status of switch ${name} is ${active ? 'active' : 'inactive'}`
-        );
+      onClick() {
+        this.loading = true;
+      },
+      onInput(checked) {
+        Dialog.confirm({
+          title: '提示',
+          content: '是否切换开关？',
+          onConfirm: () => {
+            this.checked6 = checked;
+            this.loading = false;
+          },
+          onCancel: () => {
+            this.loading = false;
+          }
+        });
       }
     }
   };
 </script>
-```
-
-:::
-
-### 自定义颜色
-
-:::demo
-
-```html
-<gree-list>
-  <gree-list-item title="蓝色">
-    <gree-switch class="blue" slot="after" v-model="isActive"></gree-switch>
-  </gree-list-item>
-  <gree-list-item title="橙色">
-    <gree-switch class="orange" slot="after" v-model="isActive"></gree-switch>
-  </gree-list-item>
-  <gree-list-item title="红色">
-    <gree-switch class="red" slot="after" v-model="isActive"></gree-switch>
-  </gree-list-item>
-</gree-list>
-
-<script>
-  export default {
-    data() {
-      return {
-        isActive: true
-      };
-    }
-  };
-</script>
-
-<style lang="less" scoped>
-  /deep/.gree-switch.active {
-    &.blue {
-      .switch-icon {
-        background: #2196f3;
-      }
-    }
-    &.orange {
-      .switch-icon {
-        background: #ff9500;
-      }
-    }
-    &.red {
-      .switch-icon {
-        background: #ff3b30;
-      }
-    }
-  }
-</style>
 ```
 
 :::
 
 ## Props
 
-| 属性     | 说明         | 类型    | 默认值  |
-| -------- | ------------ | ------- | ------- |
-| v-model  | 打开或者关闭 | Boolean | `false` |
-| disabled | 是否禁用     | Boolean | `false` |
+| 属性           | 说明                   | 类型             | 默认值  |
+| -------------- | ---------------------- | ---------------- | ------- |
+| size           | 开关尺寸，默认单位为px | [Number, String] | \-      |
+| v-model        | 开关选中状态           | any              | `false` |
+| loading        | 是否为加载状态         | Boolean          | `false` |
+| disabled       | 是否为禁用状态         | Boolean          | `false` |
+| active-color   | 打开时的背景色         | String           | \-      |
+| inactive-color | 关闭时的背景色         | String           | \-      |
+| active-value   | 打开时对应的值         | any              | `true`  |
+| inactive-value | 关闭时对应的值         | any              | `false` |
 
 ## Events
 
-### @change(isActive)
-
-事件说明
-
-| 属性     | 说明                   | 类型    |
-| -------- | ---------------------- | ------- |
-| isActive | 开关状态，打开或者关闭 | Boolean |
+| 事件名 | 说明               | 回调参数       |
+| ------ | ------------------ | -------------- |
+| change | 开关状态切换时触发 | *value: any*   |
+| click  | 点击时触发         | *event: Event* |
 
 <script>
 export default {
   data() {
     return {
-      isActive: true,
-      isActive2: false,
-      isActive3: true,
-      isActive4: false
+      checked1: true,
+      checked2: true,
+      checked3: true,
+      checked4: true,
+      checked5: true,
+      checked6: true,
+      loading: false
     };
   },
   methods: {
-    handler(name, active) {
-      console.log(
-        `Status of switch ${name} is ${active ? 'active' : 'inactive'}`
-      );
+    onClick() {
+      this.loading = true;
+    },
+    onInput(checked) {
+      this.$dialog.confirm({
+        title: '提示',
+        content: '是否切换开关？',
+        onConfirm: () => {
+          this.checked6 = checked;
+          this.loading = false;
+        },
+        onCancel: () => {
+          this.loading = false;
+        }
+      });
     }
   }
 };
 </script>
-
-<style lang="less" scoped>
-/deep/.gree-switch.active {
-  &.blue {
-    .switch-icon {
-      background: #2196f3;
-    }
-  }
-  &.orange {
-    .switch-icon {
-      background: #ff9500;
-    }
-  }
-  &.red {
-    .switch-icon {
-      background: #ff3b30;
-    }
-  }
-}
-</style>

@@ -121,3 +121,15 @@ export default {
   }
 };
 </script>
+
+<style lang="less">
+.gree-number-keyboard-container .keyboard-number .keyboard-number-list .keyboard-number-item::after {
+  width: 1px;
+}
+
+.gree-number-keyboard-container .keyboard-number .keyboard-number-list .keyboard-number-item::before,
+.gree-number-keyboard-container::before,
+.gree-code-box-box::after {
+  height: 1px;
+}
+</style>

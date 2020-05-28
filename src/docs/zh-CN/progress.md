@@ -18,19 +18,16 @@ Vue.component(Progress.name, Progress);
 <div
   class="gree-example-child gree-example-child-progress gree-example-child-progress-0"
 >
-  <gree-progress :value="0.25" :width="5">
+  <gree-progress :value="0" :width="3">
+    <span class="progress-value">0%</span>
+  </gree-progress>
+  <gree-progress :size="90" :value="0.25" :width="5">
     <span class="progress-value">25%</span>
   </gree-progress>
-  <gree-progress :size="100" :value="0.5" :width="7" color="#ed4014">
+  <gree-progress :size="110" :value="0.5" :width="7" color="#ed4014">
     <span class="progress-value">50%</span>
   </gree-progress>
-  <gree-progress
-    :size="120"
-    :value="1"
-    :width="10"
-    color="#19be6b"
-    fill="#c5c8ce"
-  >
+  <gree-progress :size="130" :value="1" :width="10" color="#19be6b" fill="#c5c8ce">
     <span class="progress-value">100%</span>
   </gree-progress>
 </div>
@@ -72,30 +69,16 @@ Vue.component(Progress.name, Progress);
 <div
   class="gree-example-child gree-example-child-progress gree-example-child-progress-1"
 >
-  <gree-progress
-    :value="0.8"
-    :width="10"
-    :size="100"
-    color="url(#linear)"
-    border-color="#FFF"
-  >
+  <gree-progress :value="0.8" :width="10" :size="100" color="url(#linear)" border-color="#FFF">
     <span class="progress-value">80%</span>
     <defs slot="defs">
       <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#FF5257" />
-        <stop offset="100%" stop-color="#FFC541" />
+        <stop offset="0%" stop-color="#FF5257"></stop>
+        <stop offset="100%" stop-color="#FFC541"></stop>
       </linearGradient>
     </defs>
   </gree-progress>
-  <gree-progress
-    :value="0.8"
-    :width="10"
-    :size="100"
-    :rotate="-90"
-    color="#FF5257"
-    transition
-    linecap="butt"
-  >
+  <gree-progress :value="0.8" :width="10" :size="100" :rotate="-90" color="#FF5257" transition linecap="butt">
     <span class="progress-value">80%</span>
   </gree-progress>
 </div>
@@ -135,20 +118,18 @@ Vue.component(Progress.name, Progress);
 
 ```html
 <gree-block class="gree-example-child-progress-2">
-  <gree-progress
-    type="dashboard"
-    :width="200"
-    :stroke-width="5"
-    :value="value"
-    :color="colors"
-  ></gree-progress>
+  <gree-progress type="dashboard" :width="200" :stroke-width="5" :value="value" :color="colors"></gree-progress>
+  <gree-progress type="dashboard" :width="200" :stroke-width="10" linecap="butt" :value="value2" :color="colors">
+    <span class="demo-dashboard-inner" style="font-size:18px">自定义插槽：80%</span>
+  </gree-progress>
 </gree-block>
 
 <script>
   export default {
     data() {
       return {
-        value: 0.1,
+        value: 0.3,
+        value2: 0.8,
         colors: [
           { color: '#f56c6c', percentage: 0.2 },
           { color: '#e6a23c', percentage: 0.4 },
@@ -183,7 +164,8 @@ Vue.component(Progress.name, Progress);
 export default {
   data() {
     return {
-      value: 0.1,
+      value: 0.3,
+      value2: 0.8,
       colors: [
         { color: '#f56c6c', percentage: 0.2 },
         { color: '#e6a23c', percentage: 0.4 },
@@ -223,12 +205,8 @@ export default {
 }
 .gree-example-child-progress-2 {
   flex-direction: column;
-
   .row {
     justify-content: center;
-    .gree-button {
-      margin: 0 !important;
-    }
   }
   .gree-progress-dashboard {
     display: block;

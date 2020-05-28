@@ -17,6 +17,9 @@ Vue.component(ScrollViewMore.name, ScrollViewMore);
 :::demo
 
 ```html
+<gree-notice-bar type="activity" mode="closable" icon="warning" scrollable>
+  为了更好的体验效果，建议在 iOS 或 Android 设备上体验！
+</gree-notice-bar>
 <div class="gree-example-child-scroll-view-1">
   <gree-scroll-view ref="scrollView1" :scrolling-x="false" @scroll="onScroll">
     <gree-list>
@@ -312,6 +315,7 @@ export default {
   width: 100%;
   height: 800px;
   background: #fff;
+  margin-top: 15px;
   .scroll-view-item {
     padding: 30px 0;
     text-align: center;

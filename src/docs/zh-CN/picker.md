@@ -75,7 +75,7 @@ Vue.component(Picker.name, Picker);
           }
           .column-item {
             color: #00aeff;
-            font-size: 50px;
+            font-size: 40px;
           }
         }
       }
@@ -164,7 +164,7 @@ Vue.component(Picker.name, Picker);
           .column-list {
             .column-item {
               color: #111a34;
-              font-size: 55px;
+              font-size: 35px;
             }
           }
         }
@@ -272,14 +272,14 @@ Vue.component(Picker.name, Picker);
                   top: 50%;
                   right: 0;
                   transform: translateY(-50%);
-                  font-size: 38px;
+                  font-size: 19px;
                 }
               }
             }
             .column-list {
               .column-item {
                 color: #111a34;
-                font-size: 45px;
+                font-size: 20px;
               }
             }
           }
@@ -322,8 +322,8 @@ Vue.component(Picker.name, Picker);
     :data="pickerData4"
     @confirm="onPickerConfirm4()"
     title="自定义标题"
-    ok-text="确认"
-    cancel-text="取消"
+    ok-text
+    cancel-text
   ></gree-picker>
 </div>
 
@@ -563,7 +563,7 @@ export default {
         }
         .column-item {
           color: #00aeff;
-          font-size: 50px;
+          font-size: 40px;
         }
       }
     }
@@ -606,7 +606,7 @@ export default {
         .column-list {
           .column-item {
             color: #111a34;
-            font-size: 55px;
+            font-size: 35px;
           }
         }
       }
@@ -652,7 +652,7 @@ export default {
         .column-list {
           .column-item {
             color: #111a34;
-            font-size: 22px;
+            font-size: 20px;
           }
         }
       }

@@ -90,7 +90,7 @@ export default {
           name: 'Icon',
           path: '/icon',
           subtitle: '图标',
-          badge: '3.1.3'
+          badge: '3.1.5'
         },
         {
           name: 'Image',

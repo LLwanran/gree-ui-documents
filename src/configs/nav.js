@@ -302,6 +302,12 @@ export default {
           subtitle: '列表选择器'
         },
         {
+          name: 'SwipeCell',
+          path: '/swipe-cell',
+          subtitle: '滑动单元格',
+          badge: 'new'
+        },
+        {
           name: 'TabPicker',
           path: '/tab-picker',
           subtitle: '多级联动选择器'
@@ -447,7 +453,8 @@ export default {
         {
           name: 'SweepSelect',
           path: '/sweep-select',
-          subtitle: '扇形区域选择'
+          subtitle: '扇形区域选择',
+          badge: '3.1.5'
         },
         {
           name: 'WaterMark',

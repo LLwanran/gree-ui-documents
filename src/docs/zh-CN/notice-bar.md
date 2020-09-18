@@ -98,6 +98,33 @@ Vue.component(NoticeBar.name, NoticeBar);
 
 :::
 
+### 垂直滚动
+
+:::demo
+
+```html
+<div class="gree-example-child gree-example-child-notice-bar gree-example-child-notice-bar-7">
+  <gree-notice-bar icon="warning">
+    <gree-swiper transition="slideY" :autoplay="3000" :is-loop="true" :has-dots="false" :is-prevent="false">
+      <gree-swiper-item>1、水箱已满，除湿模式不可用，请及时清空。</gree-swiper-item>
+      <gree-swiper-item>2、水箱已满，除湿模式不可用，请及时清空。</gree-swiper-item>
+      <gree-swiper-item>3、水箱已满，除湿模式不可用，请及时清空。</gree-swiper-item>
+    </gree-swiper>
+  </gree-notice-bar>
+</div>
+
+<style lang="scss">
+.gree-example-child-notice-bar-7 {
+  .gree-swiper {
+    height: 92px;
+    line-height: 92px;
+  }
+}
+</style>
+```
+
+:::
+
 ## Props
 
 | 属性       | 说明             | 类型    | 默认值    | 备注                                    |
@@ -146,5 +173,11 @@ export default {
   width: 100%;
   background-color: rgba(89, 158, 248, 0.08);
   color: #2f86f6;
+}
+.gree-example-child-notice-bar-7 {
+  .gree-swiper {
+    height: 46px;
+    line-height: 46px;
+  }
 }
 </style>
